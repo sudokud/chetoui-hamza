@@ -1,22 +1,27 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React, { useContext } from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import styled from 'styled-components'
+import Context from '../store/context'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+
+
+const H3 = styled.h3`
+  color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)}
+`
+const IndexPage = () => {
+
+  const { state, dispatch } = useContext(Context)
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <H3 isDark={state.isDark}>Chetoui hamza</H3>
+      <button onClick={() => {
+        dispatch({ type: "TOGGLE_DARK_MODE" })
+      }}>Toggle Dark Mode</button>
+    </Layout>)
+}
+
 
 export default IndexPage
