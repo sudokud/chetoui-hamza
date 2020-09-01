@@ -3,6 +3,7 @@ title: Title edited from netlify cms
 date: 2015-05-01T22:12:03.284Z
 featuredimage: /img/margarita.jpg
 description: no description, juste a dummy  file to experiment with netlify cms
+thumbnail: margarita.jpg
 ---
 ### This is my first post on my new fake blog! How exciting!
 
