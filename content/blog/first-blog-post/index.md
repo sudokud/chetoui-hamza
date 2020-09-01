@@ -1,7 +1,7 @@
 ---
 title: Title edited from netlify cms
 date: 2015-05-01T22:12:03.284Z
-description: Hello World
+description: no description, juste a dummy  file to experiment with netlify cms
 ---
 
 This is my first post on my new fake blog! How exciting!
