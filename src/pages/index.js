@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Context from '../store/context'
 
 
-
 const H3 = styled.h3`
   color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)}
 `
