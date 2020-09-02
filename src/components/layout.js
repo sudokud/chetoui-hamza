@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
-import { ThemeContext, createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 
 
@@ -29,9 +29,6 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }) => {
   const { state } = useContext(Context);
-  // const theme = useContext(ThemeContext)
-
-  // console.log("state : ", state, "theme :", theme);
 
   return (
     <Center>

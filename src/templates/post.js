@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from "gatsby-image"
-
+import Layout from '../components/layout'
 
 
 
@@ -26,21 +26,23 @@ export default function Post({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Classes>
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <Img
-          className="blog-image"
-          fluid={markdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
-          alt="A corgi smiling happily"
-        />
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </Classes>
+    <Layout>
+      <Classes>
+        <div className="blog-post">
+          <h1>{frontmatter.title}</h1>
+          <h2>{frontmatter.date}</h2>
+          <Img
+            className="blog-image"
+            fluid={markdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
+            alt="A corgi smiling happily"
+          />
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
+      </Classes>
+    </Layout>
   )
 }
 
