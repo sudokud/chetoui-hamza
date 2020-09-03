@@ -2,18 +2,15 @@ export default {
     fonts: {
         main: "Space Mono",
     },
-    colors: {
-        main1: "hsl(207,70%,59%)",
-        main2: "hsl(207,70%,94%)",
-        dark1: "hsl(227,2%,12%)",
-        dark2: "hsl(227,2%,26%)",
-        dark3: "hsl(227,2%,64%)",
-        light1: "hsl(0,0%,97%)",
-        light2: "hsl(0,0%,99%)",
+    palette: {
+        main: "#1c1124",
+        secondary: "#684656",
+        third: "#de774e",
+        fourth: "#b7e1b5"
     },
     dark: {
         text: "white",
-        background: "black"
+        background: "#120B02"
     },
     light: {
         text: "black",

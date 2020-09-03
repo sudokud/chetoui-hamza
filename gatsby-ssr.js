@@ -10,6 +10,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import Theme from './src/themes/theme'
 import GlobalStateProvider from './src/store/globalStateProvider'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export const wrapRootElement = ({ element }) => {
