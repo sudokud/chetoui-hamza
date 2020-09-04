@@ -9,17 +9,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Container style={{
-        padding: "128px",
-        margin: "128px 64px",
+        padding: "128px 0",
+        margin: "128px 0",
         overflow: "hidden"
       }}>
         place holder
       </Container>
       <Container fluid="lg">
-        <Row noGutters>
+        <Row className="d-flex justify-content-center">
           {data.allMarkdownRemark.edges.map((edge, i) => {
             return (
-              <Col lg={4} key={i}>
+              <Col className="d-flex justify-content-center mt-5" sm={12} md={6} lg={4} key={i}>
                 <Card
                   thumbnail={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
                   title={edge.node.frontmatter.title}
