@@ -5,6 +5,7 @@ import Context from '../store/context'
 import { createGlobalStyle } from 'styled-components'
 import DarkModeToggle from "react-dark-mode-toggle";
 import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "gatsby"
 
 
 
@@ -23,6 +24,12 @@ const GlobalStyle = createGlobalStyle`
         background:${props => (props.isDark ? props.theme.palette.main : props.theme.light.background)};
         transition:all 0.4s ease;
     }
+    a{
+      text-decoration:none;
+    }
+    a:hover{
+      text-decoration:none;
+    }
 `
 const H4 = styled.h4`
   color:${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)}
@@ -39,7 +46,9 @@ const Layout = ({ children }) => {
       <Container fluid="lg">
         <Row className="pt-4">
           <Col xs={8}>
-            <H4 isDark={state.isDark}>Chetoui hamza</H4>
+            <Link to={"/"}>
+              <H4 isDark={state.isDark}>Chetoui hamza</H4>
+            </Link>
           </Col>
           <Col xs={4} className="text-right">
             <DarkModeToggle
