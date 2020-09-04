@@ -1,9 +1,9 @@
 ---
 slug: a-new-blog-post
-title: untitled
+title: Ignore me
 date: 2020-09-01T19:04:21.191Z
-description: can't descripe this post
-thumbnail: salty_egg.jpg
+description: "my role is to fill this component, "
+thumbnail: jamstack.webp
 ---
-### hello body
-## hello body
+### Hello JAMers
+this is a sample blog post to experiment with netlify-cms,
