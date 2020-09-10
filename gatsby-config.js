@@ -44,6 +44,7 @@ module.exports = {
       options: {
         fonts: [
           `Space Mono\:400,700`,
+          'Major Mono Display'
         ],
         display: 'swap'
       }
