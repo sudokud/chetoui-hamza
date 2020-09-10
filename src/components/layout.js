@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
     html,body{
         font-family:${props => props.theme.fonts.main};
+        color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)};
         height:100%;
         width:100%;
         margin:0;
@@ -59,6 +60,10 @@ const Layout = ({ children }) => {
               size={62}
             />
           </Col>
+        </Row>
+        <Row className="d-flex justify-content-center">
+          <Link className="mx-2 py-3" to={"/blog"}>Blog</Link>
+          <Link className="mx-2 py-3" to={"/connect"}>connect</Link>
         </Row>
       </Container>
       {children}

@@ -10,11 +10,11 @@ export default {
         try_this_green: "#d6f756"
     },
     dark: {
-        text: "white",
-        background: "#120B02"
+        text: "#d6f756",
+        background: "#1c1124"
     },
     light: {
-        text: "black",
-        background: "white"
+        text: "#1c1124",
+        background: "snow"
     }
 }
