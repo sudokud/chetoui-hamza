@@ -44,7 +44,7 @@ const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
             <Card>
                 <CardBody>
                     <Text>
-                        <h4>{title} test test test</h4>
+                        <h4>{title}</h4>
                         <p>{excerpt}</p>
                     </Text>
                     <Img fluid={thumbnail} alt="blog post picture" />

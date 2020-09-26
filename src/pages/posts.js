@@ -1,10 +1,14 @@
 import React from "react"
+import { useEffect } from 'react'
 import { graphql } from 'gatsby'
 import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PixelCard from '../components/pixelCard'
-const Blog = ({ data }) => {
+
+
+const Posts = ({ data }) => {
+
   return (
     <Layout>
       <SEO title="Blog" />
@@ -29,7 +33,7 @@ const Blog = ({ data }) => {
 }
 
 
-export default Blog
+export default Posts
 
 
 export const pageQuery = graphql`

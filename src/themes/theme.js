@@ -8,7 +8,8 @@ export default {
         secondary: "#684656",
         third: "#de774e",
         fourth: "#b7e1b5",
-        try_this_green: "#d6f756"
+        try_this_green: "#d6f756",
+        link: "#007bff"
     },
     dark: {
         text: "#d6f756",
@@ -19,4 +20,5 @@ export default {
         background: "snow"
     },
     golden_ratio: 1.61803398875
+
 }

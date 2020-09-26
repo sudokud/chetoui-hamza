@@ -7,6 +7,7 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import RetroScreenImage from '../images/screen.png'
+import Pizzicato from 'pizzicato'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -55,7 +56,7 @@ const RetroScreen = styled.div`
 const Layout = ({ children }) => {
 
   const { state, dispatch } = useContext(Context)
-
+  const acousticGuitar = new Pizzicato.Sound('../audio/toggle.mp3')
   return (
     <>
       <RetroScreen />
@@ -70,6 +71,7 @@ const Layout = ({ children }) => {
           <Col xs={4} className="text-right">
             <DarkModeToggle
               onChange={() => {
+                acousticGuitar.play()
                 dispatch({ type: "TOGGLE_DARK_MODE" })
               }}
               checked={state.isDark}
@@ -78,7 +80,7 @@ const Layout = ({ children }) => {
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
-          <Link className="mx-2 py-3" to={"/blog"}>Blog</Link>
+          <Link className="mx-2 py-3" to={"/posts"}>Posts</Link>
           <Link className="mx-2 py-3" to={"/connect"}>connect</Link>
         </Row>
       </Container>
