@@ -14,11 +14,9 @@ const Button = styled.div`
         display: inline-block;
         margin: 0 auto;
         font-size: 1.61803398875rem;
-        line-height: 12px;
+        line-height: 8px;
         padding: 15px 0;
         text-align: center;
-        box-sizing: border-box;
-        color: #F9D879;
         clip-path: polygon(0% 15%, 5% 15%, 5% 0%, 95% 0%, 95% 15%, 100% 15%, 100% 85%, 95% 85%, 95% 100%, 5% 100%, 5% 85%, 0% 85%);
         cursor: pointer;
         text-transform: uppercase;

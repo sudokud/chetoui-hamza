@@ -1,24 +1,39 @@
 import React from 'react'
-import { useContext } from 'react'
 import styled from 'styled-components'
 import Btn from '../components/button'
-import Context from '../store/context'
+
 
 
 const Faurme = styled.form`
     border: 1px solid grey;
+    box-shadow: 2px 2px 0px 0px grey, -2px -2px 0px 0px grey;
+
 `
 const FaurmeGroup = styled.div`
     display:flex;
     flex-direction:column;
-    padding:24px 0;
+    padding:16px 0;
     width:256px;
     & > label {
-        font-size:${props => props.theme.golden_ratio}rem;
+        font-size:1rem;
     }
     & > input {
+        font-size:1rem;
         background:${props => props.theme.light.background};
-        border: 1px solid #777;
+        border: 1px solid ${props => props.theme.dark.background};;
+        padding: 4px 12px;
+        &: focus{
+            border-radius: 0px;
+            outline-style: solid;
+            outline-color: ${props => props.theme.palette.try_this_green};
+            outline-width: 1px;
+            outline-offset: 1px;
+        }
+    }
+    & > textarea {
+        font-size:1rem;
+        background:${props => props.theme.light.background};
+        border: 1px solid ${props => props.theme.dark.background};;
         padding: 4px 12px;
         &: focus{
             border-radius: 0px;
@@ -30,16 +45,39 @@ const FaurmeGroup = styled.div`
     }
 `
 const Form = () => {
-    const { state, dispatch } = useContext(Context)
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    };
     return (
-        <Faurme className="p-5">
+        <Faurme
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
+            className="p-5">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+                <label>
+                    don't fill this out: <input name="bot-field" />
+                </label>
+            </p>
             <FaurmeGroup>
                 <label for="name"> <span>&gt;</span> Name</label>
-                <input type="text" name="name" id="name" placeholder="----------------" />
+                <input type="text" name="name" id="name" placeholder="full name" />
             </FaurmeGroup>
             <FaurmeGroup>
                 <label for="email"> <span>&gt;</span> Email</label>
-                <input type="email" name="email" id="email" placeholder="----------------" />
+                <input type="email" name="email" id="email" placeholder="Email@sample.xyz" />
+            </FaurmeGroup>
+            <FaurmeGroup>
+                <label for="email"> <span>&gt;</span> Email</label>
+                <textarea type="text" name="message" id="message" placeholder="Hello world" />
             </FaurmeGroup>
             <FaurmeGroup>
                 <Btn text="submit" type="submit" />
