@@ -2,16 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import Pizzicato from 'pizzicato'
 
 const Button = styled.div`
     padding:0;
     margin:0;
-    text-align: center;
       
     .btn {
-        width: 142px;
-        height: 42px;
+        width: 100px;
+        height: calc(100px / ${props => props.theme.golden_ration});
         background-color: ${props => props.theme.palette.link};
         display: inline-block;
         margin: 0 auto;
@@ -33,12 +31,12 @@ const Button = styled.div`
 
 
 
-const Btn = () => {
+const Btn = ({ text, type }) => {
 
     return (
         <>
             <Button>
-                <div className="btn">button</div>
+                <button type={type} className="btn">{text}</button>
             </Button>
         </>
     )
