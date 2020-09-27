@@ -68,16 +68,34 @@ const Form = () => {
                 </label>
             </p>
             <FaurmeGroup>
-                <label for="name"> <span>&gt;</span> Name</label>
-                <input type="text" name="name" id="name" placeholder="full name" />
+                <label htmlFor="name"> <span>&gt;</span> Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="full name"
+                    required
+                />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label for="email"> <span>&gt;</span> Email</label>
-                <input type="email" name="email" id="email" placeholder="Email@sample.xyz" />
+                <label htmlFor="email"> <span>&gt;</span> Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email@sample.xyz"
+                    required
+                />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label for="email"> <span>&gt;</span> Email</label>
-                <textarea type="text" name="message" id="message" placeholder="Hello world" />
+                <label htmlFor="email"> <span>&gt;</span> Email</label>
+                <textarea
+                    type="text"
+                    name="message"
+                    id="message"
+                    placeholder="Hello world"
+                    required
+                />
             </FaurmeGroup>
             <FaurmeGroup>
                 <Btn text="submit" type="submit" />

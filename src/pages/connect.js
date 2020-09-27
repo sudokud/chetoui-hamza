@@ -1,9 +1,17 @@
 import React from "react"
+import { useEffect } from 'react'
+import useSound from 'use-sound'
 import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Form from '../components/form'
 const Connect = () => {
+
+
+    const [play] = useSound("audio/transition.mp3", { volume: 0.25 })
+    useEffect(() => {
+        play()
+    }, [play]);
     return (
         <Layout>
             <SEO title="Connect" />

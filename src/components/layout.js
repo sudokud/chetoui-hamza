@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
@@ -7,8 +7,7 @@ import DarkModeToggle from "react-dark-mode-toggle";
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import RetroScreenImage from '../images/screen.png'
-import Pizzicato from 'pizzicato'
-
+import useSound from 'use-sound'
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -100,7 +99,14 @@ const NavContainer = styled.div`
 const Layout = ({ children }) => {
 
   const { state, dispatch } = useContext(Context)
-  const lightToggle = new Pizzicato.Sound('../audio/toggle.mp3')
+
+  const [isToggled, setisToggled] = useState(false);
+
+  const [playToggle] = useSound(
+    'audio/toggle.mp3', { volume: 0.25 }
+  )
+
+
   return (
     <>
       <RetroScreen />
@@ -115,7 +121,7 @@ const Layout = ({ children }) => {
           <Col xs={4} className="text-right">
             <DarkModeToggle
               onChange={() => {
-                lightToggle.play()
+                playToggle()
                 dispatch({ type: "TOGGLE_DARK_MODE" })
               }}
               checked={state.isDark}
