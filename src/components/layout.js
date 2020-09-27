@@ -17,12 +17,13 @@ const GlobalStyle = createGlobalStyle`
     html,body{
         font-family:${props => props.theme.fonts.secondary};
         font-style: normal;
+        font-size:16px;
         color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)};
         height:100%;
         width:100%;
         margin:0;
         padding:0;
-        background:${props => (props.isDark ? props.theme.palette.main : props.theme.light.background)};
+        background:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
         transition:all 0.4s ease;
         box-sizing: border-box;
 
@@ -34,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     a:hover{
       text-decoration:none;
     }
+    span { font-family:${props => props.theme.fonts.secondary};}
 `
 const H4 = styled.h4`
   font-family:${props => props.theme.fonts.secondary};
@@ -98,7 +100,7 @@ const NavContainer = styled.div`
 const Layout = ({ children }) => {
 
   const { state, dispatch } = useContext(Context)
-  const acousticGuitar = new Pizzicato.Sound('../audio/toggle.mp3')
+  const lightToggle = new Pizzicato.Sound('../audio/toggle.mp3')
   return (
     <>
       <RetroScreen />
@@ -113,7 +115,7 @@ const Layout = ({ children }) => {
           <Col xs={4} className="text-right">
             <DarkModeToggle
               onChange={() => {
-                acousticGuitar.play()
+                lightToggle.play()
                 dispatch({ type: "TOGGLE_DARK_MODE" })
               }}
               checked={state.isDark}
@@ -127,8 +129,9 @@ const Layout = ({ children }) => {
             <div className="top_right_corner"></div>
             <div className="bottom_right_corner"></div>
             <div className="bottom_left_corner"></div>
+            <Link className="mx-2 py-3" to={"/"}>Home</Link>
             <Link className="mx-2 py-3" to={"/posts"}>Posts</Link>
-            <Link className="mx-2 py-3" to={"/connect"}>connect</Link>
+            <Link className="mx-2 py-3" to={"/connect"}>Contact</Link>
           </NavContainer>
 
         </Row>
