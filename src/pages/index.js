@@ -6,9 +6,10 @@ import SEO from "../components/seo"
 
 
 const IndexPage = () => {
-  const [play] = useSound("audio/transition.mp3", { volume: 0.5 })
+  const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   useEffect(() => {
     play()
+    return;
   }, [play]);
   return (
     <Layout>

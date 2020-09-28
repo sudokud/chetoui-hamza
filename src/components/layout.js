@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
@@ -96,12 +96,10 @@ const NavContainer = styled.div`
 `
 
 
-const Layout = ({ children }) => {
-
+const Layout = ({ children }, props) => {
+  console.clear()
+  console.log("layout props", props);
   const { state, dispatch } = useContext(Context)
-
-  const [isToggled, setisToggled] = useState(false);
-
   const [playToggle] = useSound(
     'audio/toggle.mp3', { volume: 0.25 }
   )
@@ -129,7 +127,7 @@ const Layout = ({ children }) => {
             />
           </Col>
         </Row>
-        <Row className="d-flex justify-content-center">
+        <Row className="d-flex justify-content-center mt-5 mt-md-2">
           <NavContainer>
             <div className="top_left_corner"></div>
             <div className="top_right_corner"></div>

@@ -9,20 +9,22 @@ import PixelCard from '../components/pixelCard'
 
 
 const Posts = ({ data }) => {
-  const [play] = useSound("audio/transition.mp3", { volume: 0.5 })
+  const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   useEffect(() => {
     play()
+    return;
   }, [play]);
   return (
     <Layout>
       <SEO title="Blog" />
-      <Container fluid="lg">
+      <Container fluid="lg" className="my-4 py-4" >
         <Row className="d-flex justify-content-center">
           {data.allMarkdownRemark.edges.map((edge, i) => {
+            const { thumbnail } = edge.node.frontmatter
             return (
               <Col className="d-flex justify-content-center mt-5" sm={12} md={6} lg={4} key={i}>
                 <PixelCard
-                  thumbnail={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
+                  thumbnail={thumbnail.childImageSharp.fluid}
                   title={edge.node.frontmatter.title}
                   slug={edge.node.frontmatter.slug}
                   excerpt={edge.node.frontmatter.description}
@@ -53,10 +55,7 @@ query AllBlogPosts {
           thumbnail {
             childImageSharp {
               fluid {
-                base64
-                srcSet
-                src
-                aspectRatio
+                ...GatsbyImageSharpFluid
               }
             }
           }

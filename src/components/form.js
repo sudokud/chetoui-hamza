@@ -1,12 +1,21 @@
 import React from 'react'
+import { useContext } from 'react'
 import styled from 'styled-components'
 import Btn from '../components/button'
-
+import Context from '../store/context'
 
 
 const Faurme = styled.form`
-    border: 1px solid grey;
-    box-shadow: 2px 2px 0px 0px grey, -2px -2px 0px 0px grey;
+    position:relative;
+    &:after{
+        content:" ";
+        position:absolute;
+        left:0;
+        bottom:0;
+        height:8px;
+        width:100%;
+        background:${props => (props.isDark ? "#140c19" : "#a4a0a7")};
+    }
 
 `
 const FaurmeGroup = styled.div`
@@ -45,7 +54,7 @@ const FaurmeGroup = styled.div`
     }
 `
 const Form = () => {
-
+    const { state, dispatch } = useContext(Context)
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -60,7 +69,9 @@ const Form = () => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
-            className="p-5">
+            className="p-4 pt-1"
+            isDark={state.isDark}
+        >
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
                 <label>
