@@ -7,50 +7,69 @@ import styled from 'styled-components'
 
 
 const Card = styled.div`
-    font-family:${props => props.theme.fonts.secondary};
     position:relative;
+    font-family:${props => props.theme.fonts.secondary};
     color:${props => props.theme.palette.try_this_green};
+    box-shadow:-12px 6px 6px 0 #150e11;
     width:300px;
     height:320px;
     border: 4px solid ${props => props.theme.palette.secondary};
-    background:#684656;
+    background:${props => props.theme.palette.secondary};
+    &:after{
+        content:"";
+        position:absolute;
+        bottom:-14px;
+        left:-4px;
+        width:300px;
+        height:10px;
+        // background:${props => props.theme.palette.secondary};
+        background:#2a1c22;
+
+    }
 
 `
 const CardBody = styled.div`
     position:absolute;
-    top:-8px;
-    width:100%;
-    height:calc(320px / ${props => props.theme.golden_ratio});
-    background:#222;
-    border: 4px solid ${props => props.theme.palette.secondary};
+    right:0;
+    width:90%;
+    height:100%;
+    background:inherit;
+    border: 2px solid #000000;
 `
 const Text = styled.div`
     position:absolute;
-    top:0;
+    top:90px;
+    left:-66px;
     z-index:10;
+    transform:rotateZ(90deg);
 `
 const CardFooter = styled.div`
     position:absolute;
-    top:calc(320px / ${props => props.theme.golden_ratio} - 8px);
-    width:100%;
-    height:calc(320px - 320px / ${props => props.theme.golden_ratio} + 8px);
-    background:${props => props.theme.palette.secondary};
-    border: 4px solid #684656;
+    bottom:2px;
+    right:0;
+    width:90%;
+    height:120px;
+    padding:8px;
+    overflow:hidden;
+    background:#000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+
 
 `
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     return (
         <Link to={`/${slug}`}>
             <Card>
+                <Text>
+                    {published}
+                </Text>
                 <CardBody>
-                    <Text>
-                        <h4>{title}</h4>
-                        <p>{excerpt}</p>
-                    </Text>
                     <Img fluid={thumbnail} alt="blog post picture" />
                 </CardBody>
                 <CardFooter>
-                    {published}
+                    <h4>{title}</h4>
+                    <p>{excerpt}</p>
                 </CardFooter>
             </Card>
         </Link>
