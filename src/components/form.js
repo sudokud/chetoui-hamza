@@ -54,7 +54,7 @@ const FaurmeGroup = styled.div`
     }
 `
 const Form = () => {
-    const { state, dispatch } = useContext(Context)
+    const { state } = useContext(Context)
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
