@@ -8,6 +8,9 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import RetroScreenImage from '../images/screen.png'
 import useSound from 'use-sound'
+import Footer from './footer'
+
+
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -49,10 +52,10 @@ const RetroScreen = styled.div`
   right:0;
   bottom:0;
   left:0;
-  background-image:url(${RetroScreenImage});
+  // background-image:url(${RetroScreenImage});
+  background:linear-gradient(rgba(110, 110, 110, 0.2) 1px, transparent 1px) 0% 0% / 3px 3px;
   pointer-events: none;
   z-index:200;
-  filter: opacity(10%);
 `
 const NavContainer = styled.div`
     position:relative;
@@ -106,14 +109,14 @@ const Layout = ({ children }, props) => {
 
 
   return (
-    <>
+    <React.Fragment>
       <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
         <Row className="pt-4">
           <Col xs={8}>
             <Link to={"/"}>
-              <H4 isDark={state.isDark}>Chetoui hamza</H4>
+              <img src="img/Chetoui_Hamza.svg" alt="logo" width="201px" />
             </Link>
           </Col>
           <Col xs={4} className="text-right">
@@ -127,7 +130,7 @@ const Layout = ({ children }, props) => {
             />
           </Col>
         </Row>
-        <Row className="d-flex justify-content-center mt-5 mt-md-2">
+        <Row className="d-flex justify-content-center mt-5 mt-md-3">
           <NavContainer>
             <div className="top_left_corner"></div>
             <div className="top_right_corner"></div>
@@ -137,11 +140,11 @@ const Layout = ({ children }, props) => {
             <Link className="mx-2 py-3" to={"/posts"}>Posts</Link>
             <Link className="mx-2 py-3" to={"/connect"}>Contact</Link>
           </NavContainer>
-
         </Row>
       </Container>
       {children}
-    </>
+      <Footer />
+    </React.Fragment>
   )
 }
 

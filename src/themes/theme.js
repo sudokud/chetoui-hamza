@@ -17,7 +17,7 @@ export default {
     },
     light: {
         text: "#1c1124",
-        background: "snow"
+        background: "#e8e8e8"
     },
     golden_ratio: 1.61803398875
 
