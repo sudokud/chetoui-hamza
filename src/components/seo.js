@@ -40,8 +40,8 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name="google-site-verification",
-          content="DEgkuTW_uaUGXE1plDKqLu4-4S7lKSshSSsqw_YR3qM"
+          name: `google-site-verification`,
+          content: `DEgkuTW_uaUGXE1plDKqLu4-4S7lKSshSSsqw_YR3qM`
         },
         {
           property: `og:title`,
