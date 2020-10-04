@@ -12,8 +12,7 @@ import { motion } from 'framer-motion'
 const Classes = styled.div`
   .container{
    padding:96px;
-   margin-top:96px;
-   border:1px solid deeppink;
+   margin-top:96px
   }
   img{
     margin:8px;
@@ -76,7 +75,7 @@ const IndexPage = ({ location }) => {
                 <MotionCol
                   key={i}
                   animate={{
-                    y: [-10, 10, -10]
+                    y: [-4, 4, -4]
                   }}
                   transition={{ repeat: Infinity, duration: 1.61, delay: 1 * i }}>
                   <a

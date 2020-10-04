@@ -9,7 +9,7 @@ import Layout from '../components/layout'
 
 const Classes = styled.div`
   .blog-post{
-    width:576px;
+    max-width:576px;
     margin-top:64px;
   }
   .blog-post-content{
