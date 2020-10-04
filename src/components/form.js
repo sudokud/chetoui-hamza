@@ -7,6 +7,9 @@ import Context from '../store/context'
 
 const Faurme = styled.form`
     position:relative;
+    width:100%;
+    box-shadow:-16px 8px 6px 0 ${props => (props.isDark ? "#0e0912" : "#a4a0a7")};
+    background:${props => (props.isDark ? "#160e1d" : "#8e8892")};
     &:after{
         content:" ";
         position:absolute;
@@ -14,17 +17,18 @@ const Faurme = styled.form`
         bottom:0;
         height:8px;
         width:100%;
-        background:${props => (props.isDark ? "#140c19" : "#a4a0a7")};
+        background:${props => (props.isDark ? "#000000" : "#494150")};
     }
+    @media (min-width: 768px) { width:61%; }
 
 `
 const FaurmeGroup = styled.div`
     display:flex;
     flex-direction:column;
     padding:16px 0;
-    width:256px;
+    min-width:256px;
     & > label {
-        font-size:1rem;
+        font-size:1.4rem;
     }
     & > input {
         font-size:1rem;
@@ -99,7 +103,7 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label htmlFor="email"> <span>&gt;</span> Email</label>
+                <label htmlFor="message"> <span>&gt;</span> Message</label>
                 <textarea
                     type="text"
                     name="message"

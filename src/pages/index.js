@@ -1,9 +1,9 @@
 import React from "react"
-import { useEffect } from 'react'
-import useSound from 'use-sound'
+// import { useEffect } from 'react'
+// import useSound from 'use-sound'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -27,22 +27,36 @@ const techImages = [
   { icon: "img/GitHub.svg", link: "https://github.com/" },
   { icon: "img/StrapiJS.svg", link: "https://strapi.io/" }
 ]
-// const vertical = {
 
-// }
+const MotionRow = styled(motion.custom(Row))``
+const MotionCol = styled(motion.custom(Col))``
+
+
+
+
 const IndexPage = () => {
-  const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
-  useEffect(() => {
-    play()
-    return;
-  }, [play]);
+  // const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
+  // useEffect(() => {
+  //   play()
+  //   return;
+  // }, [play]);
   return (
     <Layout>
       <SEO title="Home" />
       <Classes>
         <Container fluid="lg" className="container">
           <Row className="d-flex justify-content-center">
-            <h1>:~$ Welcome my 8bits website|</h1>
+            <h1>:~$ Welcome To My 8bits Website
+              <motion.span
+                animate={{
+                  opacity: [0, 1, 0, 1, 0]
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.61803398875
+                }}>
+                |
+              </motion.span></h1>
           </Row>
         </Container>
         <Container fluid="lg" className="mt-5 container">
@@ -52,26 +66,28 @@ const IndexPage = () => {
         <Container
           fluid="lg"
           className="mt-5 container">
-          <h4 className="d-block">Tech Stack</h4>
-          <motion.div
+          <h4 className="d-block">My Tech Stack</h4>
+          <MotionRow
             className="  
             d-flex 
             justify-content-center
             align-items-center ">
             {techImages.map((item, i) => {
               return (
-                <motion.a
-                  animate={{
-                    y: [-39, 39, -39]
-                  }}
-                  transition={{ repeat: Infinity, duration: 4, delay: 0.3 * i }}
+                <MotionCol
                   key={i}
-                  href={item.link}>
-                  <img src={item.icon} alt="alternative" width="96px" />
-                </motion.a>
+                  animate={{
+                    y: [-10, 10, -10]
+                  }}
+                  transition={{ repeat: Infinity, duration: 1.61, delay: 1 * i }}>
+                  <a
+                    href={item.link}>
+                    <img src={item.icon} alt="alternative" width="96px" />
+                  </a>
+                </MotionCol>
               )
             })}
-          </motion.div>
+          </MotionRow>
         </Container>
       </Classes>
     </Layout>

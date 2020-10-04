@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 // import { Container } from 'react-bootstrap'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion'
 
 
 const Card = styled.div`
@@ -22,7 +22,6 @@ const Card = styled.div`
         left:-4px;
         width:300px;
         height:10px;
-        // background:${props => props.theme.palette.secondary};
         background:#2a1c22;
 
     }
@@ -57,9 +56,15 @@ const CardFooter = styled.div`
 
 
 `
+const MotionLink = styled(motion.custom(Link))`
+`
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     return (
-        <Link to={`/${slug}`}>
+        <MotionLink to={`/${slug}`}
+            whileHover={{
+                y: 16,
+                transition: { duration: 0.3 },
+            }}>
             <Card>
                 <Text>
                     {published}
@@ -72,7 +77,7 @@ const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
                     <p>{excerpt}</p>
                 </CardFooter>
             </Card>
-        </Link>
+        </MotionLink>
     )
 }
 export default PixelCard

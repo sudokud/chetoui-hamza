@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
       text-decoration:none;
     }
     span { font-family:${props => props.theme.fonts.secondary};}
-    p{
+    p,input,textarea{
       font-family:${props => props.theme.fonts.read};
       font-style: normal;
     }

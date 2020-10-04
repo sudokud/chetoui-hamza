@@ -1,35 +1,45 @@
 import React from "react"
-import { useEffect } from 'react'
-import useSound from 'use-sound'
+// import { useEffect } from 'react'
+// import useSound from 'use-sound'
 import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Form from '../components/form'
-const Connect = (props) => {
-    const [play] = useSound("audio/menu-button.wav", { volume: 0.25 })
-    useEffect(() => {
-        play()
-        return;
-    }, [play]);
+
+
+
+
+
+
+const Connect = () => {
+    // const [play] = useSound("audio/menu-button.wav", { volume: 0.25 })
+    // useEffect(() => {
+    //     play()
+    //     return;
+    // }, [play]);
     return (
         <Layout>
             <SEO title="Connect" />
             <Container fluid="lg" className="mt-5">
-                <Row className="p-4 pt-2">
-                    <Col md={6} className="d-flex justify-content-center">
-                        <Form />
-                    </Col>
-                    <Col md={6} className="d-flex align-items-center flex-column p-5 mt-3">
-                        <p>
-                            <a href="https://twitter.com/okuninoshi"> <span>&gt;</span> twitter</a>
-                        </p>
-                        <p>
-                            <a href="https://instagram.com/sudokud"> <span>&gt;</span> instagram</a>
-                        </p>
-                        <p>
-                            <a href="https://github.com/okuninoshi"> <span>&gt;</span> gihub</a>
-                        </p>
-                    </Col>
+                <Row className="p-4 pt-2 justify-content-center">
+                    <Form />
+                </Row>
+                <Row className="justify-content-center p-2 mt-4">
+                    <p className="mx-2">
+                        <a href="https://twitter.com/okuninoshi">
+                            <img src="img/twitter.svg" alt="twitter" width="42px" />
+                        </a>
+                    </p>
+                    <p className="mx-2">
+                        <a href="https://instagram.com/sudokud">
+                            <img src="img/Instagram.svg" alt="Instagram" width="42px" />
+                        </a>
+                    </p>
+                    <p className="mx-2">
+                        <a href="https://www.linkedin.com/in/chetoui-hamza/">
+                            <img src="img/In.svg" alt="in" width="42px" />
+                        </a>
+                    </p>
                 </Row>
             </Container>
         </Layout>)

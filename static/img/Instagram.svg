@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="Instagram.svg">
+  <defs
+     id="defs1316" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4"
+     inkscape:cx="32"
+     inkscape:cy="32"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="776"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true" />
+  <metadata
+     id="metadata1319">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 46.66667,24.250001 H 41.333332 V 18.916667 H 46.66667 Z M 42.666666,34.916667 V 40.25 h -2.666667 v 2.666666 h -2.666666 v 2.666667 h -5 -5.666667 V 42.916666 H 24 V 40.25 H 21.333333 V 34.916666 29.583334 H 24 v -2.666667 h 2.666666 v -2.666666 h 5.666667 5 v 2.666666 h 2.666666 v 2.666667 h 2.666667 z M 53.33333,13.583334 V 10.916667 H 50.66667 V 8.250001 H 13.333334 v 2.666666 h -2.666667 v 2.666667 H 8 v 37.333332 h 2.666667 v 2.666667 h 2.666667 V 56.25 H 50.66667 v -2.666667 h 2.66666 V 50.916666 H 56 V 13.583334 h -2.66667"
+       style="fill:#007bff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.13333333"
+       id="path484"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
