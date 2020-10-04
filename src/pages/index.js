@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion'
 
 
 
@@ -27,6 +27,9 @@ const techImages = [
   { icon: "img/GitHub.svg", link: "https://github.com/" },
   { icon: "img/StrapiJS.svg", link: "https://strapi.io/" }
 ]
+// const vertical = {
+
+// }
 const IndexPage = () => {
   const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   useEffect(() => {
@@ -50,18 +53,25 @@ const IndexPage = () => {
           fluid="lg"
           className="mt-5 container">
           <h4 className="d-block">Tech Stack</h4>
-          <div className="  
+          <motion.div
+            className="  
             d-flex 
             justify-content-center
             align-items-center ">
             {techImages.map((item, i) => {
               return (
-                <a key={i} href={item.link}>
+                <motion.a
+                  animate={{
+                    y: [-39, 39, -39]
+                  }}
+                  transition={{ repeat: Infinity, duration: 4, delay: 0.3 * i }}
+                  key={i}
+                  href={item.link}>
                   <img src={item.icon} alt="alternative" width="96px" />
-                </a>
+                </motion.a>
               )
             })}
-          </div>
+          </motion.div>
         </Container>
       </Classes>
     </Layout>
