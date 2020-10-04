@@ -32,16 +32,15 @@ const MotionRow = styled(motion.custom(Row))``
 const MotionCol = styled(motion.custom(Col))``
 
 
-
-
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   // const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   // useEffect(() => {
   //   play()
   //   return;
   // }, [play]);
   return (
-    <Layout>
+    <Layout animateKey={location.key}>
+
       <SEO title="Home" />
       <Classes>
         <Container fluid="lg" className="container">

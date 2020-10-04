@@ -54,30 +54,29 @@ const CardFooter = styled.div`
     border-left: 2px solid #000000;
     border-right: 2px solid #000000;
 
-
-`
-const MotionLink = styled(motion.custom(Link))`
 `
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     return (
-        <MotionLink to={`/${slug}`}
-            whileHover={{
+        <motion.div
+            whilehover={{
                 y: 16,
                 transition: { duration: 0.3 },
             }}>
-            <Card>
-                <Text>
-                    {published}
-                </Text>
-                <CardBody>
-                    <Img fluid={thumbnail} alt="blog post picture" />
-                </CardBody>
-                <CardFooter>
-                    <h4>{title}</h4>
-                    <p>{excerpt}</p>
-                </CardFooter>
-            </Card>
-        </MotionLink>
+            <Link to={`/${slug}`}>
+                <Card>
+                    <Text>
+                        {published}
+                    </Text>
+                    <CardBody>
+                        <Img fluid={thumbnail} alt="blog post picture" />
+                    </CardBody>
+                    <CardFooter>
+                        <h4>{title}</h4>
+                        <p>{excerpt}</p>
+                    </CardFooter>
+                </Card>
+            </Link>
+        </motion.div>
     )
 }
 export default PixelCard

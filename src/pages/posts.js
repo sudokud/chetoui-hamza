@@ -6,16 +6,19 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PixelCard from '../components/pixelCard'
+// import { motion } from 'framer-motion'
 
 
-const Posts = ({ data }) => {
+
+const Posts = ({ data, location }) => {
   // const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   // useEffect(() => {
   //   play()
   //   return;
   // }, [play]);
   return (
-    <Layout>
+    <Layout animateKey={location.key}>
+
       <SEO title="Blog" />
       <Container fluid="lg" className="my-4 py-4" >
         <Row className="d-flex justify-content-center">

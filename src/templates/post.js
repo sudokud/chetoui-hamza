@@ -21,14 +21,12 @@ const Classes = styled.div`
   }
 `
 
-export default function Post({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  console.log(data);
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+export default function Post({ data, location }) {
+
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
+    <Layout animateKey={location.key}>
       <Container fluid="lg" className="d-flex justify-content-center">
         <Classes>
           <div className="blog-post">

@@ -9,6 +9,7 @@ import { Link } from "gatsby"
 import RetroScreenImage from '../images/screen.png'
 import useSound from 'use-sound'
 import Footer from './footer'
+import { motion, AnimatePresence } from "framer-motion";
 
 
 
@@ -28,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
         background:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
         transition:all 0.4s ease;
         box-sizing: border-box;
+        overflow-x: hidden;
 
     }
     a{
@@ -43,11 +45,11 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
     }
 `
-const H4 = styled.h4`
-  font-family:${props => props.theme.fonts.secondary};
-  font-size:calc(${props => props.theme.golden_ratio}px * 21);
-  color:${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)}
-`
+// const H4 = styled.h4`
+//   font-family:${props => props.theme.fonts.secondary};
+//   font-size:calc(${props => props.theme.golden_ratio}px * 21);
+//   color:${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)}
+// `
 
 const RetroScreen = styled.div`
   position:fixed;
@@ -103,15 +105,12 @@ const NavContainer = styled.div`
 `
 
 
-const Layout = ({ children }, props) => {
-  console.clear()
-  console.log("layout props", props);
+
+const Layout = ({ children, animateKey }) => {
   const { state, dispatch } = useContext(Context)
   const [playToggle] = useSound(
     'audio/toggle.mp3', { volume: 0.25 }
   )
-
-
   return (
     <React.Fragment>
       <RetroScreen />
@@ -141,12 +140,20 @@ const Layout = ({ children }, props) => {
             <div className="bottom_right_corner"></div>
             <div className="bottom_left_corner"></div>
             <Link className="mx-2 py-3" to={"/"}>Home</Link>
+            <Link className="mx-2 py-3" to={"/contact"}>Contact</Link>
             <Link className="mx-2 py-3" to={"/posts"}>Posts</Link>
-            <Link className="mx-2 py-3" to={"/connect"}>Contact</Link>
           </NavContainer>
         </Row>
       </Container>
-      {children}
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          key={animateKey}
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -100, opacity: 0 }}>
+          {children}
+        </motion.div>
+      </AnimatePresence>
       <Footer />
     </React.Fragment>
   )
