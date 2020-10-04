@@ -13,12 +13,20 @@ const Classes = styled.div`
   .container{
    padding:96px;
    margin-top:96px;
+   border:1px solid deeppink;
   }
   img{
     margin:8px;
   }
 `
-
+const techImages = [
+  { icon: "img/Bootstrap.svg", link: "https://getbootstrap.com/" },
+  { icon: "img/GatsbyJS.svg", link: "https://www.gatsbyjs.com/" },
+  { icon: "img/ReactJS.svg", link: "https://reactjs.org/" },
+  { icon: "img/Netlify.svg", link: "https://www.netlify.com/" },
+  { icon: "img/GitHub.svg", link: "https://github.com/" },
+  { icon: "img/StrapiJS.svg", link: "https://strapi.io/" }
+]
 const IndexPage = () => {
   const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
   useEffect(() => {
@@ -38,15 +46,22 @@ const IndexPage = () => {
           <h4>About me</h4>
           <p>a self taugth web developer ... </p>
         </Container>
-        <Container fluid="lg" className="mt-5 container">
-          <h4>Tech Stack</h4>
-          <img src="img/Bootstrap.svg" alt="alternative" width="128px" />
-          <img src="img/ReactJS.svg" alt="alternative" width="128px" />
-          <img src="img/GitHub.svg" alt="alternative" width="128px" />
-          <img src="img/Netlify.svg" alt="alternative" width="128px" />
-          <img src="img/NodeJS.svg" alt="alternative" width="128px" />
-          <img src="img/StrapiJS.svg" alt="alternative" width="128px" />
-          <img src="img/GatsbyJS.svg" alt="alternative" width="128px" />
+        <Container
+          fluid="lg"
+          className="mt-5 container">
+          <h4 className="d-block">Tech Stack</h4>
+          <div className="  
+            d-flex 
+            justify-content-center
+            align-items-center ">
+            {techImages.map((item, i) => {
+              return (
+                <a key={i} href={item.link}>
+                  <img src={item.icon} alt="alternative" width="96px" />
+                </a>
+              )
+            })}
+          </div>
         </Container>
       </Classes>
     </Layout>

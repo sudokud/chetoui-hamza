@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyle`
       text-decoration:none;
     }
     span { font-family:${props => props.theme.fonts.secondary};}
+    p{
+      font-family:${props => props.theme.fonts.read};
+      font-style: normal;
+    }
 `
 const H4 = styled.h4`
   font-family:${props => props.theme.fonts.secondary};

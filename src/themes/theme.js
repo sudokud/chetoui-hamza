@@ -1,7 +1,8 @@
 export default {
     fonts: {
         main: "Major Mono Display",
-        secondary: "VT323"
+        secondary: "VT323",
+        read: "Space Mono"
     },
     palette: {
         main: "#1c1124",
