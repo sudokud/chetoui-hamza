@@ -3,13 +3,14 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
 import { createGlobalStyle } from 'styled-components'
-import DarkModeToggle from "react-dark-mode-toggle";
+// import DarkModeToggle from "react-dark-mode-toggle";
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
 import RetroScreenImage from '../images/screen.png'
-import useSound from 'use-sound'
+// import useSound from 'use-sound'
 import Footer from './footer'
 import { motion, AnimatePresence } from "framer-motion";
+import ToggleDarkMode from "./toggleDarkMode"
 
 
 
@@ -45,11 +46,6 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
     }
 `
-// const H4 = styled.h4`
-//   font-family:${props => props.theme.fonts.secondary};
-//   font-size:calc(${props => props.theme.golden_ratio}px * 21);
-//   color:${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)}
-// `
 
 const RetroScreen = styled.div`
   position:fixed;
@@ -108,29 +104,30 @@ const NavContainer = styled.div`
 
 const Layout = ({ children, animateKey }) => {
   const { state, dispatch } = useContext(Context)
-  const [playToggle] = useSound(
-    'audio/toggle.mp3', { volume: 0.25 }
-  )
+  // const [playToggle] = useSound(
+  //   'audio/toggle.mp3', { volume: 0.25 }
+  // )
   return (
     <React.Fragment>
       <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
         <Row className="pt-4">
-          <Col xs={8}>
+          <Col xs={9}>
             <Link to={"/"}>
               <img src="img/Chetoui_Hamza.svg" alt="logo" width="201px" />
             </Link>
           </Col>
-          <Col xs={4} className="text-right">
-            <DarkModeToggle
+          <Col xs={3} className="d-flex justify-content-end">
+            {/* <DarkModeToggle
               onChange={() => {
                 playToggle()
                 dispatch({ type: "TOGGLE_DARK_MODE" })
               }}
               checked={state.isDark}
               size={62}
-            />
+            /> */}
+            <ToggleDarkMode />
           </Col>
         </Row>
         <Row className="d-flex justify-content-center mt-5 mt-md-3">
