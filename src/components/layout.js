@@ -49,13 +49,11 @@ const GlobalStyle = createGlobalStyle`
 
 const RetroScreen = styled.div`
   position:fixed;
-  
   top:0;
   right:0;
   bottom:0;
   left:0;
-  // background-image:url(${RetroScreenImage});
-  background:linear-gradient(rgba(110, 110, 110, 0.2) 1px, transparent 1px) 0% 0% / 3px 3px;
+  background:linear-gradient(rgba(127, 127, 127, 0.1) 1px, transparent 1px) 0% 0% / 3px 3px;
   pointer-events: none;
   z-index:200;
 `

@@ -1,6 +1,4 @@
 import React from "react"
-// import { useEffect } from 'react'
-// import useSound from 'use-sound'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Container, Row, Col } from 'react-bootstrap'
@@ -12,31 +10,18 @@ import { motion } from 'framer-motion'
 const Classes = styled.div`
   .container{
    padding:96px;
-   margin-top:96px
   }
-  img{
-    margin:8px;
+  a{
+    margin:32px;
+    padding:32px;
+  }
+  h2{
+    margin-bottom:32px;
   }
 `
-const techImages = [
-  { icon: "img/Bootstrap.svg", link: "https://getbootstrap.com/" },
-  { icon: "img/GatsbyJS.svg", link: "https://www.gatsbyjs.com/" },
-  { icon: "img/ReactJS.svg", link: "https://reactjs.org/" },
-  { icon: "img/Netlify.svg", link: "https://www.netlify.com/" },
-  { icon: "img/GitHub.svg", link: "https://github.com/" },
-  { icon: "img/StrapiJS.svg", link: "https://strapi.io/" }
-]
-
-const MotionRow = styled(motion.custom(Row))``
-const MotionCol = styled(motion.custom(Col))``
 
 
 const IndexPage = ({ location }) => {
-  // const [play] = useSound("audio/menu-button.wav", { volume: 0.5 })
-  // useEffect(() => {
-  //   play()
-  //   return;
-  // }, [play]);
   return (
     <Layout animateKey={location.key}>
 
@@ -44,17 +29,15 @@ const IndexPage = ({ location }) => {
       <Classes>
         <Container fluid="lg" className="container">
           <Row className="d-flex justify-content-center">
-            <h1>:~$ Welcome To My 8bits Website
-              <motion.span
-                animate={{
-                  opacity: [0, 1, 0, 1, 0]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 1.61803398875
-                }}>
-                |
-              </motion.span></h1>
+            <Col className="d-flex align-items-center justify-content-center">
+              <div>
+                <h1>Hey, I'm Hamza !!</h1>
+                <p>I’m a JAMSTACK developer, and designer.</p>
+              </div>
+            </Col>
+            <Col className="d-flex align-items-center justify-content-center">
+              <img src="img/jamstack.png" alt="jamstack" width="256px" />
+            </Col>
           </Row>
         </Container>
         <Container fluid="lg" className="mt-5 container">
@@ -64,28 +47,49 @@ const IndexPage = ({ location }) => {
         <Container
           fluid="lg"
           className="mt-5 container">
-          <h4 className="d-block">My Tech Stack</h4>
-          <MotionRow
-            className="  
-            d-flex 
-            justify-content-center
-            align-items-center ">
-            {techImages.map((item, i) => {
-              return (
-                <MotionCol
-                  key={i}
-                  animate={{
-                    y: [-4, 4, -4]
-                  }}
-                  transition={{ repeat: Infinity, duration: 1.61, delay: 1 * i }}>
-                  <a
-                    href={item.link}>
-                    <img src={item.icon} alt="alternative" width="96px" />
-                  </a>
-                </MotionCol>
-              )
-            })}
-          </MotionRow>
+          <h3 className="d-block">Technologies i use</h3>
+
+          <Row className="p-5 d-flex flex-column align-items-center">
+            <h2>DATA SOURCES</h2>
+            <div>
+              <a
+                href="https://strapi.io/">
+                <img src="img/StrapiJS.svg" alt="Strapi" width="128px" />
+              </a>
+              <a
+                href="https://www.netlifycms.org/">
+                <img src="img/NetlifyCMS.svg" alt="Netlify CMS" width="128px" />
+              </a>
+            </div>
+          </Row>
+
+          <Row className="p-5 d-flex flex-column align-items-center">
+            <h2>BUILD</h2>
+            <div>
+              <a
+                href="https://getbootstrap.com/">
+                <img src="img/Bootstrap.svg" alt="Bootstrap" width="128px" />
+              </a>
+              <a
+                href="https://reactjs.org/">
+                <img src="img/ReactJS.svg" alt="React" width="128px" />
+              </a>
+              <a
+                href="https://www.gatsbyjs.com/">
+                <img src="img/GatsbyJS.svg" alt="Gatsby" width="128px" />
+              </a>
+            </div>
+          </Row>
+
+          <Row className="p-5 d-flex flex-column align-items-center">
+            <h2>DEPLOY 	&amp; CDN</h2>
+            <div>
+              <a
+                href="https://www.netlify.com/" >
+                <img src="img/Netlify.svg" alt="Netlify" width="128px" />
+              </a>
+            </div>
+          </Row>
         </Container>
       </Classes>
     </Layout>
