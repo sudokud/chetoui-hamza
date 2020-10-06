@@ -1,8 +1,8 @@
 import React from 'react'
 import { useContext } from 'react'
+import Context from '../store/context'
 import styled from 'styled-components'
 import Btn from '../components/button'
-import Context from '../store/context'
 
 
 const Faurme = styled.form`

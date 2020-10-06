@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from 'react'
+import Context from '../store/context'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 // import { Container } from 'react-bootstrap'
@@ -10,7 +12,7 @@ const Card = styled.div`
     position:relative;
     font-family:${props => props.theme.fonts.secondary};
     color:${props => props.theme.palette.try_this_green};
-    box-shadow:-12px 6px 6px 0 #150e11;
+    box-shadow:-16px 8px 6px 0 ${props => (props.isDark ? "#0e0912" : "#a4a0a7")};
     width:300px;
     height:320px;
     border: 4px solid ${props => props.theme.palette.secondary};
@@ -56,14 +58,16 @@ const CardFooter = styled.div`
 
 `
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
+    const { state } = useContext(Context)
     return (
         <motion.div
+
             whilehover={{
                 y: 16,
                 transition: { duration: 0.3 },
             }}>
             <Link to={`/${slug}`}>
-                <Card>
+                <Card isDark={state.isDark}>
                     <Text>
                         {published}
                     </Text>

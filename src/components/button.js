@@ -58,12 +58,12 @@ const Button = styled.div`
 
 
 
-const Btn = ({ text, type }) => {
+const Btn = ({ text, type, callBack }) => {
 
     return (
         <>
             <Button>
-                <button type={type} className="btn">
+                <button type={type} className="btn" onClick={callBack}>
                     {text}
                 </button>
             </Button>

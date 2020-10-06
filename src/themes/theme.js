@@ -14,11 +14,11 @@ export default {
     },
     dark: {
         text: "#d6f756",
-        background: "#1c1124"
+        background: "#100818"
     },
     light: {
         text: "#1c1124",
-        background: "#e8e8e8"
+        background: "#cfced1"
     },
     golden_ratio: 1.61803398875
 

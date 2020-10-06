@@ -71,7 +71,7 @@ const ToggleDarkMode = () => {
 
   return (
     <Classes isDark={state.isDark}>
-      <div className="switch" data-isOn={isOn} onClick={toggleSwitch} role="button" tabIndex="0">
+      <div className="switch" data-ison={isOn} onClick={toggleSwitch} role="button" tabIndex="0">
         <img className="moon" src="img/moonIcon.svg" alt="dark theme" width="14px" />
         <motion.div className="handle" layout transition={spring} />
         <img className="sun" src="img/sunIcon.svg" alt="dark theme" width="21px" />
