@@ -12,6 +12,7 @@ const Connect = ({ location }) => {
         <Layout animateKey={location.key}>
             <SEO title="Connect" />
             <Container
+
                 fluid="lg"
                 className="mt-5">
                 <Row className="p-4">
@@ -20,7 +21,7 @@ const Connect = ({ location }) => {
                 <Row className="p-4">
                     <p >Tell me about your project, and get a free consultation</p>
                 </Row>
-                <Row className="p-4 pt-2 justify-content-center">
+                <Row className="p-4 pt-2 justify-content-center" id="c0ntact">
                     <Form />
                 </Row>
             </Container>

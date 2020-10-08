@@ -3,10 +3,9 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
 import { createGlobalStyle } from 'styled-components'
-// import DarkModeToggle from "react-dark-mode-toggle";
 import { Container, Row, Col } from "react-bootstrap"
 import { Link } from "gatsby"
-import RetroScreenImage from '../images/screen.png'
+// import RetroScreenImage from '../images/screen.png'
 // import useSound from 'use-sound'
 import Footer from './footer'
 import { motion, AnimatePresence } from "framer-motion";
@@ -44,6 +43,16 @@ const GlobalStyle = createGlobalStyle`
     p,input,textarea{
       font-family:${props => props.theme.fonts.read};
       font-style: normal;
+    }
+    p{
+      display:flex;
+      align-items:center;
+    }
+    h2,h3{
+      margin-bottom:32px;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family:${props => props.theme.fonts.secondary};
     }
 `
 
@@ -101,7 +110,7 @@ const NavContainer = styled.div`
 
 
 const Layout = ({ children, animateKey }) => {
-  const { state, dispatch } = useContext(Context)
+  const { state } = useContext(Context)
   // const [playToggle] = useSound(
   //   'audio/toggle.mp3', { volume: 0.25 }
   // )
@@ -113,18 +122,11 @@ const Layout = ({ children, animateKey }) => {
         <Row className="pt-4">
           <Col xs={9}>
             <Link to={"/"}>
-              <img src="img/Chetoui_Hamza.svg" alt="logo" width="201px" />
+              {/* <img src="img/Chetoui_Hamza.svg" alt="logo" width="32px" /> */}
+              CHETOUI HAMZA
             </Link>
           </Col>
           <Col xs={3} className="d-flex justify-content-end">
-            {/* <DarkModeToggle
-              onChange={() => {
-                playToggle()
-                dispatch({ type: "TOGGLE_DARK_MODE" })
-              }}
-              checked={state.isDark}
-              size={62}
-            /> */}
             <ToggleDarkMode />
           </Col>
         </Row>

@@ -103,6 +103,16 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
+                <label htmlFor="object"> <span>&gt;</span> object</label>
+                <textarea
+                    rows="1"
+                    type="text"
+                    name="object"
+                    id="object"
+                    placeholder="my object"
+                />
+            </FaurmeGroup>
+            <FaurmeGroup>
                 <label htmlFor="message"> <span>&gt;</span> Message</label>
                 <textarea
                     type="text"
