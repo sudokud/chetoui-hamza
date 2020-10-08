@@ -2,9 +2,9 @@ import React from "react"
 import SEO from "../components/seo"
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
-import { Link } from "gatsby"
 import Layout from "../components/layout"
-import RetroButton from "../components/retroButton"
+// import { Link } from "gatsby"
+// import RetroButton from "../components/retroButton"
 
 
 
@@ -94,20 +94,6 @@ const IndexPage = ({ location }) => {
                 href="https://github.com/" >
                 <img src="img/GitHub.svg" alt="Netlify" width="128px" />
               </a>
-            </Col>
-          </Row>
-        </Container>
-        <Container fluid="lg" className="container">
-          <Row >
-            <Col className="px-2">
-              <p className="w-75">i like to work as a freelancer
-              but if you want an extra man on your team for a specific project
-              </p>
-              <Link to="/contact#c0ntact">
-                <RetroButton text="send me a message" />
-              </Link>
-            </Col>
-            <Col>
             </Col>
           </Row>
         </Container>

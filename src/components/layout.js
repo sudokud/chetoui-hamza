@@ -122,7 +122,6 @@ const Layout = ({ children, animateKey }) => {
         <Row className="pt-4">
           <Col xs={9}>
             <Link to={"/"}>
-              {/* <img src="img/Chetoui_Hamza.svg" alt="logo" width="32px" /> */}
               CHETOUI HAMZA
             </Link>
           </Col>

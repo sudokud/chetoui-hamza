@@ -2,7 +2,8 @@ import React from 'react'
 import { useContext } from 'react'
 import Context from '../store/context'
 import styled from 'styled-components'
-import Btn from '../components/button'
+import RetroButton from './retroButton'
+import useSound from 'use-sound'
 
 
 const Faurme = styled.form`
@@ -66,6 +67,9 @@ const Form = () => {
             event.stopPropagation();
         }
     };
+    const [playkeySound] = useSound(
+        'audio/key_tap.wav', { volume: 0.25 }
+    )
     return (
         <Faurme
             name="contact"
@@ -90,6 +94,7 @@ const Form = () => {
                     id="name"
                     placeholder="full name"
                     required
+                    onChange={() => (playkeySound())}
                 />
             </FaurmeGroup>
             <FaurmeGroup>
@@ -100,6 +105,8 @@ const Form = () => {
                     id="email"
                     placeholder="Email@sample.xyz"
                     required
+                    onChange={() => (playkeySound())}
+
                 />
             </FaurmeGroup>
             <FaurmeGroup>
@@ -110,6 +117,8 @@ const Form = () => {
                     name="object"
                     id="object"
                     placeholder="my object"
+                    onChange={() => (playkeySound())}
+
                 />
             </FaurmeGroup>
             <FaurmeGroup>
@@ -120,10 +129,11 @@ const Form = () => {
                     id="message"
                     placeholder="Hello world"
                     required
+                    onChange={() => (playkeySound())}
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <Btn text="submit" type="submit" />
+                <RetroButton type="submit" text="SUBMIT" />
             </FaurmeGroup>
         </Faurme>
     )
