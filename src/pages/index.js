@@ -3,6 +3,7 @@ import SEO from "../components/seo"
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import Layout from "../components/layout"
+import Island from "../components/island"
 // import { Link } from "gatsby"
 // import RetroButton from "../components/retroButton"
 
@@ -41,7 +42,8 @@ const IndexPage = ({ location }) => {
               </div>
             </Col>
             <Col className="d-flex align-items-center justify-content-center">
-              <img src="img/jamstack.png" alt="jamstack" />
+              {/* <img src="img/jamstack.svg" alt="jamstack" /> */}
+              <Island />
             </Col>
           </Row>
         </Container>

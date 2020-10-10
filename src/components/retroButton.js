@@ -156,7 +156,7 @@ const Shadow = styled.div`
 const RetroButton = ({ text, type, width }) => {
     const { state } = useContext(Context)
     const [playSound] = useSound(
-        'audio/menu-button.wav', { volume: 0.25 }
+        'audio/key_tap.wav', { volume: 0.25 }
     )
 
 
