@@ -10,7 +10,7 @@ const Faurme = styled.form`
     position:relative;
     width:100%;
     box-shadow:-16px 8px 6px 0 ${props => (props.isDark ? "#0e0912" : "#a4a0a7")};
-    background:${props => (props.isDark ? "#160e1d" : "#8e8892")};
+    background:${props => (props.isDark ? "#1c1124ff" : "#f2f2f3fe")};
     &:after{
         content:" ";
         position:absolute;
@@ -18,7 +18,7 @@ const Faurme = styled.form`
         bottom:0;
         height:8px;
         width:100%;
-        background:${props => (props.isDark ? "#000000" : "#494150")};
+        background:${props => (props.isDark ? "#020102" : "#87818b")};
     }
     @media (min-width: 768px) { width:61%; }
 
@@ -39,7 +39,7 @@ const FaurmeGroup = styled.div`
         &: focus{
             border-radius: 0px;
             outline-style: solid;
-            outline-color: ${props => props.theme.palette.try_this_green};
+            outline-color: ${props => props.theme.palette.arctic_lime};
             outline-width: 1px;
             outline-offset: 1px;
         }
@@ -52,7 +52,7 @@ const FaurmeGroup = styled.div`
         &: focus{
             border-radius: 0px;
             outline-style: solid;
-            outline-color: ${props => props.theme.palette.try_this_green};
+            outline-color: ${props => props.theme.palette.arctic_lime};
             outline-width: 1px;
             outline-offset: 1px;
         }

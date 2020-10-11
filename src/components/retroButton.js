@@ -17,7 +17,7 @@ const Classes = styled.div`
         left:0;
         width:calc(100% - 8px);
         height:2px;
-        background:#222;
+        background:${props => (props.isDark ? "#0c0e05ff" : "#060405ff")};
         transform:translateX(4px);
         z-index:10;
         &:before{
@@ -25,7 +25,7 @@ const Classes = styled.div`
             position:absolute;
             width:2px;
             height:2px;
-            background:#000000;
+            background:inherit;
             left:-2px;
             top:-2px;
         }
@@ -34,68 +34,56 @@ const Classes = styled.div`
             position:absolute;
             width:2px;
             height:2px;
-            background:#000000;
+            background:inherit;
             right:-2px;
             top:-2px;
         }
     }
-    .top_left_pixel{
-        position:absolute;
-        width:2px;
-        height:2px;
-        background:#000000;
-        left:2px;
-        top:2px;
+    .points{
+        background:${props => (props.isDark ? "#0c0e05ff" : "#060405ff")};
+        .top_left_pixel{
+            position:absolute;
+            width:2px;
+            height:2px;
+            background:inherit;
+            left:2px;
+            top:2px;
+        }
+        .top_right_pixel{
+            position:absolute;
+            width:2px;
+            height:2px;
+            background:inherit;
+            right:2px;
+            top:2px;
+        }
     }
-    .top_right_pixel{
-        position:absolute;
-        width:2px;
-        height:2px;
-        background:#000000;
-        right:2px;
-        top:2px;
-    }
-    .bottom_right_pixel{
-        position:absolute;
-        width:2px;
-        height:2px;
-        background:#000000;
-        right:2px;
-        top:35px;
-        z-index:10;
-    }
-    .bottom_left_pixel{
-        position:absolute;
-        width:2px;
-        height:2px;
-        background:#000000;
-        left:2px;
-        top:35px;
-        
-    }
-    .bottom_shadow{
-        position:absolute;
-        height:5px;
-        width:calc(100% - 4px);
-        background:#444;
-        top:30px;
-        transform:translateX(2px);
-    }
-    .bottom_right_shadow{
-        position:absolute;
-        height:5px;
-        width:2px;
-        background:#444;
-        top:28px;
-        right:0;
-    }
-    .bottom_left_shadow{
-        position:absolute;
-        height:5px;
-        width:2px;
-        background:#444;
-        top:28px;
-        left:0;
+    .shadow_group{
+        background:${props => (props.isDark ? "#71822dff" : "#4f3542ff")};
+        .bottom_shadow{
+            position:absolute;
+            height:5px;
+            width:calc(100% - 4px);
+            background:inherit;
+            top:30px;
+            transform:translateX(2px);
+        }
+        .bottom_right_shadow{
+            position:absolute;
+            height:5px;
+            width:2px;
+            background:inherit;
+            top:28px;
+            right:0;
+        }
+        .bottom_left_shadow{
+            position:absolute;
+            height:5px;
+            width:2px;
+            background:inherit;
+            top:28px;
+            left:0;
+        }
     }
     &:active .points{
         transform:translateY(3px);
@@ -109,12 +97,12 @@ const StyledButton = styled.button`
     height:100%;
     padding:0;
     margin:0;
-    border:2px solid #000000;
+    border:2px solid ${props => (props.isDark ? "#0c0e05ff" : "#060405ff")};
     border-bottom:0;
     clip-path: polygon(0 10%, 5% 10%, 5% 0,
          95% 0, 95% 10%, 100% 10%,
-        100% 90%, 95% 90%, 95% 100%,
-        5% 100%, 5% 90%, 0 90%);
+        100% 90%, 94.5% 90%, 94.5% 100%,
+        5.5% 100%, 5.5% 90%, 0 90%);
     
     &:focus{
         outline: 1px solid #8e8892;
@@ -137,22 +125,23 @@ const Text = styled.p`
     width:100%;
     height:100%;
     padding:8px;
-    background:#666;
+    padding-top:3px;
+    background:${props => (props.isDark ? "#d6f756ff" : "#8c727eff")};
     font-size:1.4rem;
     font-family:${props => props.theme.fonts.secondary};
-    color: ${props => props.theme.palette.try_this_green};
+    color: ${props => (props.isDark ? "#1c1124ff" : props.theme.palette.cultured)};
     pointer-events:none;
 
 `
-const Shadow = styled.div`
-    width:100%;
-    height:100%;  
-    background:${props => (props.isDark ? "#0e0912" : "#635f66")};
-    position:absolute;
-    left:-6px;
-    bottom:-6px;
-    filter:blur(2px);
-`
+// const Shadow = styled.div`
+//     width:100%;
+//     height:100%;  
+//     background:${props => (props.isDark ? "#0e0912" : "#635f66")};
+//     position:absolute;
+//     left:-6px;
+//     bottom:-6px;
+//     filter:blur(2px);
+// `
 const RetroButton = ({ text, type, width }) => {
     const { state } = useContext(Context)
     const [playSound] = useSound(
@@ -163,18 +152,16 @@ const RetroButton = ({ text, type, width }) => {
 
     return (
         <React.Fragment>
-            {/* <Shadow /> */}
             <Classes isDark={state.isDark}>
                 <div className="points">
                     <div className="top_left_pixel"></div>
                     <div className="top_right_pixel"></div>
-                    {/* <div className="bottom_right_pixel"></div>
-                    <div className="bottom_left_pixel"></div> */}
                 </div>
                 <div className="bottom_border"></div>
                 <StyledButton
                     type={type}
                     width={width}
+
                     onClick={() => (playSound())}
                 >
                     <div className="shadow_group">
@@ -182,7 +169,7 @@ const RetroButton = ({ text, type, width }) => {
                         <div className="bottom_right_shadow"></div>
                         <div className="bottom_left_shadow"></div>
                     </div>
-                    <Text>{text}</Text>
+                    <Text isDark={state.isDark}>{text}</Text>
                 </StyledButton>
             </Classes>
         </React.Fragment>

@@ -42,7 +42,6 @@ const IndexPage = ({ location }) => {
               </div>
             </Col>
             <Col className="d-flex align-items-center justify-content-center">
-              {/* <img src="img/jamstack.svg" alt="jamstack" /> */}
               <Island />
             </Col>
           </Row>

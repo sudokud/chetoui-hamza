@@ -19,9 +19,9 @@ const Classes = styled.div`
       display: flex;
       justify-content: flex-start;
       cursor: pointer;
-      padding-top:3px;
-      padding-bottom:2px;
       margin: 0 8px;
+      border:1px solid #000;
+      border-radius:2px;
   }
   
   .switch[data-isOn="true"] {
@@ -29,10 +29,13 @@ const Classes = styled.div`
   }
   
   .handle {
-    width: 25px;
-    height: 25px;
-    background: #fff;
+    width: 29px;
+    height: 29px;
+    background:url('img/handle.png'), #000;
+    background-size:contain;
+    background-repeat:no-repeat;
     z-index:10;
+    
   }
   .moon{
     position:absolute;
@@ -72,9 +75,9 @@ const ToggleDarkMode = () => {
   return (
     <Classes isDark={state.isDark}>
       <div className="switch" data-ison={isOn} onClick={toggleSwitch} role="button" tabIndex="0">
-        <img className="moon" src="img/moonIcon.svg" alt="dark theme" width="14px" />
+        <img className="moon" src="img/moonIcon.svg" alt="dark" width="14px" />
         <motion.div className="handle" layout transition={spring} />
-        <img className="sun" src="img/sunIcon.svg" alt="dark theme" width="21px" />
+        <img className="sun" src="img/sunIcon.svg" alt="light" width="21px" />
       </div>
     </Classes>
   )

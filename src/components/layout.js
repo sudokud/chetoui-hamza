@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
         width:100%;
         margin:0;
         padding:0;
-        background:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
+        background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
         transition:all 0.4s ease;
         box-sizing: border-box;
         overflow-x: hidden;
@@ -65,6 +65,7 @@ const RetroScreen = styled.div`
   background:linear-gradient(rgba(127, 127, 127, 0.1) 1px, transparent 1px) 0% 0% / 3px 3px;
   pointer-events: none;
   z-index:200;
+  filter:opacity(0.8);
 `
 const NavContainer = styled.div`
     position:relative;
@@ -75,8 +76,8 @@ const NavContainer = styled.div`
       left:-10px;
       width:10px;
       height:10px;
-      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
-      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
+      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
+      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
     }
     .top_right_corner {
       position:absolute;
@@ -84,8 +85,8 @@ const NavContainer = styled.div`
       right:-10px;
       width:10px;
       height:10px;
-      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
-      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
+      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
+      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
     }
     .bottom_right_corner {
       position:absolute;
@@ -93,8 +94,8 @@ const NavContainer = styled.div`
       right:-10px;
       width:10px;
       height:10px;
-      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
-      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
+      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
+      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
     }
     .bottom_left_corner {
       position:absolute;
@@ -102,8 +103,8 @@ const NavContainer = styled.div`
       left:-10px;
       width:10px;
       height:10px;
-      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
-      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.secondary)};
+      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
+      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
     }
 `
 

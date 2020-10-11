@@ -11,12 +11,12 @@ import { motion } from 'framer-motion'
 const Card = styled.div`
     position:relative;
     font-family:${props => props.theme.fonts.secondary};
-    color:${props => props.theme.palette.try_this_green};
-    box-shadow:-16px 8px 6px 0 ${props => (props.isDark ? "#0e0912" : "#a4a0a7")};
+    color:${props => props.theme.palette.arctic_lime};
     width:300px;
     height:320px;
-    border: 4px solid ${props => props.theme.palette.secondary};
-    background:${props => props.theme.palette.secondary};
+    background:#004187;
+    border:4px solid #004187;
+    box-shadow:-16px 14px 6px 0 ${props => (props.isDark ? "#0e0e0e" : "#808080")};
     &:after{
         content:"";
         position:absolute;
@@ -24,8 +24,7 @@ const Card = styled.div`
         left:-4px;
         width:300px;
         height:10px;
-        background:#2a1c22;
-
+        background:${props => (props.isDark ? "#00070e" : "#00244a")};
     }
 
 `
@@ -52,7 +51,7 @@ const CardFooter = styled.div`
     height:120px;
     padding:8px;
     overflow:hidden;
-    background:#000000;
+    background:#0e0e0e;
     border-left: 2px solid #000000;
     border-right: 2px solid #000000;
 
