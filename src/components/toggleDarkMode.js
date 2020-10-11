@@ -45,13 +45,13 @@ const Classes = styled.div`
   .sun{
     position:absolute;
     right:10px;
-    top:4px;
+    top:5px;
   }
 `
 const spring = {
   type: "spring",
   stiffness: 700,
-  damping: 30
+  damping: 10
 }
 
 
