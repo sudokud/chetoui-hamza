@@ -32,6 +32,16 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
 
     }
+    canvas{
+      background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
+      height:100%;
+      width:100%;
+      margin:0;
+      padding:0;
+    }
+    canvas:focus{
+      outline: transparent solid 1px;
+    }
     a{
       text-decoration:none;
       font-family:${props => props.theme.fonts.main};
