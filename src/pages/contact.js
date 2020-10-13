@@ -19,7 +19,9 @@ const Connect = ({ location }) => {
                     <h1 >Let's Talk</h1>
                 </Row>
                 <Row className="p-4">
-                    <p >Tell me about your project, and get a free consultation</p>
+                    <p>
+                        leave me a message here, or you can reach me on my social media.
+                    </p>
                 </Row>
                 <Row className="p-4 pt-2 justify-content-center" id="c0ntact">
                     <Form />

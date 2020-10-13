@@ -133,7 +133,8 @@ const Layout = ({ children, animateKey }) => {
         <Row className="pt-4">
           <Col xs={9}>
             <Link to={"/"}>
-              CHETOUI HAMZA
+              <img src='/img/console3030.png' alt='console' />
+              sudokud
             </Link>
           </Col>
           <Col xs={3} className="d-flex justify-content-end">
