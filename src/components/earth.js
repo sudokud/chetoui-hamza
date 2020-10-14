@@ -10,7 +10,6 @@ const EarthModel = () => {
 
     useEffect(() => {
         new GLTFLoader().load('/lowpoly_floating_tree/scene.gltf', setModel);
-
     }, []);
 
     return model ? <primitive object={model.scene} position={[0, -3, 0]} /> : null;

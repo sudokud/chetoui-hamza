@@ -71,10 +71,21 @@ const ToggleDarkMode = () => {
       dispatch({ type: "TOGGLE_DARK_MODE" })
     )
   }
-
+  const handleKeyDown = (event) => {
+    let keyName = event.key
+    if (keyName === "D") {
+      toggleSwitch()
+    }
+  }
   return (
     <Classes isDark={state.isDark}>
-      <div className="switch" data-ison={isOn} onClick={toggleSwitch} role="button" tabIndex="0">
+      <div
+        className="switch"
+        data-ison={isOn}
+        onClick={toggleSwitch}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex="0">
         <img className="moon" src="img/moonIcon.svg" alt="dark" width="14px" />
         <motion.div className="handle" layout transition={spring} />
         <img className="sun" src="img/sunIcon.svg" alt="light" width="21px" />
