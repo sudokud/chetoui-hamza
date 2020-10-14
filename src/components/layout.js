@@ -135,7 +135,7 @@ const Layout = ({ children, animateKey }) => {
       <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
-        <Row className="pt-4">
+        <Row className="pt-4 pl-3">
           <Col xs={9}>
             <Chetouihamza />
           </Col>

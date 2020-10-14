@@ -40,17 +40,19 @@ const Footer = () => {
                     </p>
                 </Row>
                 <Row className="d-flex justify-content-center">
-                    <p>
+                    <p className="text-center">
                         © 2020-present chetoui hamza. All right reserved
                     </p>
                 </Row>
-                <Row className="d-flex justify-content-center">
+                <Row className="d-flex  justify-content-center">
                     <p>Made with</p>
-                    <img
-                        className="mx-3"
-                        width="31px" height="26,7px"
-                        src={state.isDark ? "img/dark_heart.gif" : "img/light_heart.gif"}
-                        alt="made with love" />
+                    <span>
+                        <img
+                            className="mx-3"
+                            width="31px" height="26,7px"
+                            src={state.isDark ? "img/dark_heart.gif" : "img/light_heart.gif"}
+                            alt="❤️" />
+                    </span>
                     <p>and Passion</p>
                 </Row>
             </Container>

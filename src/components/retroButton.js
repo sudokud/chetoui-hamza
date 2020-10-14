@@ -161,7 +161,6 @@ const RetroButton = ({ text, type, width }) => {
                 <StyledButton
                     type={type}
                     width={width}
-
                     onClick={() => (playSound())}
                 >
                     <div className="shadow_group">
