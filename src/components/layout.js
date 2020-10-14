@@ -159,6 +159,9 @@ const Layout = ({ children, animateKey }) => {
               <Link className="link mx-2 py-3" to={"/posts"}>
                 Posts
               </Link>
+              <Link className="link mx-2 py-3" to={"/lab"}>
+                Lab
+              </Link>
             </NavContainer>
           </AnimateSharedLayout>
         </Row>

@@ -34,7 +34,7 @@ const Earth = () => {
             <EarthModel />
             <OrbitControls
                 autoRotate
-                enablePan={true}
+                enablePan={false}
                 enableZoom={false}
                 enableDamping
                 dampingFactor={0.5}

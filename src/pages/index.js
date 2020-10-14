@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import Earth from "../components/earth"
 import Technologies from '../components/technologies'
-
+import LatestPosts from '../components/latestPost'
 
 const Classes = styled.div`
   .container{
@@ -61,6 +61,7 @@ const IndexPage = ({ location }) => {
             className="mt-5 container">
             <Technologies />
           </Container>
+          <LatestPosts />
         </Classes>
       </Layout>
     </>
