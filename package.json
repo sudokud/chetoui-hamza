@@ -7,10 +7,12 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "bootstrap": "^4.5.2",
+    "drei": "^0.0.60",
     "framer-motion": "^2.7.7",
     "gatsby": "^2.24.50",
     "gatsby-image": "^2.4.16",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-google-tagmanager": "^2.3.16",
     "gatsby-plugin-manifest": "^2.4.24",
     "gatsby-plugin-netlify-cms": "^4.3.12",
     "gatsby-plugin-offline": "^3.2.24",
@@ -31,7 +33,6 @@
     "react-three-fiber": "^5.0.3",
     "styled-components": "^5.1.1",
     "three": "^0.121.1",
-    "drei": "^0.0.60",
     "use-sound": "^1.0.2"
   },
   "devDependencies": {

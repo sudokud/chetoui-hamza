@@ -18,7 +18,7 @@ const EarthModel = () => {
 
 const Earth = () => {
     return (
-        <Canvas shadowMap camera={{ position: [0, 0, 6] }}>
+        <Canvas shadowMap camera={{ position: [0, 0, 8] }}>
             <ambientLight intensity={0.75} />
             <pointLight intensity={1} position={[-10, -25, -10]} />
             <spotLight

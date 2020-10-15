@@ -47,8 +47,9 @@ const IndexPage = ({ location }) => {
           <Container fluid="lg" className="container">
             <Row>
               <Col className="hi" sm={7}>
-                <span className="mx-3" role="img" aria-label="hello">👋</span>
-                <h1>Hey, I'm Hamza</h1>
+                <h1>
+                  <span className="mx-3" role="img" aria-label="hello">👋</span>
+                  Hey, I'm Hamza</h1>
                 <p>I’m a web developer,a designer, and a JAMSTACK enthusiast</p>
               </Col>
               <Col style={{ minHeight: "400px" }} sm={5}>
