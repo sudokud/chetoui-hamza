@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 
 
@@ -10,16 +10,9 @@ import { Link } from 'gatsby'
 
 
 const Logo = styled.h2`
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    top: -8px;
-    z-index: 2;
-    overflow: hidden;
+    font-size:42px;
     color: #d6f756;
-    lin
-    mix-blend-mode: luminosity;
-    text-align: center;
+    margin: auto 0;
     text-shadow: 
     1px 0px 0px #1c1124, 
     0px 1px 0px #007bff, 

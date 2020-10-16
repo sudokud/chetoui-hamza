@@ -4,12 +4,11 @@ import styled from 'styled-components'
 import Context from '../store/context'
 import { createGlobalStyle } from 'styled-components'
 import { Container, Row, Col } from "react-bootstrap"
-import { Link } from "gatsby"
 import Footer from './footer'
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"
 import ToggleDarkMode from "./toggleDarkMode"
 import Chetouihamza from './chetouihamza'
-
+import Nav from './nav'
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -75,61 +74,13 @@ const RetroScreen = styled.div`
   z-index:200;
   filter:opacity(0.8);
 `
-const NavContainer = styled.nav`
-    position:relative;
-    padding:16px;
-    display: flex;
-    flex-direction: row;
-    .top_left_corner {
-      position:absolute;
-      top:-10px;
-      left:-10px;
-      width:10px;
-      height:10px;
-      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-    }
-    .top_right_corner {
-      position:absolute;
-      top:-10px;
-      right:-10px;
-      width:10px;
-      height:10px;
-      border-top:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-    }
-    .bottom_right_corner {
-      position:absolute;
-      bottom:-10px;
-      right:-10px;
-      width:10px;
-      height:10px;
-      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-      border-right:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-    }
-    .bottom_left_corner {
-      position:absolute;
-      bottom:-10px;
-      left:-10px;
-      width:10px;
-      height:10px;
-      border-bottom:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-      border-left:1px solid ${props => (props.isDark ? props.theme.dark.text : props.theme.palette.eggplant)};
-    }
-`
+
 
 
 
 const Layout = ({ children, animateKey }) => {
   const { state } = useContext(Context)
-  // const [playToggle] = useSound(
-  //   'audio/toggle.mp3', { volume: 0.25 }
-  // )
-  const spring = {
-    type: "spring",
-    stiffness: 500,
-    damping: 30
-  };
+
   return (
     <React.Fragment>
       <RetroScreen />
@@ -143,27 +94,8 @@ const Layout = ({ children, animateKey }) => {
             <ToggleDarkMode />
           </Col>
         </Row>
-        <Row className="d-flex justify-content-center mt-5 mt-md-3">
-          <AnimateSharedLayout>
-            <NavContainer>
-              <div className="top_left_corner"></div>
-              <div className="top_right_corner"></div>
-              <div className="bottom_right_corner"></div>
-              <div className="bottom_left_corner"></div>
-              <Link className="link mx-2 py-3" to={"/"}>
-                Home
-              </Link>
-              <Link className="link mx-2 py-3" to={"/contact"}>
-                Contact
-              </Link>
-              <Link className="link mx-2 py-3" to={"/posts"}>
-                Posts
-              </Link>
-              <Link className="link mx-2 py-3" to={"/lab"}>
-                Lab
-              </Link>
-            </NavContainer>
-          </AnimateSharedLayout>
+        <Row className="d-flex justify-content-center mt-5 mt-sm-3">
+          <Nav />
         </Row>
 
       </Container>

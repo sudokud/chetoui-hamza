@@ -9,7 +9,7 @@ const Button = styled.div`
     width:fit-content;
     position:relative;
     
-    & > .btn { 
+    & > .beauton { 
         position:relative;
         width: 90px;
         height: 40px;
@@ -63,7 +63,7 @@ const Btn = ({ text, type, callBack }) => {
     return (
         <>
             <Button>
-                <button type={type} className="btn" onClick={callBack}>
+                <button type={type} className="beauton" onClick={callBack}>
                     {text}
                 </button>
             </Button>

@@ -11,7 +11,6 @@ import useSound from 'use-sound'
 
 
 const LogoContainer = styled.a`
-    border:1px solid #000;
     width:120px;
     height:calc(120px /1.5 );
     background:${props => props.theme.palette.eggplant};
@@ -39,11 +38,21 @@ const LogoContainer = styled.a`
     }
 
 `
-const Technologies = () => {
-
+const Technolgy = (props) => {
+    const { href, src, alt } = props
     const [POP] = useSound(
         'audio/pop.wav', { volume: 0.25 }
     )
+    return (
+        <LogoContainer onMouseEnter={() => (POP())}
+            href={href}>
+            <img src={src} alt={alt} />
+        </LogoContainer>
+    )
+}
+const Technologies = () => {
+
+
     return (
         <React.Fragment>
 
@@ -53,46 +62,49 @@ const Technologies = () => {
                 <Col sm={4}
                     className="my-4 d-flex flex-column align-items-center">
                     <h3>DATA SOURCES</h3>
-                    <LogoContainer
-                        href="https://strapi.io/">
-                        <img src="img/StrapiJS.svg" alt="Strapi" />
-                    </LogoContainer>
-                    <LogoContainer
-                        href="https://www.netlifycms.org/">
-                        <img src="img/NetlifyCMS.svg" alt="Netlify CMS" />
-                    </LogoContainer>
+                    <Technolgy
+                        href="https://strapi.io/"
+                        src="img/StrapiJS.svg"
+                        alt="Strapi"
+                    />
+                    <Technolgy
+                        href="https://www.netlifycms.org/"
+                        src="img/NetlifyCMS.svg"
+                        alt="Netlify CMS"
+                    />
 
                 </Col>
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
                     <h3>BUILD</h3>
-                    <LogoContainer
-                        href="https://getbootstrap.com/">
-                        <img src="img/Bootstrap.svg" alt="Bootstrap" />
-                    </LogoContainer>
-                    <LogoContainer
-                        href="https://reactjs.org/">
-                        <img src="img/ReactJS.svg" alt="React" />
-                    </LogoContainer>
-                    <LogoContainer
-                        href="https://www.gatsbyjs.com/">
-                        <img src="img/Gatsby_Monogram.svg" alt="Gatsby" />
-                    </LogoContainer>
+                    <Technolgy
+                        href="https://getbootstrap.com/"
+                        src="img/Bootstrap.svg"
+                        alt="Bootstrap"
+                    />
+                    <Technolgy
+                        href="https://reactjs.org/"
+                        src="img/ReactJS.svg" alt="React" />
+
+                    <Technolgy
+                        href="https://www.gatsbyjs.com/"
+                        src="img/Gatsby_Monogram.svg" alt="Gatsby" />
+
                 </Col>
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
                     <h3>DEPLOY 	&amp; CDN</h3>
 
-                    <LogoContainer
-                        href="https://www.netlify.com/" >
-                        <img src="img/Netlify.svg" alt="Netlify" />
-                    </LogoContainer>
-                    <LogoContainer onMouseEnter={() => (POP())}
-                        href="https://github.com/" >
-                        <img src="img/GitHub.svg" alt="Netlify" />
-                    </LogoContainer>
+                    <Technolgy
+                        href="https://www.netlify.com/"
+                        src="img/Netlify.svg" alt="Netlify" />
+
+                    <Technolgy
+                        href="https://github.com/"
+                        src="img/GitHub.svg" alt="Netlify" />
+
                 </Col>
             </Row>
         </React.Fragment>

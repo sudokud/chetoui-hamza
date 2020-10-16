@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import useSound from 'use-sound'
 
 
-// ratio 2,5793
-
 const Classes = styled.div`
     position:relative;
     height:39px;
@@ -133,15 +131,7 @@ const Text = styled.p`
     pointer-events:none;
 
 `
-// const Shadow = styled.div`
-//     width:100%;
-//     height:100%;  
-//     background:${props => (props.isDark ? "#0e0912" : "#635f66")};
-//     position:absolute;
-//     left:-6px;
-//     bottom:-6px;
-//     filter:blur(2px);
-// `
+
 const RetroButton = ({ text, type, width }) => {
     const { state } = useContext(Context)
     const [playSound] = useSound(

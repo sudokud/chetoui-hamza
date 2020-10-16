@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Chetoui Hamza Personal Website`,
-    description: `this is the place where i play with code and design :)`,
+    title: `Chetoui Hamza`,
+    description: `this is a place where i play with code and design :)`,
     author: `@okuninoshi`,
   },
   plugins: [
@@ -27,11 +27,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `chetoui-hamza`,
+        short_name: `hamza`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#d6f756`,
+        theme_color: `#d6f756`,
         display: `minimal-ui`,
         icon: `src/images/autoportrait.png`, // This path is relative to the root of the site.
       },
