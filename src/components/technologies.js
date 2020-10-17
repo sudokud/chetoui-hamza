@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 // import { useContext } from 'react'
 // import Context from '../store/context'
+import { motion } from 'framer-motion'
 import useSound from 'use-sound'
 
 
@@ -10,7 +11,7 @@ import useSound from 'use-sound'
 
 
 
-const LogoContainer = styled.a`
+const LogoContainer = styled(motion.a)`
     width:120px;
     height:calc(120px /1.5 );
     background:${props => props.theme.palette.eggplant};
@@ -44,7 +45,7 @@ const Technolgy = (props) => {
         'audio/pop.wav', { volume: 0.25 }
     )
     return (
-        <LogoContainer onMouseEnter={() => (POP())}
+        <LogoContainer whileHover={() => (POP())}
             href={href}>
             <img src={src} alt={alt} />
         </LogoContainer>

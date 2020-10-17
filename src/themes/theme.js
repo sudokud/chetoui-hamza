@@ -9,8 +9,8 @@ export default {
         eggplant: "#684656",
         arctic_lime: "#d6f756",
         azure: "#007bff",
-        cultured: "#f2f2f3",
-        burgundy: "#800020"
+        burgundy: "#800020",
+        cultured: "#f2f2f3"
     },
     dark: {
         text: "#d6f756",
