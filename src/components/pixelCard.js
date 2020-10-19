@@ -4,7 +4,7 @@ import Context from '../store/context'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { motion, transform } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const Card = styled.div`

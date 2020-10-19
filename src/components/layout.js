@@ -95,17 +95,16 @@ const Layout = ({ children, animateKey }) => {
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
         <Row className="py-3">
-          <Col xs={11} className="px-2  d-flex align-items-center">
+          <Col xs={9} className="px-2  d-flex align-items-center">
             <Chetouihamza />
           </Col>
-          <Col xs={1} className="px-2 d-flex align-items-center">
+          <Col xs={3} className="px-2 d-flex align-items-center justify-content-end">
             <ToggleDarkMode />
           </Col>
         </Row>
         <Row className="d-flex justify-content-center mt-5 mt-sm-3">
           <Nav />
         </Row>
-
       </Container>
       <AnimatePresence exitBeforeEnter>
         <motion.div
