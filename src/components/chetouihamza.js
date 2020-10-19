@@ -4,15 +4,11 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 
-
-
-
-
-
 const Logo = styled.h2`
-    font-size:42px;
+    font-size:32px;
     color: #d6f756;
-    margin: auto 0;
+    padding:0;
+    margin:0;
     text-shadow: 
     1px 0px 0px #1c1124, 
     0px 1px 0px #007bff, 

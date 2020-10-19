@@ -36,6 +36,8 @@ const Styles = styled.div`
 
     .outline {
         position: absolute;
+        top:-2px;
+        left:-1px;
         height:100%;
         width:100%;
         filter:opacity(0.61);

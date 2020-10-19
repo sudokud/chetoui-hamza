@@ -53,7 +53,7 @@ query AllBlogPosts {
         frontmatter {
           slug
           title
-          date
+          date(formatString: "MMMM DD, YYYY")
           description
           thumbnail {
             childImageSharp {

@@ -73,6 +73,14 @@ const RetroScreen = styled.div`
   pointer-events: none;
   z-index:200;
   filter:opacity(0.8);
+  &::before{
+    content:"";
+    position:absolute;
+    top:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg, #007bff, #d6f756);
+  }
 `
 
 
@@ -86,11 +94,11 @@ const Layout = ({ children, animateKey }) => {
       <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
-        <Row className="pt-4 pl-3">
-          <Col xs={9}>
+        <Row className="py-3">
+          <Col xs={11} className="px-2  d-flex align-items-center">
             <Chetouihamza />
           </Col>
-          <Col xs={3} className="d-flex align-items-center justify-content-end">
+          <Col xs={1} className="px-2 d-flex align-items-center">
             <ToggleDarkMode />
           </Col>
         </Row>
