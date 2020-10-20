@@ -95,7 +95,7 @@ const Layout = ({ children, animateKey }) => {
       <GlobalStyle isDark={state.isDark} />
       <Container fluid="lg">
         <Row className="py-3">
-          <Col xs={9} className="px-2  d-flex align-items-center">
+          <Col xs={9} className="px-2 d-flex align-items-center">
             <Chetouihamza />
           </Col>
           <Col xs={3} className="px-2 d-flex align-items-center justify-content-end">
