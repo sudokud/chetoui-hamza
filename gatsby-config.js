@@ -78,6 +78,16 @@ module.exports = {
         // routeChangeEventName: "YOUR_ROUTE_CHANGE_EVENT_NAME",
       },
     },
+    {
+
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: 'ddad7727-c579-4593-b3d6-58c7f1a329c1',
+        enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
