@@ -33,11 +33,6 @@ const Footer = () => {
                             <img src="img/Instagram.svg" alt="Instagram" width="42px" />
                         </a>
                     </p>
-                    <p className="mx-2">
-                        <a href="https://www.linkedin.com/in/chetoui-hamza/">
-                            <img src="img/In.svg" alt="in" width="42px" />
-                        </a>
-                    </p>
                 </Row>
                 <Row className="d-flex justify-content-center">
                     <p className="text-center">
