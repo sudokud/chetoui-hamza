@@ -91,6 +91,9 @@ const Technologies = () => {
                     <Technolgy
                         href="https://www.gatsbyjs.com/"
                         src="img/Gatsby_Monogram.svg" alt="Gatsby" />
+                    <Technolgy
+                        href="https://material-ui.com/"
+                        src="img/material-ui.svg" alt="Gatsby" />
 
                 </Col>
 
@@ -104,7 +107,10 @@ const Technologies = () => {
 
                     <Technolgy
                         href="https://github.com/"
-                        src="img/GitHub.svg" alt="Netlify" />
+                        src="img/GitHub.svg" alt="Github" />
+                    <Technolgy
+                        href="https://vercel.com/"
+                        src="img/vercel.svg" alt="Vercel" />
 
                 </Col>
             </Row>
