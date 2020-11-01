@@ -37,6 +37,7 @@ const Classes = styled.div`
 }
 `
 
+
 const IndexPage = ({ location }) => {
 
   return (

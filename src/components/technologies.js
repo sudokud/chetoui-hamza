@@ -42,7 +42,7 @@ const LogoContainer = styled(motion.a)`
 const Technolgy = (props) => {
     const { href, src, alt } = props
     const [POP] = useSound(
-        'audio/pop.wav', { volume: 0.25 }
+        'audio/pop.wav', { volume: 0.1 }
     )
     return (
         <LogoContainer whileHover={() => (POP())}
