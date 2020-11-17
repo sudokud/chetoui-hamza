@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Canvas, } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'drei'
-import { motion } from 'framer-motion'
 
 
 const EarthModel = () => {

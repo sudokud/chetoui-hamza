@@ -89,9 +89,12 @@ export default function Nav() {
 
 function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
     return (
-        <div className="link"
+        <div
+            className="link"
             onMouseLeave={onMouseLeave}
-            onMouseEnter={onMouseEnter}>
+            onMouseEnter={onMouseEnter}
+            role="link"
+        >
             <Link to={to} >
                 {isSelected && (
                     <motion.div

@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import Img from "gatsby-image"
 import Layout from '../components/layout'
-
+import SEO from '../components/seo'
 
 
 const Styles = styled.div`
@@ -23,6 +23,7 @@ export default function Post({ data, location }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout animateKey={location.key}>
+      <SEO title={frontmatter.title} />
       <Container fluid="lg" className="my-5 py-5">
         <Styles>
           <StyledRow>

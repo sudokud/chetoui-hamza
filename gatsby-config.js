@@ -3,6 +3,9 @@ module.exports = {
     title: `Chetoui Hamza`,
     description: `chetoui's hamza personal website`,
     author: `@okuninoshi`,
+    keywords: 'chetoui, hamza, web, jamstack, tipaza, fouka',
+    siteUrl: 'https://chetoui-hamza.netlify.app',
+    image: '/img/autoportrait.png'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

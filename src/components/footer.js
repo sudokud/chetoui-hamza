@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import Context from '../store/context'
-
+import { Horizontal } from './horizontal'
 
 
 
@@ -20,6 +20,7 @@ const Footer = () => {
 
     return (
         <Classes isDark={state.isDark}>
+            <Horizontal />
             <Container fluid="lg" className="container">
                 <Row className="d-flex justify-content-center">
                     <p

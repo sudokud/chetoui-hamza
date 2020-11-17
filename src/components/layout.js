@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import ToggleDarkMode from "./toggleDarkMode"
 import Chetouihamza from './chetouihamza'
 import Nav from './nav'
+// import { ParallaxProvider } from 'react-scroll-parallax';
+// import { Parallax } from 'react-scroll-parallax';
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -84,8 +86,6 @@ const RetroScreen = styled.div`
 `
 
 
-
-
 const Layout = ({ children, animateKey }) => {
   const { state } = useContext(Context)
 
@@ -93,7 +93,7 @@ const Layout = ({ children, animateKey }) => {
     <React.Fragment>
       <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
-      <Container fluid="lg">
+      <Container fluid="lg" style={{ position: "relative" }}>
         <Row className="py-3">
           <Col xs={9} className="px-2 d-flex align-items-center">
             <Chetouihamza />
@@ -106,6 +106,7 @@ const Layout = ({ children, animateKey }) => {
           <Nav />
         </Row>
       </Container>
+
       <AnimatePresence exitBeforeEnter>
         <motion.div
           key={animateKey}
@@ -113,6 +114,7 @@ const Layout = ({ children, animateKey }) => {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}>
           {children}
+
         </motion.div>
       </AnimatePresence>
       <Footer />

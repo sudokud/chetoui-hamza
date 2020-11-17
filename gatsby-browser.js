@@ -14,10 +14,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const wrapRootElement = ({ element }) => {
     return (
+
         <GlobalStateProvider>
             <ThemeProvider theme={Theme}>
                 {element}
             </ThemeProvider>
         </GlobalStateProvider>
+
     )
 }

@@ -7,6 +7,7 @@ import Earth from "../components/earth"
 import Technologies from '../components/technologies'
 import LatestPosts from '../components/latestPost'
 
+
 const Classes = styled.div`
   .container{
    margin-top:96px;
@@ -43,7 +44,7 @@ const IndexPage = ({ location }) => {
   return (
     <>
       <Layout animateKey={location.key}>
-        <SEO title="Home" />
+        <SEO title="home page" />
         <Classes>
           <Container fluid="lg" className="container">
             <Row>
