@@ -39,8 +39,8 @@ function Tokyo() {
                         </clipPath>
                     </defs>
                     <Layer1 isDark={state.isDark} />
-                    <Layer2 isDark={state.isDark} />
-                    <Layer3 isDark={state.isDark} />
+                    {/* <Layer2 isDark={state.isDark} />
+                    <Layer3 isDark={state.isDark} /> */}
                 </svg>
             </GlobaStyles>
         </React.Fragment>
@@ -48,3 +48,20 @@ function Tokyo() {
 }
 
 export default Tokyo;
+
+
+
+
+
+
+
+
+
+// <motion.rect
+//     left={0}
+//     id="lantern"
+//     animate={{ left: 100 }}
+//     y={156.09358}
+//     x={891.95044}
+//     style={{ height: 8.1821804, width: 9.9862537 }}
+// />

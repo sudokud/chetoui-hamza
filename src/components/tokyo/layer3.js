@@ -5,10 +5,16 @@ import { motion } from 'framer-motion'
 
 const Group = styled.g`
 #path1510{
-    fill:${props => props.isDark ? "#574f5d" : "#726b77"};
+    fill:${props => props.isDark ? "#202e3b" : "#3F5873"};
 }
 #path1556{
-    fill:${props => props.isDark ? "#0d0811" : "#1c1124"};
+    fill:${props => props.isDark ? "#100f1f" : "#222144"};
+}
+
+#train{
+    #path1284{
+        fill:${props => props.theme.palette.cultured};
+    }
 }
 `
 
@@ -991,14 +997,10 @@ export default Layer3
 const Train = () => {
     return (
         <motion.g
-            x={1200}
             style={{ y: -13 }}
-            animate={{ x: [null, 300, -1000] }}
-            transition={{
-                times: [0, 0.5, 1],
-                repeat: Infinity,
-                duration: 5
-            }}
+            x={1200}
+            animate={{ x: [null, 290, -800] }}
+            transition={{ duration: 7, times: [0, 0.6, 1], repeat: Infinity }}
             id="train"
         // transform="matrix(1.12224 0 0 1.12224 0 -57.574)"
         >

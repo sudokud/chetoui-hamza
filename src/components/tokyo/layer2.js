@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const Group = styled.g`
 #path908{
-    fill:${props => props.isDark ? "#1c1124" : "#c9c6ca"};
+    fill:${props => props.isDark ? "#1c1124" : "#CAD6DE"};
 }
 `
 
