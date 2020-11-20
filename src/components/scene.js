@@ -38,26 +38,6 @@ const Scene = () => {
                 zIndex: 1
             }}>
                 <Sky isDark={state.isDark} />
-                {/* {state.isDark ?
-                    <AnimatePresence>
-                        <motion.img
-                            animate={{ opacity: 1 }}
-                            transition={transition}
-                            width="100%"
-                            src="img/super-hero-traced-dark.svg"
-                            alt="tokyo-at-night" />
-                    </AnimatePresence>
-                    :
-
-                    <AnimatePresence>
-                        <motion.img
-                            animate={{ opacity: 1 }}
-                            transition={transition}
-                            width="100%"
-                            src="img/super-hero-traced-light.svg"
-                            alt="tokyo-at-night" />
-                    </AnimatePresence>
-                } */}
                 <Tokyo />
             </div>
         </Container>

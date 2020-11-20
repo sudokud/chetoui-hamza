@@ -19,7 +19,7 @@ const Group = styled.g`
     }
     #g424{
         opacity:${props => props.isDark ? 1 : 0.61};
-        animation: ${props => props.isDark ? "flicker 1s ease alternate infinite" : null};
+        animation: ${props => props.isDark ? "flicker 1s ease-out alternate infinite" : null};
     }
 
     @keyframes flicker {
@@ -61,13 +61,6 @@ const Layer1 = ({ isDark }) => {
                 <path id="path876" d="M556.172 321.768v3.69h-3.62v-3.69z"></path>
                 <path id="path902" d="M655.882 321.768v3.69h-3.62v-3.69z"></path>
             </g>
-            {/* <motion.path
-                fill="#fff"
-                d="M891.95 164.812v-8.718h16.122v8.718z"
-                initial={{ pathLength: 1 }}
-                animate={{ pathLength: 0 }}
-                transition={{ duration: 2 }}
-            ></motion.path> */}
             <motion.rect
                 fill="#fef"
                 initial={{ x: 892, y: 156 }}
@@ -75,12 +68,12 @@ const Layer1 = ({ isDark }) => {
                 width={10}
                 animate={{
                     x: [892, 892, 920, 935],
-                    width: [0, 10, 10, 0]
+                    width: [0, 10, 11, 0]
                 }}
                 transition={{
                     linear: [0, .33, .7, 1],
                     repeat: Infinity,
-                    duration: 6
+                    duration: 9
                 }}
             />
             <g

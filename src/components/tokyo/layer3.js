@@ -10,7 +10,20 @@ const Group = styled.g`
 #path1556{
     fill:${props => props.isDark ? "#100f1f" : "#222144"};
 }
-
+#red-lights{
+    path{
+        opacity:${props => props.isDark ? 1 : 0.61};
+        animation: ${props => props.isDark ? "flicker .6s ease-in alternate infinite" : null};
+    }
+    @keyframes flicker {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.6;
+        }
+    }
+}
 #train{
     #path1284{
         fill:${props => props.theme.palette.cultured};
@@ -935,13 +948,7 @@ const Layer3 = ({ isDark }) => {
                 d="M1191.475 350.25h17.99v4.998h-17.99z"
                 display="inline"
             ></path>
-            <path
-                id="path906"
-                fill="#f2f2f2"
-                strokeWidth="1.122"
-                d="M440.119 70.813h4.021v-7.88h3.99v-4.017h3.96V54.93h8.042v-4.048h20.971V54.9h8.012v4.08h3.99v4.016h3.96v7.88h4.051V91.92h-3.99v8.003h-4.02V104h-4.022v3.831h-8.042v4.08h-20.755v-4.017h-8.167v-4.017h-3.959V99.89h-4.051v-8.034h-3.991z"
-                display="inline"
-            ></path>
+
             <g
                 id="post-lights"
                 fill="#fff"
