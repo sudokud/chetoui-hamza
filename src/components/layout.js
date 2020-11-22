@@ -3,14 +3,9 @@ import PropTypes from "prop-types"
 import styled from 'styled-components'
 import Context from '../store/context'
 import { createGlobalStyle } from 'styled-components'
-import { Container, Row, Col } from "react-bootstrap"
 import Footer from './footer'
 import { motion, AnimatePresence } from "framer-motion"
-import ToggleDarkMode from "./toggleDarkMode"
-import Chetouihamza from './chetouihamza'
-import Nav from './nav'
-// import { ParallaxProvider } from 'react-scroll-parallax';
-// import { Parallax } from 'react-scroll-parallax';
+import AppNav from './MuiAppBar'
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -21,15 +16,10 @@ const GlobalStyle = createGlobalStyle`
         font-style: normal;
         font-size:16px;
         color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)};
-        height:100%;
-        width:100%;
         margin:0;
         padding:0;
         background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
-        transition:all 0.4s ease;
         box-sizing: border-box;
-        overflow-x: hidden;
-
     }
     canvas{
       background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
@@ -86,27 +76,15 @@ const RetroScreen = styled.div`
 `
 
 
-const Layout = ({ children, animateKey }) => {
+
+const Layout = (props) => {
+  const { children, animateKey } = props;
   const { state } = useContext(Context)
 
   return (
     <React.Fragment>
-      <RetroScreen />
       <GlobalStyle isDark={state.isDark} />
-      <Container fluid="lg" style={{ position: "relative" }}>
-        <Row className="py-3">
-          <Col xs={9} className="px-2 d-flex align-items-center">
-            <Chetouihamza />
-          </Col>
-          <Col xs={3} className="px-2 d-flex align-items-center justify-content-end">
-            <ToggleDarkMode />
-          </Col>
-        </Row>
-        <Row className="d-flex justify-content-center mt-5 mt-sm-3">
-          <Nav />
-        </Row>
-      </Container>
-
+      <AppNav />
       <AnimatePresence exitBeforeEnter>
         <motion.div
           key={animateKey}
@@ -118,6 +96,7 @@ const Layout = ({ children, animateKey }) => {
         </motion.div>
       </AnimatePresence>
       <Footer />
+      <RetroScreen />
     </React.Fragment>
   )
 }
@@ -127,3 +106,6 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+
+

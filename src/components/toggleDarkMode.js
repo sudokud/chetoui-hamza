@@ -9,44 +9,37 @@ import useSound from 'use-sound'
 
 
 const Classes = styled.div`
-  position:relative;
-  display:flex;
-  flex-direction:row;
-  .switch {
-      width: 55px;
-      height: 31px;
-      background: #000;
-      display: flex;
-      justify-content: flex-start;
-      cursor: pointer;
-      margin: 0 8px;
-      border:1px solid #000;
-      border-radius:2px;
+.switch {
+    position:relative;
+    width: 55px;
+    height: 31px;
+    background: #000;
+    display: flex;
+    justify-content: ${props => props.isDark ? "flex-start" : "flex-end"};
+    cursor: pointer;
+    margin: 0 8px;
+    border:1px solid ${props => props.theme.palette.dark_purple};
+    border-radius:5px;
+    .handle {
+      width: 50%;
+      height: 29px;
+      background:#000;
+      z-index:10;
+      border-radius:5px;
+    }
+    .moon{
+      position:absolute;
+      left:5px;
+      top:8px;
+    }
+    .sun{
+      position:absolute;
+      right:3px;
+      top:5px;
+    }
   }
   
-  .switch[data-isOn="true"] {
-    justify-content: flex-end;
-  }
   
-  .handle {
-    width: 29px;
-    height: 29px;
-    background:url('img/handle.png'), #000;
-    background-size:contain;
-    background-repeat:no-repeat;
-    z-index:10;
-    
-  }
-  .moon{
-    position:absolute;
-    left:13px;
-    top:8px;
-  }
-  .sun{
-    position:absolute;
-    right:10px;
-    top:5px;
-  }
 `
 const spring = {
   type: "spring",

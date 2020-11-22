@@ -32,6 +32,9 @@ const Styles = styled.div`
         cursor: pointer;
         margin-left:12px;
         padding:4px;
+        a{
+            color:${props => props.theme.palette.arctic_lime};
+        }
     }
 
     .outline {
@@ -41,21 +44,21 @@ const Styles = styled.div`
         height:100%;
         width:100%;
         filter:opacity(0.61);
-        border:1px solid ${props => props.theme.palette.azure};
+        border:1px solid ${props => props.theme.palette.arctic_lime};
         box-shadow: 
-        1px 0px 0px ${props => props.theme.palette.azure},
-        0px 1px 0px ${props => props.theme.palette.azure},
-        2px 1px 0px ${props => props.theme.palette.azure},
-        1px 2px 0px ${props => props.theme.palette.azure},
-        3px 2px 0px ${props => props.theme.palette.azure},
-        2px 3px 0px ${props => props.theme.palette.azure},
-        4px 3px 0px ${props => props.theme.palette.azure},
-        3px 4px 0px ${props => props.theme.palette.azure},
-        5px 4px 0px ${props => props.theme.palette.azure},
-        4px 5px 0px ${props => props.theme.palette.azure},
-        6px 5px 0px ${props => props.theme.palette.azure},
-        5px 6px 0px ${props => props.theme.palette.azure},
-        7px 6px 0px ${props => props.theme.palette.azure};
+        1px 0px 0px ${props => props.theme.palette.arctic_lime},
+        0px 1px 0px ${props => props.theme.palette.arctic_lime},
+        2px 1px 0px ${props => props.theme.palette.arctic_lime},
+        1px 2px 0px ${props => props.theme.palette.arctic_lime},
+        3px 2px 0px ${props => props.theme.palette.arctic_lime},
+        2px 3px 0px ${props => props.theme.palette.arctic_lime},
+        4px 3px 0px ${props => props.theme.palette.arctic_lime},
+        3px 4px 0px ${props => props.theme.palette.arctic_lime},
+        5px 4px 0px ${props => props.theme.palette.arctic_lime},
+        4px 5px 0px ${props => props.theme.palette.arctic_lime},
+        6px 5px 0px ${props => props.theme.palette.arctic_lime},
+        5px 6px 0px ${props => props.theme.palette.arctic_lime},
+        7px 6px 0px ${props => props.theme.palette.arctic_lime};
         background-blend-mode: difference;
     }
     
@@ -95,7 +98,7 @@ function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
             onMouseEnter={onMouseEnter}
             role="link"
         >
-            <Link to={to} >
+            <Link to={to} activeStyle={{ color: "#684656" }}>
                 {isSelected && (
                     <motion.div
                         layoutId="outline"

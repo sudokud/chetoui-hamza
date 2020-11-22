@@ -6,13 +6,13 @@ import Layout from "../components/layout"
 import Earth from "../components/earth"
 import Technologies from '../components/technologies'
 import LatestPosts from '../components/latestPost'
+import Scene from "../components/scene"
 
 
 const Classes = styled.div`
-  .container{
+  .container-override{
    margin-top:96px;
    position:relative;
- 
   }
   a{
     margin:8px;
@@ -46,9 +46,9 @@ const IndexPage = ({ location }) => {
       <Layout animateKey={location.key}>
         <SEO title="home page" />
         <Classes>
-          <Container fluid="lg" className="container">
+          {/* <Container fluid="lg" className="container">
             <Row>
-              <Col className="hi" sm={7}>
+            <Col className="hi" sm={7}>
                 <h1>
                   <span className="mx-3" role="img" aria-label="hello">👋</span>
                   Hey, I'm Hamza</h1>
@@ -57,11 +57,12 @@ const IndexPage = ({ location }) => {
               <Col style={{ minHeight: "400px" }} sm={5}>
                 <Earth />
               </Col>
-            </Row>
-          </Container>
+              </Row>
+            </Container> */}
+          <Scene />
           <Container
             fluid="lg"
-            className="mt-5 container">
+            className="mt-5 container-override">
             <Technologies />
           </Container>
           <LatestPosts />
