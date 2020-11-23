@@ -43,9 +43,9 @@
      inkscape:window-height="735"
      id="namedview1627"
      showgrid="false"
-     inkscape:zoom="0.99999996"
-     inkscape:cx="848.03057"
-     inkscape:cy="163.07546"
+     inkscape:zoom="0.70710675"
+     inkscape:cx="750.09975"
+     inkscape:cy="168.51366"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -93,6 +93,114 @@
        x2="1036.236"
        y2="11.932971"
        gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
+       inkscape:menu="Shadows and Glows"
+       inkscape:label="Cutout Glow"
+       style="color-interpolation-filters:sRGB;"
+       id="filter1631">
+      <feOffset
+         dy="3"
+         dx="3"
+         id="feOffset1621" />
+      <feGaussianBlur
+         stdDeviation="3"
+         result="blur"
+         id="feGaussianBlur1623" />
+      <feFlood
+         flood-color="rgb(0,0,0)"
+         flood-opacity="1"
+         result="flood"
+         id="feFlood1625" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite"
+         id="feComposite1627" />
+      <feBlend
+         in="blur"
+         in2="composite"
+         mode="normal"
+         id="feBlend1629" />
+    </filter>
+    <filter
+       inkscape:label="Soft Focus Lens"
+       inkscape:menu="Image Effects"
+       inkscape:menu-tooltip="Glowing image content without blurring it"
+       style="color-interpolation-filters:sRGB;"
+       id="filter1667">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="result3"
+         id="feGaussianBlur1653" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 50 0 "
+         result="result7"
+         id="feColorMatrix1655" />
+      <feComposite
+         operator="in"
+         in2="SourceGraphic"
+         result="result9"
+         id="feComposite1657" />
+      <feComposite
+         in2="result7"
+         operator="arithmetic"
+         in="result9"
+         k1="0.5"
+         k3="0.5"
+         result="result1"
+         id="feComposite1659" />
+      <feBlend
+         in2="result1"
+         result="result5"
+         mode="screen"
+         in="SourceGraphic"
+         id="feBlend1661" />
+      <feBlend
+         in2="result5"
+         mode="darken"
+         in="result5"
+         result="result6"
+         id="feBlend1663" />
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="result8"
+         id="feComposite1665" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter2461">
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(255,255,255)"
+         result="flood"
+         id="feFlood2451" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2453" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="6"
+         result="blur"
+         id="feGaussianBlur2455" />
+      <feOffset
+         dx="2.77556e-17"
+         dy="4.57967e-15"
+         result="offset"
+         id="feOffset2457" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2459" />
+    </filter>
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -2200,7 +2308,7 @@
        d="m 467.14007,67.326698 h 3.88933 v -7.617669 h 3.86003 v -3.883585 h 3.82963 v -3.853642 h 7.77868 v -3.913421 h 20.28467 v 3.883586 h 7.74936 v 3.943256 h 3.86003 v 3.883585 h 3.82963 v 7.61767 h 3.91864 v 20.344019 h -3.85893 v 7.736576 h -3.88934 v 3.943691 h -3.89042 v 3.703926 h -7.77867 v 3.94369 h -20.07518 v -3.88294 h -7.89916 v -3.884017 h -3.82963 v -3.853642 h -3.91865 v -7.766955 h -3.86002 z"
        id="sunXmoon"
        inkscape:connector-curvature="0"
-       style="fill:#ffffff;stroke-width:1.08521" />
+       style="fill:#ffffff;stroke-width:1.08521;filter:url(#filter2461)" />
     <path
        d="m 601.63407,77.655597 v -3.426704 h -35.237 v 4.361103 h -7.328 v -4.361103 h -7.172 v -2.803799 h -17.307 v 3.4268 h -26.194 v 6.230103 h 36.952 v 3.427 h 31.183 v -3.582 h 11.071 v -3.2714 z"
        fill="#cad4de"
