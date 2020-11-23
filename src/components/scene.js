@@ -9,7 +9,7 @@ import Tokyo from './tokyo/tokyo'
 const Sky = styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 81%;
     left: 0;
     top: 0;
     padding:0;
@@ -20,11 +20,9 @@ const Sky = styled.div`
     };
 `
 const MainWrapper = styled.div`
-    padding-top: 13rem;   
+    padding-top: 9rem;   
     position: relative;
     max-width: 1279px;
-    margin: auto;
-    overflow: hidden;
 `
 
 const Scene = () => {

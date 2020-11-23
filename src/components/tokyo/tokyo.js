@@ -38,7 +38,7 @@ function Tokyo() {
     const { state } = useContext(Context)
     return (
         <GlobaStyles isDark={state.isDark}>
-            {state.isDark ?
+            {/* {state.isDark ?
                 <MoonWrapper>
 
                     <Moon
@@ -59,18 +59,20 @@ function Tokyo() {
                         d="M440.119 70.813h4.021v-7.88h3.99v-4.017h3.96V54.93h8.042v-4.048h20.971V54.9h8.012v4.08h3.99v4.016h3.96v7.88h4.051V91.92h-3.99v8.003h-4.02V104h-4.022v3.831h-8.042v4.08h-20.755v-4.017h-8.167v-4.017h-3.959V99.89h-4.051v-8.034h-3.991z"
                         display="inline"
                     ></Sun>
-                </SunWrapper>}
+                </SunWrapper>} */}
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 id="svg1625"
                 width="1279.364"
-                height="439.748"
+                // height="439.748"
+                height="488.33218"
                 x="0"
                 y="0"
                 fill="none"
                 version="1.1"
-                viewBox="0 0 1279.364 439.748"
-                preserveAspectRatio="xMidYMid meet"
+                // viewBox="0 0 1279.364 439.748"
+                viewBox="0 0 1275.0286 439.748"
+            // preserveAspectRatio="xMidYMid meet"
             >
                 <defs id="defs1623">
                     <clipPath id="clip0">
