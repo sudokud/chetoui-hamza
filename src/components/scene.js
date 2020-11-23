@@ -23,6 +23,10 @@ const MainWrapper = styled.div`
     padding-top: 9rem;   
     position: relative;
     max-width: 1279px;
+    margin:auto;
+    @media (max-width: 768px){
+        padding-top: 5rem;
+    }
 `
 
 const Scene = () => {

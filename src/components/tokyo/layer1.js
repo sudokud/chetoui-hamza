@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { lime, yellow } from '@material-ui/core/colors'
 
 
 const Group = styled.g`
@@ -33,6 +34,11 @@ const Group = styled.g`
     .cloud{
         fill:#cad4de;
     }
+  
+    #sunXmoon{
+        fill:${props => props.isDark ? props.theme.palette.cultured : yellow.A400};
+    }
+
 `
 
 const Layer1 = ({ isDark }) => {
@@ -47,6 +53,28 @@ const Layer1 = ({ isDark }) => {
             transform="translate(0 -31.23)"
             isDark={isDark}
         >
+            {/* <motion.path
+                x={1000}
+                y={-1000}
+                animate={{
+                    y: 100, x: -50
+                }}
+                transition={{
+                    duration: 9,
+                    repeat: Infinity
+                }}
+                style={{
+                    fill: "none",
+                    stroke: "url(#linearGradient1655)",
+                    strokeWidth: 0.394,
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    strokeMiterlimit: 4,
+                    strokeDasharray: "none"
+                }}
+                d="M 1036.236,11.932971 977.43949,51.951609 Z"
+                id="etoile-filante" /> */}
             <motion.path
                 x={400}
                 animate={{ x: -800 }}
@@ -58,7 +86,7 @@ const Layer1 = ({ isDark }) => {
             <path
                 d="m 467.14007,67.326698 h 3.88933 v -7.617669 h 3.86003 v -3.883585 h 3.82963 v -3.853642 h 7.77868 v -3.913421 h 20.28467 v 3.883586 h 7.74936 v 3.943256 h 3.86003 v 3.883585 h 3.82963 v 7.61767 h 3.91864 v 20.344019 h -3.85893 v 7.736576 h -3.88934 v 3.943691 h -3.89042 v 3.703926 h -7.77867 v 3.94369 h -20.07518 v -3.88294 h -7.89916 v -3.884017 h -3.82963 v -3.853642 h -3.91865 v -7.766955 h -3.86002 z"
                 id="sunXmoon"
-                style={{ fill: "#ffffff", strokeWidth: 1 }} />
+            />
             <path
                 d="m 601.63407,77.655597 v -3.426704 h -35.237 v 4.361103 h -7.328 v -4.361103 h -7.172 v -2.803799 h -17.307 v 3.4268 h -26.194 v 6.230103 h 36.952 v 3.427 h 31.183 v -3.582 h 11.071 v -3.2714 z"
                 fill="#cad4de"

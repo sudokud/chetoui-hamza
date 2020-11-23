@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1275.0286"
@@ -42,9 +43,9 @@
      inkscape:window-height="735"
      id="namedview1627"
      showgrid="false"
-     inkscape:zoom="0.49999998"
-     inkscape:cx="815.02569"
-     inkscape:cy="225.83131"
+     inkscape:zoom="0.99999996"
+     inkscape:cx="848.03057"
+     inkscape:cy="163.07546"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -61,6 +62,18 @@
      inkscape:snap-bbox-midpoints="true" />
   <defs
      id="defs1623">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1653">
+      <stop
+         style="stop-color:#9380f8;stop-opacity:1"
+         offset="0"
+         id="stop1649" />
+      <stop
+         style="stop-color:#fefefe;stop-opacity:1"
+         offset="1"
+         id="stop1651" />
+    </linearGradient>
     <clipPath
        id="clip0">
       <rect
@@ -71,6 +84,15 @@
          x="0"
          y="0" />
     </clipPath>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1653"
+       id="linearGradient1655"
+       x1="977.43951"
+       y1="51.951611"
+       x2="1036.236"
+       y2="11.932971"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -2192,6 +2214,22 @@
        fill="#cad4de"
        id="path803"
        style="stroke-width:0.657883" />
+    <path
+       style="fill:none;stroke:url(#linearGradient1655);stroke-width:0.394;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 1036.236,11.932971 977.43949,51.951609 Z"
+       id="path807" />
+    <circle
+       id="path811"
+       style="fill:#ffffff;stroke:#000000"
+       cx="886.77588"
+       cy="65.066338"
+       r="0" />
+    <circle
+       id="path821"
+       style="fill:#ffffff;stroke:#000000"
+       cx="1014.1056"
+       cy="25.942348"
+       r="0" />
   </g>
   <g
      inkscape:groupmode="layer"

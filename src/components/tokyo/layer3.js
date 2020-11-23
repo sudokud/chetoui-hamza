@@ -1007,9 +1007,12 @@ const Train = () => {
             style={{ y: -13 }}
             x={1200}
             animate={{ x: [null, 290, -800] }}
-            transition={{ duration: 9, times: [0, 0.5, 1], repeat: Infinity }}
+            transition={{
+                duration: 10,
+                times: [0, 0.6, 1],
+                repeat: Infinity,
+            }}
             id="train"
-        // transform="matrix(1.12224 0 0 1.12224 0 -57.574)"
         >
             <path
                 id="path868"

@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
         padding:0;
         background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
         box-sizing: border-box;
+        overflow-x:hidden;
     }
     canvas{
       background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
