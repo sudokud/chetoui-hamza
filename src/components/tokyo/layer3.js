@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 
+
 const Group = styled.g`
 #path1510{
     fill:${props => props.isDark ? "#202e3b" : "#3F5873"};
@@ -23,6 +24,9 @@ const Group = styled.g`
             opacity: 0.6;
         }
     }
+}
+#path2469{
+    display:${props => props.isDark ? "block" : "none"};
 }
 #train{
     #path1284{
@@ -993,6 +997,80 @@ const Layer3 = ({ isDark }) => {
                 d="M915.72 333.207h15.807v39.875h-3.885V337.09h-11.923z"
                 display="inline"
             ></path>
+            <path
+                style={{
+                    fill: "#ffffff",
+                    stroke: "none",
+                    strokeWidth: "1px",
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    opacity: 0.2
+                }}
+                d="m 751.93669,345.27771 -10.91556,29.25128 h 30.25572 l -7.4859,-29.2367 z"
+                id="path2469" />
+            <path
+                style={{
+                    fill: "#ffffff",
+                    stroke: "none",
+                    strokeWidth: "1px",
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    opacity: 0.2
+                }}
+                d="m 424.23267,345.27771 -10.91556,29.25128 h 30.25572 l -7.4859,-29.2367 z"
+                id="path2469" />
+            <path
+                style={{
+                    fill: "#ffffff",
+                    stroke: "none",
+                    strokeWidth: "1px",
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    opacity: 0.2
+                }}
+                d="m 424.23267,345.27771 -10.91556,29.25128 h 30.25572 l -7.4859,-29.2367 z"
+                id="path2469" />
+            <path
+                style={{
+                    fill: "#ffffff",
+                    stroke: "none",
+                    strokeWidth: "1px",
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    opacity: 0.2
+                }}
+                d="m 588.08468,345.27771 -10.91556,29.25128 h 30.25572 l -7.4859,-29.2367 z"
+                id="path2469" />
+            <motion.path
+                style={{
+                    fill: "#ffffff",
+                }}
+                animate={{
+                    opacity: [0.2, 0, 0.2, 0.2]
+                }}
+                transition={{
+                    times: [0.1, 0.2, 0.3, 1],
+                    duration: 0.3,
+                    repeat: Infinity
+                }}
+                d="m 1079.6418,345.27771 -10.9156,29.25128 h 30.2558 l -7.4859,-29.2367 z"
+                id="path2469" />
+            <path
+                style={{
+                    fill: "#ffffff",
+                    stroke: "none",
+                    strokeWidth: "1px",
+                    strokeLinecap: "butt",
+                    strokeLinejoin: "miter",
+                    strokeOpacity: 1,
+                    opacity: 0.2
+                }}
+                d="m 915.78645,343.33791 -10.91556,29.25128 h 30.25572 l -7.4859,-29.2367 z"
+                id="path2469" />
 
         </Group>
     )

@@ -72,6 +72,38 @@ function Tokyo() {
                         y2="11.932971"
                         gradientUnits="userSpaceOnUse" />
                 </defs>
+                <filter
+                    style={{ colorInterpolationFilters: "sRGB" }}
+
+                    id="filter2461">
+                    <feFlood
+                        flood-opacity="1"
+                        flood-color="rgb(255,255,255)"
+                        result="flood"
+                        id="feFlood2451" />
+                    <feComposite
+                        in="flood"
+                        in2="SourceGraphic"
+                        operator="in"
+                        result="composite1"
+                        id="feComposite2453" />
+                    <feGaussianBlur
+                        in="composite1"
+                        stdDeviation="6"
+                        result="blur"
+                        id="feGaussianBlur2455" />
+                    <feOffset
+                        dx="2.77556e-17"
+                        dy="4.57967e-15"
+                        result="offset"
+                        id="feOffset2457" />
+                    <feComposite
+                        in="SourceGraphic"
+                        in2="offset"
+                        operator="over"
+                        result="composite2"
+                        id="feComposite2459" />
+                </filter>
                 <Layer1 isDark={state.isDark} />
                 <Layer2 isDark={state.isDark} />
                 <Layer3 isDark={state.isDark} />
