@@ -2,10 +2,11 @@ import React from "react";
 import { useContext } from 'react'
 import styled from 'styled-components';
 import Context from '../../store/context'
-import { motion, AnimatePresence } from 'framer-motion'
+// import { motion, AnimatePresence } from 'framer-motion'
 import Layer1 from './layer1'
 import Layer2 from './layer2'
 import Layer3 from './layer3'
+import Layer0 from './layer0'
 
 
 const GlobaStyles = styled.div`
@@ -33,7 +34,6 @@ function Tokyo() {
                 fill="none"
                 version="1.1"
                 viewBox="0 0 1275.0286 439.748"
-            // preserveAspectRatio="xMidYMid meet"
             >
                 <defs id="defs1623">
                     <clipPath id="clip0">
@@ -74,11 +74,10 @@ function Tokyo() {
                 </defs>
                 <filter
                     style={{ colorInterpolationFilters: "sRGB" }}
-
                     id="filter2461">
                     <feFlood
-                        flood-opacity="1"
-                        flood-color="rgb(255,255,255)"
+                        floodOpacity="1"
+                        floodColor="rgb(255,255,255)"
                         result="flood"
                         id="feFlood2451" />
                     <feComposite
@@ -104,6 +103,7 @@ function Tokyo() {
                         result="composite2"
                         id="feComposite2459" />
                 </filter>
+                {state.isDark && <Layer0 />}
                 <Layer1 isDark={state.isDark} />
                 <Layer2 isDark={state.isDark} />
                 <Layer3 isDark={state.isDark} />

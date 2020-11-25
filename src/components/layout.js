@@ -22,16 +22,6 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         overflow-x:hidden;
     }
-    canvas{
-      background-color:${props => (props.isDark ? props.theme.dark.background : props.theme.light.background)};
-      height:100%;
-      width:100%;
-      margin:0;
-      padding:0;
-    }
-    canvas:focus{
-      outline: transparent solid 1px;
-    }
     a{
       text-decoration:none;
       font-family:${props => props.theme.fonts.main};
@@ -47,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     p{
       display:flex;
       align-items:center;
+      color:${props => props.isDark ? props.theme.light.background : props.theme.dark.background};
     }
     h2,h3{
       margin-bottom:32px;

@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 
 const Logo = styled.h2`
-    font-size:32px;
+    font-size:24px;
     color: #d6f756;
     padding:0;
     margin:0;
@@ -30,7 +30,7 @@ const Chetouihamza = () => {
     return (
         <Link to={"/"}>
             <Logo >
-                chetoui hamza
+                &#60; &#47; &#62;
             </Logo>
         </Link>
     )

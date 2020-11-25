@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { yellow } from '@material-ui/core/colors'
 
 
-const Group = styled.g`
+const Group = styled(motion.g)`
     #path4{
         fill:${props => props.isDark ? "#150d1b" : "#E7E7FF"};
     }
@@ -36,12 +36,12 @@ const Group = styled.g`
     }
   
     #sunXmoon{
-        fill:${props => props.isDark ? props.theme.palette.cultured : yellow.A400};
+        fill:${props => props.isDark ? props.theme.palette.cultured : yellow[200]};
         filter:url(#filter2461);
     }
     #craters{
         path{
-            fill:${props => props.isDark ? "#c6c6c6" : yellow.A400};
+            fill:${props => props.isDark ? "#c6c6c6" : yellow[200]};
             stroke:none;
         }
     }
@@ -60,28 +60,6 @@ const Layer1 = ({ isDark }) => {
             transform="translate(0 -31.23)"
             isDark={isDark}
         >
-            {/* <motion.path
-                x={1000}
-                y={-1000}
-                animate={{
-                    y: 100, x: -50
-                }}
-                transition={{
-                    duration: 9,
-                    repeat: Infinity
-                }}
-                style={{
-                    fill: "none",
-                    stroke: "url(#linearGradient1655)",
-                    strokeWidth: 0.394,
-                    strokeLinecap: "butt",
-                    strokeLinejoin: "miter",
-                    strokeOpacity: 1,
-                    strokeMiterlimit: 4,
-                    strokeDasharray: "none"
-                }}
-                d="M 1036.236,11.932971 977.43949,51.951609 Z"
-                id="etoile-filante" /> */}
             <motion.path
                 x={100}
                 animate={{ x: -400 }}
@@ -2692,4 +2670,7 @@ const Layer1 = ({ isDark }) => {
 
     )
 }
+
+
+
 export default Layer1

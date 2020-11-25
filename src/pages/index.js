@@ -3,7 +3,6 @@ import SEO from "../components/seo"
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import Layout from "../components/layout"
-import Earth from "../components/earth"
 import Technologies from '../components/technologies'
 import LatestPosts from '../components/latestPost'
 import Scene from "../components/scene"
@@ -23,17 +22,11 @@ const Classes = styled.div`
     flex-direction:column;
     justify-content:center;
     pointer-events:none;
-    h1{
-      font-size:4rem;
+    h2{
+      font-size:2.7rem;
     }
     p{
       font-size:1.5rem;
-    }
-    @media (max-width: 575.98px)
-    {
-      h1{
-        font-size:3rem;
-      } 
     }
 }
 `
@@ -46,20 +39,17 @@ const IndexPage = ({ location }) => {
       <Layout animateKey={location.key}>
         <SEO title="home page" />
         <Classes>
-          {/* <Container fluid="lg" className="container">
+          <Scene />
+          <Container fluid="lg" className="container">
             <Row>
-            <Col className="hi" sm={7}>
-                <h1>
+              <Col className="hi" sm={7}>
+                <h2>
                   <span className="mx-3" role="img" aria-label="hello">👋</span>
-                  Hey, I'm Hamza</h1>
+                  Hey, I'm Hamza</h2>
                 <p>I’m a web developer,a designer, and a JAMSTACK enthusiast</p>
               </Col>
-              <Col style={{ minHeight: "400px" }} sm={5}>
-                <Earth />
-              </Col>
-              </Row>
-            </Container> */}
-          <Scene />
+            </Row>
+          </Container>
           <Container
             fluid="lg"
             className="mt-5 container-override">

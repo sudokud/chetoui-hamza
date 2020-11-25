@@ -16,7 +16,7 @@ const Card = styled.div`
     background:#004187;
     border:4px solid #004187;
     padding:4px;
-    box-shadow:-16px 14px 6px 0 ${props => (props.isDark ? "#0e0e0e" : "#808080")};
+    box-shadow:-16px 14px 6px 0 ${props => props.isDark ? "#0e0e0e" : "#808080"};
     &:after{
         content:"";
         position:absolute;
@@ -24,9 +24,18 @@ const Card = styled.div`
         left:-4px;
         width:300px;
         height:10px;
-        background:${props => (props.isDark ? "#00070e" : "#00244a")};
+        background:${props => props.isDark ? "#00070e" : "#00244a"};
+        transition: all 0.3s ease;
     }
-
+    &:hover{
+        box-shadow:none;
+        transform: scale(0.97) translate(0px, 10px);
+    }
+    &:hover:after{
+        transform: translate(0px, -11px);
+        height:0;
+    }
+    transition: all 0.3s ease;
 `
 const CardBody = styled.div`
     width:100%;
@@ -46,35 +55,25 @@ const CardFooter = styled.div`
     background:#001327;
     overflow:hidden;
 `
-const spring = {
-    type: "spring",
-    stiffness: 1000,
-    damping: 10,
-    mass: 2
-};
+
 
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     const { state } = useContext(Context)
     return (
-        <motion.div
-            whileHover={{ scale: 1.025 }}
-            animate
-            transition={spring}>
-            <Link to={`/${slug}`}>
-                <Card isDark={state.isDark}>
-                    <Text>
-                        {published}
-                    </Text>
-                    <CardBody>
-                        <Img fluid={thumbnail} alt="blog post picture" />
-                    </CardBody>
-                    <CardFooter>
-                        <h4>{title}</h4>
-                        <p>{excerpt}</p>
-                    </CardFooter>
-                </Card>
-            </Link>
-        </motion.div>
+        <Link to={`/${slug}`}>
+            <Card isDark={state.isDark}>
+                <Text>
+                    {published}
+                </Text>
+                <CardBody>
+                    <Img fluid={thumbnail} alt="blog post picture" />
+                </CardBody>
+                <CardFooter>
+                    <h4>{title}</h4>
+                    <p>{excerpt}</p>
+                </CardFooter>
+            </Card>
+        </Link>
     )
 }
 export default PixelCard
