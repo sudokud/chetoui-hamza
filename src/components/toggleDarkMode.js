@@ -22,8 +22,8 @@ const Classes = styled.div`
     border-radius:5px;
     .handle {
       width: 50%;
-      height: 29px;
-      background:#000;
+      height: 100%;
+      background: ${props => props.isDark ? "#f2f2f3" : "#fff10e"};
       z-index:10;
       border-radius:5px;
     }
@@ -43,8 +43,8 @@ const Classes = styled.div`
 `
 const spring = {
   type: "spring",
-  stiffness: 700,
-  damping: 10
+  stiffness: 300,
+  damping: 8
 }
 
 

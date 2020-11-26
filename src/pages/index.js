@@ -5,17 +5,11 @@ import styled from 'styled-components'
 import Layout from "../components/layout"
 import Technologies from '../components/technologies'
 import LatestPosts from '../components/latestPost'
-import Scene from "../components/scene"
-import { useContext } from 'react'
-import Context from '../store/context'
 import Sky from '../components/sky'
+import Scene from "../components/scene"
+
 
 const Classes = styled.div`
-.container-override{
-  border:1px solid deeppink;
-   margin-top:96px;
-   position:relative;
-  }
   a{
     margin:8px;
     padding:16px 8px;
@@ -37,19 +31,14 @@ const Classes = styled.div`
 
 
 const IndexPage = ({ location }) => {
-  const { state } = useContext(Context)
   return (
     <>
       <Layout animateKey={location.key}>
-        <SEO title="home page" />
+        <SEO title="Huis" />
         <Classes>
-          <Container fluid className="px-0 py-0 position-relative">
-            <Sky
-              isDark={state.isDark} />
-            <Scene />
-          </Container>
-
-          <Container fluid="lg" className="container">
+          <Sky />
+          <Scene />
+          <Container fluid="lg" className="container-override">
             <Row>
               <Col className="hi" sm={7}>
                 <h2>
