@@ -5,11 +5,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1275.0286"
-   height="488.33218"
-   viewBox="0 0 1275.0286 488.33219"
+   width="1279.364"
+   height="517.18311"
+   viewBox="0 0 1279.364 517.18311"
    fill="none"
    version="1.1"
    id="svg1625"
@@ -43,8 +44,8 @@
      id="namedview1627"
      showgrid="false"
      inkscape:zoom="0.70710675"
-     inkscape:cx="654.16346"
-     inkscape:cy="235.81377"
+     inkscape:cx="644.03923"
+     inkscape:cy="239.69993"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -61,6 +62,18 @@
      inkscape:snap-bbox-midpoints="true" />
   <defs
      id="defs1623">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1720">
+      <stop
+         style="stop-color:#162d55;stop-opacity:1"
+         offset="0"
+         id="stop1716" />
+      <stop
+         style="stop-color:#1c1124;stop-opacity:0.99993697"
+         offset="1"
+         id="stop1718" />
+    </linearGradient>
     <clipPath
        id="clip0">
       <rect
@@ -75,7 +88,7 @@
        inkscape:menu-tooltip="In and out glow with a possible offset and colorizable flood"
        inkscape:menu="Shadows and Glows"
        inkscape:label="Cutout Glow"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        id="filter1631">
       <feOffset
          dy="3"
@@ -106,7 +119,7 @@
        inkscape:label="Soft Focus Lens"
        inkscape:menu="Image Effects"
        inkscape:menu-tooltip="Glowing image content without blurring it"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        id="filter1667">
       <feGaussianBlur
          stdDeviation="5"
@@ -128,7 +141,9 @@
          k1="0.5"
          k3="0.5"
          result="result1"
-         id="feComposite1659" />
+         id="feComposite1659"
+         k2="0"
+         k4="0" />
       <feBlend
          in2="result1"
          result="result5"
@@ -148,7 +163,7 @@
          id="feComposite1665" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter2461">
       <feFlood
@@ -183,21 +198,38 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter2503"
-       x="-3.2556882e-05"
+       x="-3.2556884e-05"
        width="1.0000651"
-       y="-6.4181458e-05"
+       y="-6.4181455e-05"
        height="1.0001284">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.01729623"
          id="feGaussianBlur2505" />
     </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1720"
+       id="linearGradient1722"
+       x1="618.35565"
+       y1="-29.159098"
+       x2="615.698"
+       y2="484.30911"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="stars"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(0.50127958,28.75794)">
+    <rect
+       style="fill:url(#linearGradient1722);fill-opacity:1;stroke-width:0.394;stroke-linecap:round"
+       id="background-sky"
+       width="1278.8247"
+       height="517.54846"
+       x="0.026957346"
+       y="-29.159098" />
     <g
        id="g3842-2"
        style="display:inline"
@@ -6219,7 +6251,7 @@
      id="layer1"
      inkscape:label="layer-0"
      style="display:inline;opacity:1;filter:url(#filter2503)"
-     transform="translate(-0.50127958,17.446933)"
+     transform="translate(0,46.204873)"
      sodipodi:insensitive="true">
     <path
        d="m 592.92478,243.27142 v 1.88282 h -11.144 v 1.71912 h 22.3297 v 1.84189 h 31.3432 v -1.84189 h 25.976 v -1.76005 h -11.1852 v -1.84189 h -7.2931 v -1.88282 h -3.7692 v -1.80096 h -3.6468 v -1.84189 h -7.3337 v 1.84189 h -9.3415 v 1.80096 h -1.8437 v 1.92375 h -1.8031 v 1.84189 h -2.0072 v -1.88282 z"
@@ -8388,7 +8420,7 @@
      id="layer3"
      inkscape:label="layer-1"
      style="display:inline"
-     transform="translate(-0.50127958,17.446933)"
+     transform="translate(0,46.204873)"
      sodipodi:insensitive="true">
     <path
        id="path908"
@@ -9265,7 +9297,7 @@
      id="layer4"
      inkscape:label="layer-2"
      style="display:inline;opacity:1"
-     transform="translate(-0.50127958,17.446933)"
+     transform="translate(0,46.204873)"
      sodipodi:insensitive="true">
     <path
        d="m 602.01751,447.013 h -7.93089 v 3.99182 h 3.99631 v 8.04761 h 3.93458 z"
