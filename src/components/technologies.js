@@ -32,7 +32,7 @@ const LogoContainer = styled(motion.a)`
 const Technolgy = (props) => {
     const { href, src, alt } = props
     const [POP] = useSound(
-        'audio/pop.wav', { volume: 0.1 }
+        'audio/hoverIn.wav', { volume: 0.2 }
     )
     const { state } = useContext(Context)
     return (

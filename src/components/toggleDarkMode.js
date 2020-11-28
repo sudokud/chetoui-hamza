@@ -1,6 +1,6 @@
 import React from "react"
 import { useState, useContext } from "react"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import styled from "styled-components"
 import Context from '../store/context'
 import useSound from 'use-sound'
@@ -10,41 +10,24 @@ import useSound from 'use-sound'
 
 const Classes = styled.div`
 .switch {
-    position:relative;
-    width: 55px;
-    height: 31px;
-    background: #000;
+    width: 23px;
+    height: 23px;
     display: flex;
-    justify-content: ${props => props.isDark ? "flex-start" : "flex-end"};
     cursor: pointer;
     margin: 0 8px;
-    border:1px solid ${props => props.theme.palette.dark_purple};
     border-radius:5px;
-    .handle {
-      width: 50%;
-      height: 100%;
-      background: ${props => props.isDark ? "#f2f2f3" : "#fff10e"};
-      z-index:10;
-      border-radius:5px;
-    }
-    .moon{
-      position:absolute;
-      left:5px;
-      top:8px;
-    }
-    .sun{
-      position:absolute;
-      right:3px;
-      top:5px;
-    }
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
   }
-  
-  
+  img{
+    width:100%;
+  }
 `
 const spring = {
   type: "spring",
-  stiffness: 300,
-  damping: 8
+  duration: 0.7,
 }
 
 
@@ -59,9 +42,9 @@ const ToggleDarkMode = () => {
 
   const toggleSwitch = () => {
     return (
+      dispatch({ type: "TOGGLE_DARK_MODE" }),
       playToggle(),
-      setIsOn(!isOn),
-      dispatch({ type: "TOGGLE_DARK_MODE" })
+      setIsOn(!isOn)
     )
   }
   const handleKeyDown = (event) => {
@@ -78,14 +61,31 @@ const ToggleDarkMode = () => {
         onClick={toggleSwitch}
         onKeyDown={handleKeyDown}
         role="button"
+        data-toggle="tooltip" data-placement="bottom" title={`Activate Dark Mode`}
         tabIndex="0">
-        <img className="moon" src="img/moonIcon.svg" alt="dark" width="14px" />
-        <motion.div className="handle" layout transition={spring} />
-        <img className="sun" src="img/sunIcon.svg" alt="light" width="21px" />
+        {!state.isDark && (
+          <AnimatePresence>
+            <motion.img
+              initial={{ opacity: 0, rotate: 45 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={spring}
+              src="img/moon.svg"
+              alt="dark" />
+          </AnimatePresence>
+        )}
+        {state.isDark && (
+          <AnimatePresence>
+            <motion.img
+              initial={{ opacity: 0, rotate: -23 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={spring}
+              src="img/sun.svg"
+              alt="light" />
+          </AnimatePresence>)
+        }
       </div>
     </Classes>
   )
 }
-
 
 export default ToggleDarkMode

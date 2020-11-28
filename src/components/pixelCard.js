@@ -5,9 +5,10 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import useSound from 'use-sound'
 
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     position:relative;
     font-family:${props => props.theme.fonts.secondary};
     color:${props => props.theme.palette.arctic_lime};
@@ -59,9 +60,14 @@ const CardFooter = styled.div`
 
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     const { state } = useContext(Context)
+    const [POP] = useSound(
+        'audio/hoverIn.wav', { volume: 0.2 }
+    )
     return (
         <Link to={`/${slug}`}>
-            <Card isDark={state.isDark}>
+            <Card isDark={state.isDark}
+                onHoverEnd={() => (POP())}
+            >
                 <Text>
                     {published}
                 </Text>

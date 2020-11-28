@@ -98,7 +98,7 @@ function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
             onMouseEnter={onMouseEnter}
             role="link"
         >
-            <Link to={to} activeStyle={{ color: "#684656" }}>
+            <Link to={to} activeStyle={{ color: color }}>
                 {isSelected && (
                     <motion.div
                         layoutId="outline"
@@ -116,22 +116,22 @@ function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
 
 const colors = [
     {
-        color: "#005ec3",
+        color: "#684656",
         to: "/",
         name: "HOME"
     },
     {
-        color: "#004187",
+        color: "#d6f756",
         to: "/contact",
         name: "CONTACT"
     },
     {
-        color: "#00244a",
+        color: "#f2f2f3",
         to: "/posts",
         name: "POSTS"
     },
     {
-        color: "#00070e",
+        color: "#007bff",
         to: "/lab",
         name: "LAB"
     }
