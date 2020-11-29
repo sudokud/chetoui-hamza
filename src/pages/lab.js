@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+// import { useState, useEffect } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"

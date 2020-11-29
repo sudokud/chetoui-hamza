@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 
 const Group = styled.g`

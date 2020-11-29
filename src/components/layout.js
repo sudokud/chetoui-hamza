@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components'
 import Footer from './footer'
 import { motion, AnimatePresence } from "framer-motion"
 import AppNav from './MuiAppBar'
+import SwipeableTemporaryDrawer from "./menu"
 
 const GlobalStyle = createGlobalStyle`
   * > *{
@@ -76,6 +77,7 @@ const Layout = (props) => {
   return (
     <React.Fragment>
       <GlobalStyle isDark={state.isDark} />
+      <SwipeableTemporaryDrawer />
       <AppNav />
       <AnimatePresence exitBeforeEnter>
         <motion.div

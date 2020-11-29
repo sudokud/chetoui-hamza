@@ -1,9 +1,9 @@
 import React from "react"
-import { useState, useContext } from "react"
-import { AnimatePresence, motion } from "framer-motion"
-import styled from "styled-components"
+import { useContext } from "react"
 import Context from '../store/context'
 import useSound from 'use-sound'
+import { AnimatePresence, motion } from "framer-motion"
+import styled from "styled-components"
 
 
 
@@ -38,13 +38,11 @@ const ToggleDarkMode = () => {
     'audio/toggle.mp3', { volume: 0.25 }
   )
 
-  const [isOn, setIsOn] = useState(false);
 
   const toggleSwitch = () => {
     return (
       dispatch({ type: "TOGGLE_DARK_MODE" }),
-      playToggle(),
-      setIsOn(!isOn)
+      playToggle()
     )
   }
   const handleKeyDown = (event) => {
@@ -57,7 +55,6 @@ const ToggleDarkMode = () => {
     <Classes isDark={state.isDark}>
       <div
         className="switch"
-        data-ison={isOn}
         onClick={toggleSwitch}
         onKeyDown={handleKeyDown}
         role="button"

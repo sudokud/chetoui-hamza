@@ -7,6 +7,10 @@ const reducer = (state, action) => {
             return {
                 isDark: !state.isDark
             }
+        case "TOGGLE_DRAWER":
+            return {
+                isOpen: !state.isOpen
+            }
         default: {
             return state
         }

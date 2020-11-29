@@ -61,7 +61,7 @@ const CardFooter = styled.div`
 const PixelCard = ({ thumbnail, title, slug, excerpt, published }) => {
     const { state } = useContext(Context)
     const [POP] = useSound(
-        'audio/hoverIn.wav', { volume: 0.2 }
+        'audio/hoverIn.wav', { volume: 0.5 }
     )
     return (
         <Link to={`/${slug}`}>
