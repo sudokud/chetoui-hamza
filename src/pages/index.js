@@ -19,11 +19,11 @@ const Classes = styled.div`
     flex-direction:column;
     justify-content:center;
     pointer-events:none;
-    h2{
-      font-size:2.7rem;
+    h1{
+      font-size:3.5rem;
     }
     p{
-      font-size:1.5rem;
+      font-size:1.19rem;
     }
 }
 `
@@ -41,10 +41,8 @@ const IndexPage = ({ location }) => {
           <Container fluid="lg" className="container-override">
             <Row>
               <Col className="hi" sm={7}>
-                <h2>
-                  <span className="mx-3" role="img" aria-label="hello">👋</span>
-                  Hey, I'm Hamza</h2>
-                <p>I’m a web developer,a designer, and a JAMSTACK enthusiast</p>
+                <h1>Chetoui Hamza</h1>
+                <p>web developer, a designer, and a JAMSTACK enthusiast</p>
               </Col>
             </Row>
           </Container>

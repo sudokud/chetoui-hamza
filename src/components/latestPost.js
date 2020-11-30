@@ -35,7 +35,7 @@ const LatestPosts = () => {
 `)
     return (
         <Container fluid="lg" className="my-4 py-4" >
-            <h2 className="d-block">Latest from blog</h2>
+            <h2 className="d-block">Latest in Blog </h2>
             <Row className="d-flex justify-content-center">
                 {data.allMarkdownRemark.edges.map((edge, i) => {
                     const { thumbnail } = edge.node.frontmatter

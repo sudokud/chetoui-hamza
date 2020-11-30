@@ -30,7 +30,7 @@ const Styles = styled.div`
         position: relative;
         display: block;
         cursor: pointer;
-        margin-left:12px;
+        margin:0 12px;
         padding:4px;
         a{
             color:${props => props.theme.palette.arctic_lime};
@@ -121,17 +121,17 @@ const colors = [
         name: "HOME"
     },
     {
-        color: "#d6f756",
+        color: "#684657",
         to: "/contact",
         name: "CONTACT"
     },
     {
-        color: "#f2f2f3",
+        color: "#684756",
         to: "/posts",
         name: "POSTS"
     },
     {
-        color: "#007bff",
+        color: "#694656",
         to: "/lab",
         name: "LAB"
     }

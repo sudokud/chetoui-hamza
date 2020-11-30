@@ -35,7 +35,7 @@ const spring = {
 const ToggleDarkMode = () => {
   const { state, dispatch } = useContext(Context)
   const [playToggle] = useSound(
-    'audio/toggle.mp3', { volume: 0.25 }
+    'audio/toggleDarkLightMode.wav', { volume: 0.25 }
   )
 
 

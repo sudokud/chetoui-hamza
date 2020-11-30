@@ -57,6 +57,9 @@ const FaurmeGroup = styled.div`
             outline-offset: 1px;
         }
     }
+    sup{
+        color:${props => props.theme.palette.eggplant};
+    }
 `
 const Form = () => {
     const { state } = useContext(Context)
@@ -87,7 +90,7 @@ const Form = () => {
                 </label>
             </p>
             <FaurmeGroup>
-                <label htmlFor="name"> <span>&gt;</span> Name</label>
+                <label htmlFor="name"> <span>&gt;</span> Name <sup>required</sup></label>
                 <input
                     type="text"
                     name="name"
@@ -98,7 +101,7 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label htmlFor="email"> <span>&gt;</span> Email</label>
+                <label htmlFor="email"> <span>&gt;</span> Email <sup>required</sup></label>
                 <input
                     type="email"
                     name="email"
@@ -110,7 +113,7 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label htmlFor="object"> <span>&gt;</span> object</label>
+                <label htmlFor="object"> <span>&gt;</span> object <sup>optional</sup></label>
                 <textarea
                     rows="1"
                     type="text"
@@ -122,7 +125,7 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <label htmlFor="message"> <span>&gt;</span> Message</label>
+                <label htmlFor="message"> <span>&gt;</span> Message <sup>required</sup></label>
                 <textarea
                     type="text"
                     name="message"
@@ -133,7 +136,7 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <RetroButton type="submit" text="SUBMIT" />
+                <RetroButton type="submit" text="Send Message" />
             </FaurmeGroup>
         </Faurme>
     )

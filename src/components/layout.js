@@ -36,8 +36,6 @@ const GlobalStyle = createGlobalStyle`
       font-style: normal;
     }
     p{
-      display:flex;
-      align-items:center;
       color:${props => props.isDark ? props.theme.light.background : props.theme.dark.background};
     }
     h2,h3{
