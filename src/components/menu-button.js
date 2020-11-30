@@ -59,6 +59,7 @@ const MenuButton = ({ transition, ...props }) => {
                 cursor: "pointer"
             }}
             onClick={toggleDrawer}
+            tabIndex="1"
         >
             <motion.g
                 fill="#684656"

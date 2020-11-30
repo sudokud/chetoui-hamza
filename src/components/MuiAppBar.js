@@ -35,9 +35,9 @@ export default function AppNav() {
             <HideOnScroll>
                 <SAppBar>
                     <Toolbar>
-                        <Container fluid="lg">
+                        <Container fluid="lg" className="px-0 px-md-3">
                             <Row>
-                                <Col xs={6} md={4} className="d-flex align-items-center justify-content-left">
+                                <Col xs={7} md={4} className="d-flex align-items-center justify-content-left">
                                     <Chetouihamza />
                                 </Col>
                                 {matches && (
@@ -49,14 +49,14 @@ export default function AppNav() {
                                 )
                                 }
                                 <Col className="d-flex align-items-center justify-content-end">
+                                    <ToggleDarkMode />
                                     {!matches && (
                                         <MenuButton
-                                            className="mr-4"
+                                            className="ml-4 mr-2"
                                             transition={{ type: "spring", stiffness: 60, damping: 10 }}
                                         />
                                     )
                                     }
-                                    <ToggleDarkMode />
                                 </Col>
                             </Row>
                         </Container>

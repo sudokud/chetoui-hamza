@@ -21,7 +21,7 @@ const Styles = styled.div`
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: ${props => props.flexDir || "row"};
         flex-wrap: wrap;
         position:relative;
     }
@@ -63,11 +63,11 @@ const Styles = styled.div`
     }
     
  `
-export default function Nav() {
+export default function Nav({ flexDir, ...props }) {
     const [selected, setSelected] = useState(colors[0]);
 
     return (
-        <Styles>
+        <Styles flexDir={flexDir} {...props}>
             <AnimateSharedLayout>
                 <nav className="navigations">
                     {colors.map(({ color, to, name }) => {
