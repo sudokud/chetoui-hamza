@@ -4,6 +4,7 @@ import Context from '../store/context'
 import styled from 'styled-components'
 import RetroButton from './retroButton'
 import useSound from 'use-sound'
+import FancadeButton from './fancade-style-button'
 
 
 const Faurme = styled.form`
@@ -136,7 +137,8 @@ const Form = () => {
                 />
             </FaurmeGroup>
             <FaurmeGroup>
-                <RetroButton type="submit" text="Send Message" />
+                {/* <RetroButton type="submit" text="Send Message" /> */}
+                <FancadeButton type="submit" text="Send Message" />
             </FaurmeGroup>
         </Faurme>
     )
