@@ -32,7 +32,7 @@ const spring = {
 
 
 
-const ToggleDarkMode = () => {
+const ToggleDarkMode = ({ ...props }) => {
   const { state, dispatch } = useContext(Context)
   const [playToggle] = useSound(
     'audio/toggleDarkLightMode.wav', { volume: 0.25 }
@@ -52,7 +52,7 @@ const ToggleDarkMode = () => {
     }
   }
   return (
-    <Classes isDark={state.isDark}>
+    <Classes isDark={state.isDark} {...props}>
       <div
         className="switch"
         onClick={toggleSwitch}

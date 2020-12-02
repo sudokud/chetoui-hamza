@@ -30,7 +30,6 @@ const Styles = styled.div`
         position: relative;
         display: block;
         cursor: pointer;
-        margin:0 12px;
         padding:4px;
         a{
             color:${props => props.theme.palette.arctic_lime};
@@ -93,7 +92,7 @@ export default function Nav({ flexDir, ...props }) {
 function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
     return (
         <div
-            className="link"
+            className="link mx-1 mx-md-3"
             onMouseLeave={onMouseLeave}
             onMouseEnter={onMouseEnter}
             role="link"
