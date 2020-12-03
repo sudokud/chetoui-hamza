@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,13 +41,14 @@
      inkscape:window-height="771"
      id="namedview112"
      showgrid="true"
-     inkscape:zoom="1"
-     inkscape:cx="10.221608"
-     inkscape:cy="-2.1499631"
+     inkscape:zoom="8"
+     inkscape:cx="23.635719"
+     inkscape:cy="12.77231"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid122"
@@ -61,7 +62,7 @@
      transform="translate(-180,-160)">
     <path
        id="rect127-3"
-       style="opacity:0.999937;fill:#d6f756;fill-opacity:1;stroke-width:0.0394001;stroke-linecap:round"
+       style="opacity:0.999937;fill:#f2f2f2;fill-opacity:1;stroke-width:0.0394001;stroke-linecap:round"
        d="m 189,160 v 1 h -1 -1 v 1 h -1 -1 v 1 h -1 v 1 h -1 v 1 h -1 v 1 1 h -1 v 1 1 h -1 v 1 1 1 1 1 h 1 v 1 1 h 1 v 1 1 h 1 v 1 h 1 v 1 h 1 v 1 h 1 1 v 1 h 1 1 v 1 h 1 1 1 1 1 v -1 h 1 1 v -1 h 1 1 v -1 h 1 v -1 h 1 v -1 h 1 v -1 -1 h 1 v -1 -1 h 1 v -1 -1 -1 -1 h -1 v 1 h -1 v 1 1 1 h -1 -1 v 1 h -1 v 1 h -1 -1 v 1 h -1 -1 -1 v -1 h -1 -1 -1 v -1 h -1 v -1 -1 h -1 v -1 -1 h -1 v -1 -1 -1 -1 h 1 v -1 -1 h 1 v -1 h 1 v -1 h 1 v -1 h 1 1 1 1 1 v -1 h -1 -1 v -1 h -1 -1 -1 -1 z" />
   </g>
 </svg>
