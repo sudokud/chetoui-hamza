@@ -1,9 +1,10 @@
 import React from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import Context from "../store/context";
 import { motion, AnimateSharedLayout } from "framer-motion";
 import styled from "styled-components";
-import { Link } from 'gatsby'
-
+import { Link } from 'gatsby';
 /**
  * This is an example of animating between different components in Framer Motion 2.
  *
@@ -90,6 +91,10 @@ export default function Nav({ flexDir, ...props }) {
 }
 
 function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
+    const { state, dispatch } = useContext(Context)
+    const toggleDrawer = () => {
+        return dispatch({ type: "TOGGLE_DRAWER" })
+    }
     return (
         <div
             className="link mx-1 mx-md-3"
@@ -97,7 +102,7 @@ function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
             onMouseEnter={onMouseEnter}
             role="link"
         >
-            <Link to={to} activeStyle={{ color: color }}>
+            <Link to={to} activeStyle={{ color: color }} onClick={toggleDrawer}>
                 {isSelected && (
                     <motion.div
                         layoutId="outline"

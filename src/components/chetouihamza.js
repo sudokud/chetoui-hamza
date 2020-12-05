@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { Link } from 'gatsby'
 
-// 2,69312169312
 const LogoWrapper = styled(motion.span)`
   #svg1877{
     height:29px;
   }
 
 `
-
 
 const Chetouihamza = () => {
     return (
