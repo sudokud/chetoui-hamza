@@ -27,7 +27,10 @@ const NavWrapper = styled(motion.div)`
 
 
 export default function SwipeableTemporaryDrawer() {
-    const { state } = useContext(Context)
+    const { state, dispatch } = useContext(Context)
+    const toggleDrawer = () => {
+        return dispatch({ type: "TOGGLE_DRAWER" })
+    }
     return (
         <Classes isDark={state.isDark}>
             <SwipeableDrawer
@@ -36,9 +39,7 @@ export default function SwipeableTemporaryDrawer() {
                 open={state.isOpen}
             >
                 <NavWrapper>
-                    <Nav
-                    // flexDir="column"
-                    />
+                    <Nav onClick={toggleDrawer} />
                 </NavWrapper>
             </SwipeableDrawer>
         </Classes>

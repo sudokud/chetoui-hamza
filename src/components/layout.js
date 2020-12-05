@@ -70,8 +70,10 @@ const RetroScreen = styled.div`
 
 const Layout = (props) => {
   const { children, animateKey } = props;
-  const { state } = useContext(Context)
-
+  const { state, dispatch } = useContext(Context)
+  const toggleDrawer = () => {
+    return dispatch({ type: "TOGGLE_DRAWER" })
+  }
   return (
     <React.Fragment>
       <GlobalStyle isDark={state.isDark} />

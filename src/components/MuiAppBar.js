@@ -9,9 +9,7 @@ import styled from 'styled-components';
 import { Container, Row, Col } from "react-bootstrap"
 import ToggleDarkMode from "./toggleDarkMode";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import MenuButton from './menu-button';
 import HamButton from './hamburger-button';
-
 
 function HideOnScroll(props) {
     const { children, window } = props;

@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useContext } from "react";
-import Context from "../store/context";
+
 import { motion, AnimateSharedLayout } from "framer-motion";
 import styled from "styled-components";
 import { Link } from 'gatsby';
@@ -67,7 +66,7 @@ export default function Nav({ flexDir, ...props }) {
     const [selected, setSelected] = useState(colors[0]);
 
     return (
-        <Styles flexDir={flexDir} {...props}>
+        <Styles flexDir={flexDir}>
             <AnimateSharedLayout>
                 <nav className="navigations">
                     {colors.map(({ color, to, name }) => {
@@ -79,6 +78,7 @@ export default function Nav({ flexDir, ...props }) {
                                 color={color}
                                 isSelected={selected === color}
                                 onMouseEnter={() => setSelected(color)}
+                                {...props}
 
                             />
                         )
@@ -90,11 +90,8 @@ export default function Nav({ flexDir, ...props }) {
     );
 }
 
-function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
-    const { state, dispatch } = useContext(Context)
-    const toggleDrawer = () => {
-        return dispatch({ type: "TOGGLE_DRAWER" })
-    }
+function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter, ...props }) {
+
     return (
         <div
             className="link mx-1 mx-md-3"
@@ -102,7 +99,7 @@ function Item({ color, to, name, isSelected, onMouseLeave, onMouseEnter }) {
             onMouseEnter={onMouseEnter}
             role="link"
         >
-            <Link to={to} activeStyle={{ color: color }} onClick={toggleDrawer}>
+            <Link to={to} activeStyle={{ color: color }} {...props}>
                 {isSelected && (
                     <motion.div
                         layoutId="outline"
