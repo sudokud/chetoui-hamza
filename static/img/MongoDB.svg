@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="250.93364"
-   width="923.07733"
-   viewBox="-79.0212 -35.8025 526.80823 67.380387"
+   height="27.45631"
+   width="101"
+   viewBox="-79.0212 -35.8025 57.641575 7.3725341"
    version="1.1"
    id="svg48"
    sodipodi:docname="MongoDB.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   inkscape:version="1.0.1 (1.0.1+r74)">
   <metadata
      id="metadata52">
     <rdf:RDF>
@@ -35,16 +35,17 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1280"
-     inkscape:window-height="776"
+     inkscape:window-height="771"
      id="namedview50"
      showgrid="false"
-     inkscape:zoom="0.295"
-     inkscape:cx="-23.206906"
-     inkscape:cy="125.46682"
+     inkscape:zoom="6.675088"
+     inkscape:cx="51.759759"
+     inkscape:cy="32.05966"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg48" />
+     inkscape:current-layer="g871"
+     inkscape:document-rotation="0" />
   <defs
      id="defs28">
     <linearGradient
@@ -132,7 +133,7 @@
   </defs>
   <g
      id="g871"
-     transform="translate(5.8038174,82.961161)">
+     transform="matrix(0.10941662,0,0,0.10941662,-70.374967,-22.807782)">
     <g
        id="g32"
        transform="matrix(0.125,0,0,-0.125,-79.020975,-13.468467)"

@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="533.33331"
-   width="533.33331"
-   viewBox="-91.8 -153 353.59999 611.99998"
+   height="101"
+   width="101"
+   viewBox="-91.8 -153 66.963001 115.8975"
    version="1.1"
    id="svg6"
    sodipodi:docname="Bootstrap.svg"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+   inkscape:version="1.0.1 (1.0.1+r74)">
   <metadata
      id="metadata12">
     <rdf:RDF>
@@ -26,7 +26,14 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs10" />
+     id="defs10">
+    <rect
+       x="-1170.7238"
+       y="-612.70953"
+       width="430.88663"
+       height="157.28838"
+       id="rect11" />
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -37,19 +44,20 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1280"
-     inkscape:window-height="776"
+     inkscape:window-height="771"
      id="namedview8"
      showgrid="false"
-     inkscape:zoom="0.295"
-     inkscape:cx="-218.0791"
-     inkscape:cy="266.66667"
+     inkscape:zoom="0.834386"
+     inkscape:cx="268.6577"
+     inkscape:cy="70.161124"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg6" />
+     inkscape:current-layer="svg6"
+     inkscape:document-rotation="0" />
   <g
      id="g824"
-     transform="translate(161.5)">
+     transform="matrix(0.189375,0,0,0.189375,-43.831312,-124.02563)">
     <path
        style="fill:#563d7c"
        inkscape:connector-curvature="0"

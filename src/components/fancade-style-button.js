@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import Context from '../store/context'
+
 
 const FCSButton = styled(motion.button)`
-width:128px;
-height:56px;
+width:144px;
+height:59px;
 padding:0;
 margin:0;
 position:relative;
@@ -20,19 +23,37 @@ background:transparent;
     align-items:center;
     justify-content:center;
     font-size:1.47rem;
+    color:${props => props.theme.palette.cultured};
+}
+#btn-body{
+    fill:${props => props.isDark ? "#a18c96" : "#007bff"};
+}
+#btn-borders{
+    fill:${props => props.isDark ? "#684656" : "#00356e"};
+}
+#btn-shadow{
+    fill:${props => props.isDark ? "#402b35" : "#004c9e"};
 }
 `
 
 
 function FancadeButton({ text, ...props }) {
+    const [active, setActive] = useState(false);
+    const { state } = useContext(Context);
     return (
-        <FCSButton text={text} {...props}>
+        <FCSButton
+            isDark={state.isDark}
+            onMouseEnter={() => (setActive(true))}
+            onMouseLeave={() => (setActive(false))}
+            text={text}
+            {...props}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="100%"
                 height="100%"
                 version="1.1"
                 viewBox="0 0 33.867 14.501"
+            // opacity={active ? 1 : 0.6}
             >
                 <motion.g
                     strokeLinecap="round"
@@ -45,7 +66,6 @@ function FancadeButton({ text, ...props }) {
                         fill="#c4b7c8"
                         fillOpacity="1"
                         d="M46.197 107.464H79.096V120.997H46.197z"
-                        opacity="1"
                     ></motion.path>
                     <motion.path
                         id="btn-borders"
