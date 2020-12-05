@@ -25,7 +25,7 @@ background:transparent;
     font-size:1.47rem;
     color:${props => props.theme.palette.cultured};
 }
-#btn-body{
+#btn-body, #body-translate{
     fill:${props => props.isDark ? "#a18c96" : "#007bff"};
 }
 #btn-borders{
@@ -53,7 +53,6 @@ function FancadeButton({ text, ...props }) {
                 height="100%"
                 version="1.1"
                 viewBox="0 0 33.867 14.501"
-            // opacity={active ? 1 : 0.6}
             >
                 <motion.g
                     strokeLinecap="round"
@@ -78,6 +77,14 @@ function FancadeButton({ text, ...props }) {
                         fill="#a793ac"
                         fillOpacity="1"
                         d="M46.197 119.063v1.451h.483v.483h31.932v-.483h.484v-1.451h-.484v.483H46.68v-.483z"
+                        opacity="1"
+                    ></motion.path>
+                    <motion.path
+                        animate={{ y: active ? 1.310 : 0 }}
+                        id="body-translate"
+                        fill="#c4b7c8"
+                        fillOpacity="1"
+                        d="M46.68 107.463v.484h-.484v11.116h.484v.483h31.932v-.483h.484v-11.116h-.484v-.484z"
                         opacity="1"
                     ></motion.path>
                 </motion.g>
