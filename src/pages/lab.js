@@ -1,6 +1,6 @@
 import React from "react"
 // import { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -13,9 +13,9 @@ const Lab = ({ location }) => {
             <SEO title="Lab" />
             <Container fluid="lg" className="my-5 p-5" >
                 <Row className="d-flex justify-content-center">
-                    <h1>
-                        Building...
-                    </h1>
+                    <Col xs={6} className="text-center">
+                        <img width="100%" src="https://media.giphy.com/media/kHItTUhmy50guDJH2H/giphy.gif" alt="have a great day" />
+                    </Col>
                 </Row>
             </Container>
         </Layout>

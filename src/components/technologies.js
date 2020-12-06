@@ -10,7 +10,11 @@ import useSound from 'use-sound'
 
 
 
-
+const Styled = styled.div`
+// h2{
+//     font-size:42px;
+// }
+`
 const LogoContainer = styled(motion.a)`
     width: 101px;
     height: 75px;
@@ -48,14 +52,14 @@ const Technologies = () => {
 
 
     return (
-        <React.Fragment>
+        <Styled>
 
             <h2 className="d-block">Technologies i use</h2>
             <Row >
 
                 <Col sm={4}
                     className="my-4 d-flex flex-column align-items-center">
-                    <h3>DATA SOURCES</h3>
+                    <h4>DATA SOURCES</h4>
                     <Technolgy
                         href="https://strapi.io/"
                         src="img/StrapiJS.svg"
@@ -71,7 +75,7 @@ const Technologies = () => {
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
-                    <h3>BUILD</h3>
+                    <h4>BUILD</h4>
                     <Technolgy
                         href="https://getbootstrap.com/"
                         src="img/Bootstrap.svg"
@@ -92,7 +96,7 @@ const Technologies = () => {
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
-                    <h3>DEPLOY 	&amp; CDN</h3>
+                    <h4>DEPLOY 	&amp; CDN</h4>
 
                     <Technolgy
                         href="https://www.netlify.com/"
@@ -107,7 +111,7 @@ const Technologies = () => {
 
                 </Col>
             </Row>
-        </React.Fragment>
+        </Styled>
     )
 }
 
