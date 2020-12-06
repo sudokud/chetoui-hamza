@@ -50,14 +50,8 @@ export default function AppNav() {
                                 <Col className="d-flex align-items-center justify-content-end">
                                     <ToggleDarkMode />
                                     {!matches && (
-                                        <>
-                                            {/* <MenuButton
-                                                className="ml-4 mr-2"
-                                                transition={{ type: "spring", stiffness: 60, damping: 10 }}
-                                            /> */}
-                                            <HamButton
-                                                transition={{ type: "spring", stiffness: 130, damping: 10 }} />
-                                        </>
+                                        <HamButton
+                                            transition={{ type: "spring", stiffness: 130, damping: 10 }} />
                                     )
                                     }
                                 </Col>
