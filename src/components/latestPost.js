@@ -1,10 +1,7 @@
 import React from "react"
-// import { useEffect } from 'react'
-// import useSound from 'use-sound'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Container, Row, Col } from 'react-bootstrap'
-import PixelCard from './pixelCard'
-// import { motion } from 'framer-motion'
+import NesCard from './NesCard'
 
 
 
@@ -18,7 +15,7 @@ const LatestPosts = () => {
                 frontmatter {
                 slug
                 title
-                date
+                date(formatString: "MMMM DD, YYYY")
                 description
                 thumbnail {
                     childImageSharp {
@@ -41,7 +38,7 @@ const LatestPosts = () => {
                     const { thumbnail } = edge.node.frontmatter
                     return (
                         <Col className="d-flex justify-content-center mt-5" sm={12} md={6} lg={4} key={i}>
-                            <PixelCard
+                            <NesCard
                                 thumbnail={thumbnail.childImageSharp.fluid}
                                 title={edge.node.frontmatter.title}
                                 slug={edge.node.frontmatter.slug}

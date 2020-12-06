@@ -1,8 +1,8 @@
 export default {
     fonts: {
         main: "Major Mono Display",
-        secondary: "VT323",
-        read: "Space Mono"
+        read: "Space Mono",
+        TITLES: "Bowlby One SC"
     },
     palette: {
         dark_purple: "#1c1124",

@@ -56,7 +56,7 @@ module.exports = {
         fonts: [
           `Space Mono\:400,700`,
           `Major Mono Display`,
-          `VT323`
+          `Bowlby One SC`
         ],
         display: 'swap'
       }

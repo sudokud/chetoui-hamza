@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
     html,body{
-        font-family:${props => props.theme.fonts.secondary};
+        font-family:${props => props.theme.fonts.main};
         font-style: normal;
         font-size:16px;
         color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)};
@@ -25,12 +25,10 @@ const GlobalStyle = createGlobalStyle`
     }
     a{
       text-decoration:none;
-      font-family:${props => props.theme.fonts.main};
     }
     a:hover{
       text-decoration:none;
     }
-    span { font-family:${props => props.theme.fonts.secondary};}
     p,input,textarea{
       font-family:${props => props.theme.fonts.read};
       font-style: normal;
@@ -38,11 +36,8 @@ const GlobalStyle = createGlobalStyle`
     p{
       color:${props => props.isDark ? props.theme.light.background : props.theme.dark.background};
     }
-    h2,h3{
-      margin-bottom:32px;
-    }
     h1,h2,h3,h4,h5,h6{
-      font-family:${props => props.theme.fonts.secondary};
+      font-family:${props => props.theme.fonts.titles};
     }
 `
 
@@ -70,10 +65,7 @@ const RetroScreen = styled.div`
 
 const Layout = (props) => {
   const { children, animateKey } = props;
-  const { state, dispatch } = useContext(Context)
-  const toggleDrawer = () => {
-    return dispatch({ type: "TOGGLE_DRAWER" })
-  }
+  const { state } = useContext(Context)
   return (
     <React.Fragment>
       <GlobalStyle isDark={state.isDark} />
