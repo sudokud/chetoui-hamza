@@ -59,7 +59,7 @@ const Technologies = () => {
 
                 <Col sm={4}
                     className="my-4 d-flex flex-column align-items-center">
-                    <h4>DATA SOURCES</h4>
+                    <h5>DATA SOURCES</h5>
                     <Technolgy
                         href="https://strapi.io/"
                         src="img/StrapiJS.svg"
@@ -75,7 +75,7 @@ const Technologies = () => {
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
-                    <h4>BUILD</h4>
+                    <h5>BUILD</h5>
                     <Technolgy
                         href="https://getbootstrap.com/"
                         src="img/Bootstrap.svg"
@@ -96,7 +96,7 @@ const Technologies = () => {
 
                 <Col sm={4}
                     className="my-4  d-flex flex-column align-items-center">
-                    <h4>DEPLOY 	&amp; CDN</h4>
+                    <h5>DEPLOY 	&amp; CDN</h5>
 
                     <Technolgy
                         href="https://www.netlify.com/"

@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   }
     html,body{
         font-family:${props => props.theme.fonts.main};
+        font-weight: 400;
         font-style: normal;
         font-size:16px;
         color:${props => (props.isDark ? props.theme.dark.text : props.theme.light.text)};

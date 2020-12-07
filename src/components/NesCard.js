@@ -10,7 +10,6 @@ import useSound from 'use-sound'
 
 const Card = styled(motion.div)`
     position:relative;
-    font-family:${props => props.theme.fonts.TITLES};
     color:${props => props.theme.palette.arctic_lime};
     width:300px;
     height:450px;

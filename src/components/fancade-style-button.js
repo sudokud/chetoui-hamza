@@ -22,7 +22,7 @@ background:transparent;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:1.47rem;
+    font-size:1rem;
     color:${props => props.theme.palette.cultured};
 }
 #btn-body, #body-translate{
