@@ -4,7 +4,7 @@ import { useContext } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 import Context from '../store/context'
-
+import LeftButton from './left-button'
 
 
 const Classes = styled.div`
@@ -20,8 +20,8 @@ const Footer = () => {
     return (
         <Classes isDark={state.isDark}>
             <Container fluid="lg" className="container">
-                <Row className="d-flex justify-content-center">
-                    <p
+                <Row className="d-flex justify-content-center my-3">
+                    {/* <p
                         className="mx-2">
                         <a href="https://twitter.com/okuninoshi">
                             <img src="img/twitter.svg" alt="twitter" width="42px" />
@@ -31,7 +31,18 @@ const Footer = () => {
                         <a href="https://instagram.com/sudokud">
                             <img src="img/Instagram.svg" alt="Instagram" width="42px" />
                         </a>
-                    </p>
+                    </p> */}
+                    {/* /// */}
+
+                    <a href="https://instagram.com/sudokud">
+                        <LeftButton />
+                    </a>
+                    <a href="https://instagram.com/sudokud">
+                        <img src="img/middle-button.svg" alt="Instagram" width="42px" />
+                    </a>
+                    <a href="https://instagram.com/sudokud">
+                        <img src="img/right-button.svg" alt="Instagram" width="42px" />
+                    </a>
                 </Row>
                 <Row className="d-flex justify-content-center">
                     <p className="text-center">

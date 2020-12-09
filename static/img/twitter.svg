@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -9,21 +7,21 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="64px"
-   height="64px"
-   viewBox="0 0 64 64"
+   width="42"
+   height="36"
+   viewBox="0 0 42 36"
    version="1.1"
    id="SVGRoot"
-   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   inkscape:version="1.0.1 (1.0.1+r74)"
    sodipodi:docname="twitter.svg">
   <defs
      id="defs1952">
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
-       inkscape:vp_x="-8.637803 : 31.511541 : 1"
+       inkscape:vp_x="-8.637803 : 3.511541 : 1"
        inkscape:vp_y="0 : 1000 : 0"
-       inkscape:vp_z="55.362197 : 31.511541 : 1"
-       inkscape:persp3d-origin="23.362197 : 20.844874 : 1"
+       inkscape:vp_z="55.362197 : 3.511541 : 1"
+       inkscape:persp3d-origin="23.362197 : -7.155126 : 1"
        id="perspective2514" />
   </defs>
   <sodipodi:namedview
@@ -34,17 +32,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="19.225038"
-     inkscape:cy="17.392969"
+     inkscape:cx="16.369506"
+     inkscape:cy="4.7736539"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="776"
+     inkscape:window-height="771"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:grid-bbox="true" />
+     inkscape:grid-bbox="true"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata1955">
     <rdf:RDF>
@@ -60,16 +59,11 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-9.9266005,-12.619315)">
     <path
-       d="m 46.666666,31.749999 h -5.333334 v 2.666667 h -2.666666 v 2.666667 h -2.666667 v 2.666666 h -2.666666 v 2.666667 h -4.666667 -5.333333 -5.999999 v -5.333333 h 5.333332 V 34.416666 H 20 v -5.333333 -2.666667 h -2.666666 v -5.333332 h 5.333332 V 23.75 h 2.666667 v 2.666666 H 28 v 2.666667 h 2.666666 V 23.75 h 2.666667 v -2.666666 h 5.333333 V 23.75 h 2.666666 v 2.666666 h 5.333334 z M 53.333332,13.083334 V 10.416667 H 50.666666 V 7.7500005 H 13.333334 v 2.6666665 h -2.666667 v 2.666667 H 8.0000005 v 37.333332 h 2.6666665 v 2.666666 h 2.666667 v 2.666667 h 37.333332 v -2.666667 h 2.666666 v -2.666666 h 2.666667 V 13.083334 h -2.666667"
-       style="fill:#007bff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.13333333"
-       id="path480"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path814"
-       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.13333333;opacity:0.25"
-       d="m 46.666666,34.416665 h -5.333334 v 2.666667 h -2.666666 v 2.666667 h -2.666667 v 2.666666 h -2.666666 v 2.666667 h -4.666667 -5.333333 -5.999999 v -5.333333 h 5.333332 V 37.083332 H 20 V 31.749999 29.083332 H 17.333334 V 23.75 h 5.333332 v 2.666666 h 2.666667 v 2.666666 H 28 v 2.666667 h 2.666666 v -5.333333 h 2.666667 V 23.75 h 5.333333 v 2.666666 h 2.666666 v 2.666666 h 5.333334 z M 53.333332,15.75 V 13.083333 H 50.666666 V 10.416666 H 13.333334 v 2.666667 H 10.666667 V 15.75 H 8.0000005 v 37.333332 h 2.6666665 v 2.666666 h 2.666667 v 2.666667 h 37.333332 v -2.666667 h 2.666666 v -2.666666 h 2.666667 V 15.75 h -2.666667" />
+       id="path46"
+       style="fill:#007bff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.133333"
+       d="m 16.260585,19.9533 v 5.33203 h 2.666016 v 2.667969 5.332031 h 2.666015 v 2.667969 h -5.332031 v 5.332031 h 6 5.332031 4.667969 v -2.666015 h 2.666016 v -2.666016 h 2.666015 V 33.28533 h 2.667969 v -2.666015 h 5.332031 V 25.28533 H 40.260585 V 22.619315 H 37.592616 V 19.9533 h -5.332031 v 2.666015 h -2.667969 v 5.333984 H 26.9266 V 25.28533 H 24.260585 V 22.619315 H 21.592616 V 19.9533 Z" />
   </g>
 </svg>
