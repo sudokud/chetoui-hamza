@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import Context from '../store/context'
 import styled from 'styled-components'
 import useSound from 'use-sound'
-import FancadeButton from './fancade-style-button'
+import FancadeButton from './buttons/fancade-style-button'
 
 
 const Faurme = styled.form`

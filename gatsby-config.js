@@ -3,7 +3,7 @@ module.exports = {
     title: `Chetoui Hamza`,
     description: `chetoui's hamza personal website`,
     author: `@okuninoshi`,
-    keywords: 'chetoui hamza, web, jamstack, tipaza, fouka, faster websites, site web static, api, sécurisé, e commerce algerie',
+    keywords: 'chetoui hamza, web, jamstack, tipaza, fouka, faster websites, site web static, api, sécurisé, ecommerce algerie, strapi, gatsby, cdn, netlify',
     siteUrl: 'https://chetoui-hamza.netlify.app',
     image: '/img/autoportrait.png'
   },
@@ -50,17 +50,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Space Mono\:400,700`,
-          `Major Mono Display`,
-          `Bowlby One SC`
-        ],
-        display: 'swap'
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       `Space Mono\:400,700`,
+    //       `Major Mono Display`,
+    //       `Bowlby One SC`
+    //     ],
+    //     display: 'swap'
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {

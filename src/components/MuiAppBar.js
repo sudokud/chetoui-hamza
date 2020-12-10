@@ -7,9 +7,9 @@ import Nav from './nav';
 import Slide from '@material-ui/core/Slide';
 import styled from 'styled-components';
 import { Container, Row, Col } from "react-bootstrap"
-import ToggleDarkMode from "./toggleDarkMode";
+import ToggleDarkMode from "./buttons/toggleDarkMode";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import HamButton from './hamburger-button';
+import HamButton from './buttons/hamburger-button';
 
 function HideOnScroll(props) {
     const { children, window } = props;

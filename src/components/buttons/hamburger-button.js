@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { useContext } from "react"
-import Context from '../store/context'
+import Context from '../../store/context'
 import { Button as BTN } from '@material-ui/core'
 
 const Button = styled(BTN)`

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import Context from '../store/context'
+import Context from '../../store/context'
 
 
 const FCSButton = styled(motion.button)`

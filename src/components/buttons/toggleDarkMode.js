@@ -1,6 +1,6 @@
 import React from "react"
 import { useContext } from "react"
-import Context from '../store/context'
+import Context from '../../store/context'
 import useSound from 'use-sound'
 import { AnimatePresence, motion } from "framer-motion"
 import styled from "styled-components"

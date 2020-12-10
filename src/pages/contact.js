@@ -1,6 +1,6 @@
 import React from 'react'
 // import { useState, useEffect } from "react"
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Form from '../components/form'
@@ -9,20 +9,6 @@ import Form from '../components/form'
 
 
 function Connect({ location }) {
-    // const [offset, setOffset] = useState(0);
-
-    // useEffect(() => {
-    //     function handleScroll() {
-    //         setOffset(window.pageYOffset);
-    //     }
-
-    //     window.addEventListener("scroll", handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
-
     return (
         <Layout animateKey={location.key}>
             <SEO title="Connect" />
