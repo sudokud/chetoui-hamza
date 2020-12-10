@@ -23,7 +23,6 @@ background:transparent;
     justify-content:center;
 }
 #btn-body{
-    opacity:0.999937;
     fill:#916f7c;
     fill-opacity:1;
     stroke-width:0.074332;
@@ -31,7 +30,6 @@ background:transparent;
     paint-order:markers fill stroke;
 }
 #btn-borders{
-    opacity:0.999937;
     fill:#241c1f;
     stroke-width:0.0742069;
     stroke-linecap:round;
@@ -39,7 +37,6 @@ background:transparent;
 
 }
 #btn-shadow{
-    opacity:0.999937;
     fill:#48373e;
     fill-opacity:1;
     stroke-width:0.0742069;
@@ -49,7 +46,6 @@ background:transparent;
 }
 
 #border-translate{
-  opacity:0.999937;
   fill:#241c1f;
   fill-opacity:1;
   stroke-width:0.0742069;
