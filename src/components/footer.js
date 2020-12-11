@@ -13,6 +13,7 @@ const Classes = styled.div`
   .container{
    padding:32px;
    margin-top:32px;
+   border:1px solid deeppink;
   }
 `
 
@@ -23,19 +24,6 @@ const Footer = () => {
         <Classes isDark={state.isDark}>
             <Container fluid="lg" className="container">
                 <Row className="d-flex justify-content-center my-3">
-                    {/* <p
-                        className="mx-2">
-                        <a href="https://twitter.com/okuninoshi">
-                            <img src="img/twitter.svg" alt="twitter" width="42px" />
-                        </a>
-                    </p>
-                    <p className="mx-2">
-                        <a href="https://instagram.com/sudokud">
-                            <img src="img/Instagram.svg" alt="Instagram" width="42px" />
-                        </a>
-                    </p> */}
-                    {/* /// */}
-
                     <a href="https://instagram.com/sudokud">
                         <LeftButton imgSrc="img/twitter.svg" imgAlt="Instagram" />
                     </a>
@@ -53,9 +41,8 @@ const Footer = () => {
                 </Row>
                 <Row className="d-flex  justify-content-center">
                     <p>Made with</p>
-                    <span>
+                    <span className="mx-3">
                         <img
-                            className="mx-3"
                             width="31px" height="26,7px"
                             src={state.isDark ? "img/dark_heart.gif" : "img/light_heart.gif"}
                             alt="❤️" />

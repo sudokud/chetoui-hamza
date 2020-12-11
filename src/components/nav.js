@@ -31,6 +31,7 @@ const Styles = styled.div`
         display: block;
         cursor: pointer;
         padding:4px;
+        padding-right:12px;
         a{
             color:${props => props.theme.palette.arctic_lime};
         }
@@ -43,21 +44,18 @@ const Styles = styled.div`
         height:100%;
         width:100%;
         filter:opacity(0.61);
-        border:1px solid ${props => props.theme.palette.arctic_lime};
         box-shadow: 
-        1px 0px 0px ${props => props.theme.palette.arctic_lime},
-        0px 1px 0px ${props => props.theme.palette.arctic_lime},
-        2px 1px 0px ${props => props.theme.palette.arctic_lime},
-        1px 2px 0px ${props => props.theme.palette.arctic_lime},
-        3px 2px 0px ${props => props.theme.palette.arctic_lime},
-        2px 3px 0px ${props => props.theme.palette.arctic_lime},
-        4px 3px 0px ${props => props.theme.palette.arctic_lime},
-        3px 4px 0px ${props => props.theme.palette.arctic_lime},
-        5px 4px 0px ${props => props.theme.palette.arctic_lime},
-        4px 5px 0px ${props => props.theme.palette.arctic_lime},
-        6px 5px 0px ${props => props.theme.palette.arctic_lime},
-        5px 6px 0px ${props => props.theme.palette.arctic_lime},
-        7px 6px 0px ${props => props.theme.palette.arctic_lime};
+        -1px 1px 0px ${props => props.theme.palette.arctic_lime},
+        -2px 2px 0px ${props => props.theme.palette.arctic_lime},
+        -3px 3px 0px ${props => props.theme.palette.arctic_lime},
+        -4px 4px 0px ${props => props.theme.palette.arctic_lime},
+        -5px 5px 0px ${props => props.theme.palette.arctic_lime},
+        inset -1px 1px 0px #5c6a25,
+        inset -2px 2px 0px #5c6a25,
+        inset -3px 3px 0px #5c6a25,
+        inset -4px 4px 0px #5c6a25,
+        inset -5px 5px 0px #5c6a25;
+
         background-blend-mode: difference;
     }
     

@@ -24,7 +24,7 @@ background:transparent;
 }
 #btn-body,
 #body-translate{
-    fill:#003b7a;
+    fill:#218cff;
     fill-opacity:1;
     stroke-width:0.074332;
     stroke-linecap:round;
@@ -32,14 +32,14 @@ background:transparent;
 }
 #btn-borders,
 #border-translate{
-    fill:#000b17;
+    fill:#001b38;
     stroke-width:0.0742069;
     stroke-linecap:round;
     paint-order:markers fill stroke;
 
 }
 #btn-shadow{
-    fill:#001b38;
+    fill:#005bbd;
     fill-opacity:1;
     stroke-width:0.0742069;
     stroke-linecap:round;
