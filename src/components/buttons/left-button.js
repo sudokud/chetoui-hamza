@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 
-const LeftButton = styled(motion.button)`
+export const ButtonWrapper = styled(motion.button)`
 width:45px;
 height:39px;
 padding:0;
@@ -22,22 +22,24 @@ background:transparent;
     align-items:center;
     justify-content:center;
 }
-#btn-body{
-    fill:#916f7c;
+#btn-body,
+#body-translate{
+    fill:#003b7a;
     fill-opacity:1;
     stroke-width:0.074332;
     stroke-linecap:round;
     paint-order:markers fill stroke;
 }
-#btn-borders{
-    fill:#241c1f;
+#btn-borders,
+#border-translate{
+    fill:#000b17;
     stroke-width:0.0742069;
     stroke-linecap:round;
     paint-order:markers fill stroke;
 
 }
 #btn-shadow{
-    fill:#48373e;
+    fill:#001b38;
     fill-opacity:1;
     stroke-width:0.0742069;
     stroke-linecap:round;
@@ -45,28 +47,12 @@ background:transparent;
 
 }
 
-#border-translate{
-  fill:#241c1f;
-  fill-opacity:1;
-  stroke-width:0.0742069;
-  stroke-linecap:round;
-  paint-order:markers fill stroke;
-
-}
-#body-translate{
-    opacity:0.999937;
-    fill:#916f7c;
-    fill-opacity:1;
-    stroke-width:0.074332;
-    stroke-linecap:round;
-    paint-order:markers fill stroke;
-}
 `
 
 export default function ({ imgSrc, imgAlt, ...props }) {
     const [active, setActive] = useState(false);
     return (
-        <LeftButton
+        <ButtonWrapper
             onMouseEnter={() => (setActive(true))}
             onMouseLeave={() => (setActive(false))}
             {...props}
@@ -105,6 +91,6 @@ export default function ({ imgSrc, imgAlt, ...props }) {
             <motion.span className="btn-icon" animate={{ y: active ? "3px" : 0 }}>
                 <img src={imgSrc} alt={imgAlt} />
             </motion.span>
-        </LeftButton>
+        </ButtonWrapper>
     )
 }
