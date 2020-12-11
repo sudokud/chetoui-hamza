@@ -39,7 +39,7 @@ export default Posts
 
 export const pageQuery = graphql`
 query AllBlogPosts {
-  allMarkdownRemark {
+  allMarkdownRemark (sort: {fields: frontmatter___thumbnail___modifiedTime, order: DESC}) {
     edges {
       node {
         frontmatter {

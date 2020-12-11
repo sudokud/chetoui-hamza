@@ -9,7 +9,7 @@ const LatestPosts = () => {
 
     const data = useStaticQuery(graphql`
     query LatestBlogPosts {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {fields: frontmatter___thumbnail___modifiedTime, order: DESC}, limit: 3) {
             edges {
             node {
                 frontmatter {
