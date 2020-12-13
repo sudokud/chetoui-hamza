@@ -13,7 +13,6 @@ const Classes = styled.div`
   .container{
    padding:32px;
    margin-top:32px;
-   border:1px solid deeppink;
   }
 `
 

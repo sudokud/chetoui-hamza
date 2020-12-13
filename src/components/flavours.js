@@ -16,6 +16,8 @@ justify-content:center;
     border:1px solid deeppink;
     display:flex;
     flex-direction:row;
+    width:170px;
+    overflow:hidden;
 }
 `
 
@@ -28,31 +30,28 @@ export default function () {
                 <motion.div
                     className="Row"
                 >
-                    <Col className="Col">
-                        <motion.p initial={{ y: -64 }}
-                            animate={{ y: 64 }}
-                            transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                type: "keyframes",
-                                repeatType: "loop"
-                            }}>
-                            vanilla
+                    <motion.p
+
+                        animate={{ x: [-170, 230, 230, -130], y: [0, 0, 170, 170] }}
+                        transition={{
+                            times: [0, 0.66, 0.66, 1],
+                            duration: 9,
+                            repeat: Infinity,
+                            type: "tween"
+                        }}>
+                        vanilla
                 </motion.p>
-                    </Col>
-                    <Col className="Col">
-                        <motion.p initial={{ x: -128 }}
-                            animate={{ x: 128 }}
-                            transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                // type: "keyframes",
-                                type: "tween",
-                                repeatType: "loop"
-                            }}>
-                            vanilla
+                    <motion.p
+
+                        animate={{ x: [-180, 230, 230, -170], y: [0, 0, 170, 170] }}
+                        transition={{
+                            times: [0, 0.66, 0.66, 1],
+                            duration: 9,
+                            repeat: Infinity,
+                            type: "tween"
+                        }}>
+                        chocolate
                 </motion.p>
-                    </Col>
                 </motion.div>
             </Styles>
         </Container>

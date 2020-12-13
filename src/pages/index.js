@@ -52,7 +52,7 @@ const IndexPage = ({ location }) => {
             className="mt-5 container-override">
             <Technologies />
           </Container>
-          <Flavours />
+          {/* <Flavours /> */}
           <LatestPosts />
         </Classes>
       </Layout>
