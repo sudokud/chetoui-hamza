@@ -4,14 +4,13 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 
-export const ButtonWrapper = styled(motion.button)`
+export const ButtonWrapper = styled(motion.a)`
 width:45px;
 height:39px;
 padding:0;
 margin:0;
 position:relative;
-border:0px solid transparent;
-background:transparent;
+
 .btn-icon{
     position:absolute;
     left:0;
@@ -49,13 +48,14 @@ background:transparent;
 
 `
 
-export default function ({ imgSrc, imgAlt, ...props }) {
+export default function ({ href, children, ...props }) {
     const [active, setActive] = useState(false);
     return (
         <ButtonWrapper
             onMouseEnter={() => (setActive(true))}
             onMouseLeave={() => (setActive(false))}
             {...props}
+            href={href}
         >
 
             <svg
@@ -89,7 +89,7 @@ export default function ({ imgSrc, imgAlt, ...props }) {
                 </g>
             </svg>
             <motion.span className="btn-icon" animate={{ y: active ? "3px" : 0 }}>
-                <img src={imgSrc} alt={imgAlt} />
+                {children}
             </motion.span>
         </ButtonWrapper>
     )

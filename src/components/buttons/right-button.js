@@ -3,13 +3,14 @@ import { useState } from 'react'
 import { ButtonWrapper } from './left-button'
 import { motion } from 'framer-motion'
 
-export default function ({ imgSrc, imgAlt, ...props }) {
+export default function ({ href, children, ...props }) {
     const [active, setActive] = useState(false);
     return (
         <ButtonWrapper
             onMouseEnter={() => (setActive(true))}
             onMouseLeave={() => (setActive(false))}
             {...props}
+            href={href}
         >
 
             <svg
@@ -48,7 +49,7 @@ export default function ({ imgSrc, imgAlt, ...props }) {
                 </g>
             </svg>
             <motion.span className="btn-icon" animate={{ y: active ? "3px" : 0 }}>
-                <img src={imgSrc} alt={imgAlt} />
+                {children}
             </motion.span>
         </ButtonWrapper>
     )

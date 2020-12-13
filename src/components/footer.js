@@ -7,7 +7,7 @@ import Context from '../store/context'
 import LeftButton from './buttons/left-button'
 import MiddleButton from "./buttons/middle-button"
 import RightButton from "./buttons/right-button"
-
+import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
 
 const Classes = styled.div`
   .container{
@@ -24,15 +24,15 @@ const Footer = () => {
         <Classes isDark={state.isDark}>
             <Container fluid="lg" className="container">
                 <Row className="d-flex justify-content-center my-3">
-                    <a href="https://instagram.com/sudokud">
-                        <LeftButton imgSrc="img/twitter.svg" imgAlt="Instagram" />
-                    </a>
-                    <a href="https://twitter.com/okuninoshi">
-                        <MiddleButton imgSrc="img/twitter.svg" imgAlt="twitter" />
-                    </a>
-                    <a href="https://instagram.com/sudokud">
-                        <RightButton imgSrc="img/twitter.svg" imgAlt="twitter" />
-                    </a>
+                    <LeftButton href="https://instagram.com/sudokud">
+                        <FaGithub color="#f2f2f3" fontSize="24px" />
+                    </LeftButton>
+                    <MiddleButton href="https://twitter.com/okuninoshi">
+                        <FaTwitter color="#f2f2f3" fontSize="24px" />
+                    </MiddleButton>
+                    <RightButton href="https://github.com/okuninoshi">
+                        <FaInstagram color="#f2f2f3" fontSize="24px" />
+                    </RightButton>
                 </Row>
                 <Row className="d-flex justify-content-center">
                     <p className="text-center">
