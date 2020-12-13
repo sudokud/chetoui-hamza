@@ -50,17 +50,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       `Space Mono\:400,700`,
-    //       `Major Mono Display`,
-    //       `Bowlby One SC`
-    //     ],
-    //     display: 'swap'
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Space Mono\:400,700`,
+          `Major Mono Display`,
+          `Bowlby One SC`
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
