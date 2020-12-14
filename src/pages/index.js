@@ -7,7 +7,7 @@ import Technologies from '../components/technologies'
 import LatestPosts from '../components/latestPost'
 import Sky from '../components/sky'
 import Scene from "../components/scene"
-import Flavours from "../components/flavours"
+// import Flavours from "../components/flavours"
 
 
 const Classes = styled.div`
@@ -28,9 +28,6 @@ const Classes = styled.div`
     }
 }
 `
-
-
-
 const IndexPage = ({ location }) => {
   return (
     <>
