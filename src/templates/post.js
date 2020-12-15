@@ -29,12 +29,12 @@ export default function Post({ data, location }) {
           <StyledRow>
             <Col sm={2}></Col>
             <Col>
+              <p className="py-3">{frontmatter.date}</p>
               <Img
                 className="thumbnail"
                 fluid={markdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
                 alt="JAMSTACK"
               />
-              <h4 className="py-3">Published: {frontmatter.date}</h4>
               <h1>{frontmatter.title}</h1>
               <div
                 dangerouslySetInnerHTML={{ __html: html }}
