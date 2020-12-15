@@ -2,7 +2,6 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Chetouihamza from './chetouihamza';
 import Nav from './nav';
 import Slide from '@material-ui/core/Slide';
 import styled from 'styled-components';
@@ -37,7 +36,7 @@ export default function AppNav() {
                         <Container fluid="lg" className="px-0 px-md-3">
                             <Row>
                                 <Col xs={7} md={4} className="d-flex align-items-center justify-content-left">
-                                    <Chetouihamza />
+                                    <img src="/img/my-logo.svg" width="112px" alt="chetoui hamza" />
                                 </Col>
                                 {matches && (
 

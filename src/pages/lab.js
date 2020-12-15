@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap'
-import Isometrics from "../components/isometrics"
+// import Isometrics from "../components/isometrics"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
