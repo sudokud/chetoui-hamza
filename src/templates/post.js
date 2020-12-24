@@ -21,6 +21,9 @@ const Styles = styled.div`
       margin-bottom:0;
     }
   }
+  em {
+    color: deeppink;
+  }
 `
 const StyledRow = styled(Row)`
   & > .thumbnail{

@@ -1,5 +1,5 @@
 ---
-slug: mui-x-react-bootstrap
+slug: mui-x-react-bootstrap-x-gatsbyjs
 title: mixing React UI libraries with Gatsby
 date: 2020-12-11T17:59:31.482Z
 description: combine Material-Ui with React-Bootstrap to create faster web Apps UIs
@@ -7,26 +7,36 @@ thumbnail: jamstack.webp
 tags:
   - JavaScript JAMStack libraries ui ux
 ---
+#### Introduction
+
+
 for a quick preview visit  [this link](https://reactjs-clone.netlify.app/)
+when you google for react ui libraries the first reasult you'll see is is a top 10, 5 or 3 React components Library for 2020, for a new newcomers to the industrie of web developing  this result will frustrate theme, just like it did when i first start learning about React, React-Frameworks and UI librarie.
 
-#### requirements, envirenement setup
+thats what pushed me to write this particular blog post, for me there's no top because they all speak the same language wich is *React* and i think they will made a great couple if they share the same project.
 
-to be able to follow a along side with this tutorial make sur to have the following installed.
+in this post you will play the role of **Cupidon** with material-ui and react-bootstrap, but first let's set up the envirenemnt for theme to be able to communicate.
+#### envirenement setup
 
-1. nodejs (npm)
-2. git 
-3. gatsby CLI
+> to be able to follow along with this quick tutorial you need to have a basic basic knowledge of **React** as well as **Bootstrap** and to be familare with your **command line**
 
-our main focus is to build faster web Apps UIs using React UI libraries, so we're escaping the **Development Environment Set Up**, and redirects you to [this amazing tutorial](https://www.gatsbyjs.com/docs/tutorial/part-zero/) from the official gatsby site.
+first check if you have the following installed on your machine, if not navigate to the official website for each, follow the Guides to install themes depends on you Operating system.
+
+1. [nodejs (npm)](https://nodejs.org/en/)
+2. [git](https://git-scm.com/)
+3. [gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
+
+follow this step by step [tutorial](https://www.gatsbyjs.com/docs/tutorial/part-zero/) from the official gatsby site. to get started with **Gatsby** the Where our two lovers will meet 💜.
 
 if you have already installed and configured this tools lets quick check our versions before we start.
 
-run the following commande from your favorite terminal.
+run the following commande from your command line (console).
 
 ```bash
 > node --version
 > npm --version
 ```
+
 The output should look similar to the screenshot below, showing version numbers in response to the commands.
 
 
@@ -68,18 +78,18 @@ and choose "Done" to confirm your choices
   ─────
 ```
 
-The CLI will run an interactive shell asking for the above options before creating a Gatsby site for you.
+The **CLI** will run an interactive shell asking for the above options before creating a Gatsby site for you.
 
-make sure to select styled-components for styling system?,  Add Markdown support (without MDX) for additional features.
+make sure to select *styled-components* for styling system?,  Add *Markdown* support (without MDX) for additional features.
 
-after the installation finishes open the file(whereever you named the project) with a text editor, mine is [VSCode](https://code.visualstudio.com/), also i recomande using it, because its free and open source, and it contain a lot of features(Extensions).
+after the installation finishes open the project folder with your Text editor.
 
-Inside your Gatsby project, you will see somthing like the screenshot below.for more details about the role of each file and folder check the [official gatsby docs](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#files).
+Inside teh **Gatsby project**, you will see somthing like the screenshot below. for more details about the role of each file or folder check the [official gatsby docs](https://www.gatsbyjs.com/docs/reference/gatsby-project-structure/#files) about the topic.
 
 ![file-structure](./files-structure.png)
 
 
-back to your command line, add react-bootstrap and Material-Ui libraries by installing the following npm packages
+back to your command line, add **react-bootstrap** and **Material-Ui** libraries.
 
 ```bash
 > npm install react-bootstrap bootstrap
@@ -88,22 +98,23 @@ back to your command line, add react-bootstrap and Material-Ui libraries by inst
 > npm install gatsby-plugin-material-ui
 ```
 
->Note the last dependency is the gatsby-plugin-material-ui, this plugin will help us to override the default styling by injecting the material-ui styles first.
+>Note the last dependency is the **gatsby-plugin-material-ui**, we will configure this plugin to **override** the default styling by **injecting** the material-ui styles first.
 
-The Gatsby Config File:
+###### The Gatsby Config File:
 
-in the root of your project note the gatsby-config.js file, 
+In the root of your project you have the *gatsby-config.js* file, 
 this file let us configure the gatsby [plugins](https://www.gatsbyjs.com/plugins/) to add functionality 
 and customize our Gatsby apps, in our case we need to override the
-[material-ui](https://material-ui.com/) styles to applie our own, lets see how it works.
+[material-ui](https://material-ui.com/) styles.
 
-navigate to the gatsby.config.js file and update the plugins array, to match the following: 
+Open the gatsby.config.js file and update the plugins array. 
 
 
 ```javascript
+// gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: "name of your site",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -127,57 +138,56 @@ module.exports = {
   ],
 };
 ```
-That's all for the material-ui library, next we need to configure react-bootstrap this time we'll use another gatsby file.
+This is  all we need to configure **material-ui** library with **Gatsby**, next we configure react-bootstrap.
 
-The Gatsby browser File:
+###### the gatsby browser file:
 
-depends on the version of gatsby you installed it may or may not contain the gatsby-browser.js, if not add this file to the root of your project.
+depends on the starter you used in the gatsby installation it may or may not contain the **gatsby-browser.js**.
 
-copy past the following code and save.
+add the file to the root of your project, copy and past the following code to it.
 
 ```javascript
+//gatsby-browser.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
-This file gives us the abilty to interacte with the client-side of Gatsby. in our case we just made bootstrap styles available globally in our project.
+>This file gives us the abilty to interacte with the client-side of Gatsby. in our case we just made bootstrap styles globally available.
+run 
 
-if you want to verfiy the that the styls are properly imported in the head of the html documment opne the browser devtools and inspect the head tag  you will a diffrent link and style links the bootsrap style that we imported are highlated in the the screenshot bellow:
+```bash
+> gatsby develop
+```
+open the browser at *https://localhost:8000* open the devtools, inside the `<head>` tag you will see that the bootstrap styles that we imported in the **gatsby-browser.js** file are injected just like we wanted.
 
 ![browser inspect](./browser-devtools.png)
 
-> notice that at the top of the head tag we have this <!--mui-inject-first--> followed by some style tags, thos are comming from the material-ui styles remember how we configured the library to inject its styles first, at this stage you'll not get any styles tags because we didn't import any MUI component yet, this is what we'll do next
+> notice that at the top of the `<head>` tag we have this <!--mui-inject-first--> followed by some `<style>` tags, those are comming from the material-ui styles remember when we configured the plugin to inject the styles first, at this stage you'll not get any styles tags because we didn't import any **MUI component** yet.
 
-Creating our first Component:
+###### The Layout component:
 
-in create a components folder inside the src folder, we will put all our components inside of this folder in the src/components create a new file layout.js.
+to start creating components create the *layout.js* file inside `/src/componets` folder.
 
-copy and past the following code to src/components/layout.js
+copy and past the following code to it.
 
 ```javascript
+// src/components/layout.js
 import React from 'react'
 import {
     Container
 } from 'react-bootstrap'
 import PrimarySearchAppBar from './app-bar'
-import Footer from './footer'
-
 import { createGlobalStyle } from 'styled-components'
-
 const GlobalStyle = createGlobalStyle`
-body,html {
+body,html{
     margin:0;
     padding:0;
-    font-family: -apple-system, BlinkMacSystemFont,
-                 Segoe UI, Roboto,Oxygen,
-                 Ubuntu,Cantarell,
-                 Fira Sans,Droid Sans,
-                 Helvetica Neue,sans-serif;
+    font-family: Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+                 Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: 400;
 }
 h1,h2,h3{
     color: #61dafb;
 }
 `
-
 const Layout = ({ children }) => {
     return (
         <React.Fragment>
@@ -187,22 +197,20 @@ const Layout = ({ children }) => {
                 <Container fluid className="px-0 pt-5">
                     {children}
                 </Container>
-                <Footer />
             </Container>
         </React.Fragment>
     )
 }
-
 export default Layout
 ```
-if you save and run the gatsby develop command nothing will happens, because we are not using this component any where in our pages.
+if you save and run the `gatsby develop` command you will not see any difference, because we are not using this component any where in our pages.
 
-open the index.js file from src/pages/ folder and update  it to mathch the following
+open the index.js file from src/pages/ folder and update  it to mathch the following.
 
 ```javascript
+// src/pages/index.js
 import * as React from "react"
 import Layout from '../components/layout'
-
 const IndexPage = () => {
   return (
     <Layout>
@@ -211,27 +219,33 @@ const IndexPage = () => {
 }
 export default IndexPage
 ```
-the role of this component is to wrapp the pages with the same shared layout.
+the role of `<Layout>` component is to wrapp the pages with the same shared layout.
 
-try to run the gatsby develop command again and you'll get the following error
+run the `gatsby develop` command and you'll get an error
 
 ```bash
   32:18  error  'PrimarySearchAppBar' is not defined  react/jsx-no-undef
-  36:18  error  'Footer' is not defined               react/jsx-no-undef
 
-✖ 2 problems (2 errors, 0 warnings)
-
+✖ 1 problem (1 error, 0 warnings)
 
 File: src/components/layout.js
 
 failed Building development bundle - 17.015s
 ```
 
-that because we didn't defined thos two components yet, back to the src/components file and create app-bar.js file and copy past the following code.
+we are expecting this because we are importing a component that we didn't define yet.
+
+###### The App Bar Component:
+
+
+![reactjs.org app bar](./reactjs_AppBar.png)
+
+
+create app-bar.js in the components folder and add the following code.
 
 ```js
+// src/components/app-bar.js
 import React from 'react';
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import TranslateIcon from '@material-ui/icons/Translate';
@@ -299,18 +313,21 @@ export default function PrimarySearchAppBar() {
   )
 }
 ```
-in the code above, first we import the material-ui AppBar and Toolbar components that will construct our main app-bar component, next we import react-bootsrap `Row` and `Col` components to layout the app-bar elements,
+this is where we will bring **react-bootstrap** and **Material-ui** to build a React component that combine the Two Together.
 
-> the material-ui library also provide components such as Grid and Container to build responsive layout but the purpose of this tutorial is to mix  react-bootstrap with material-ui
+we are using `<AppBar>` and the `<Toolbar>` components to wrap our Navigation links, the `<Row>` and `<Col>` components are used for our **Layout** needs.
 
 
-notice how we're using bootstrap classes into the `<AppBar>` this work just fine because material-ui styles are injected first, this is great because we can import any material-ui component and applie bootstrap classes to it.
+> the material-ui library also provide components such as [Grid](https://material-ui.com/components/grid/) and [Container](https://material-ui.com/components/container/) for responsive layout, follow the links to know more about it.
 
-remember that we added styled-components to our styling system chois when first created a new gatsby site, we will use it to add styles to look just like the [reactjs](https://reactjs.org/) website.
+Notice in `<AppBar position="fixed" className="app-bar px-lg-5">` the *ClassName* property the class **px-lg-5** is a bootstrap class that apply padding-left and padding-right (3rem) on larger screen to the AppBar, and it override the default padding values of the AppBar, remember that we injected all material-ui styles first. 
 
-update the app-bar.js component by adding the following
+the **app-bar** class is comming from the *<AppBarStyles>* that we will add next to add custom styles to look just like the [reactjs](https://reactjs.org/) website.
+
+update the app-bar.js by adding the custom styles.
 
 ```js
+// src/components/app-bar.js
 ...
 import styled from 'styled-components'
 const AppBarStyles = styled.div`
@@ -394,20 +411,25 @@ const AppBarStyles = styled.div`
 export default function PrimarySearchAppBar() { ...
 
 ```
-next wrapp the entire `<AppBar>` with `<AppBarStyles>` to applie the styles.
+next wrap our entire `<AppBar>` with `<AppBarStyles>`.
 
 ```javascript
+// src/components/app-bar.js
+...
 <AppBarStyles>
   <AppBar>
    ...
   </AppBar>
 </AppBarStyles>
+...
 ```
-now import the useMediaQuery built in hook from @material-ui/core/useMediaQuery that we will use to add responsive behaviour and toggle some components on spesific breakpoint.
+material-ui provide a CSS media query hook. It allows the rendering of components based on whether the query matches or not, [read more ☚](https://material-ui.com/components/use-media-query/#usemediaquery) about it.
 
-update the code by adding the following 
+update the file by adding the following
 
 ```javascript
+// src/components/app-bar.js
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 ...
 const breakpoints = {
     sm: "576px",
@@ -420,11 +442,14 @@ export default function PrimarySearchAppBar() {
     const lg = useMediaQuery(`(min-width: ${breakpoints.lg})`);
 ...
 ```
-the hook return a boolean true/false depends on the media query you pass to it, in this case we stick to react-bootstrap media queries.
 
-update the file again to add responsive behaviour on the md and lg breakpoint 
+the way we're using this breakpoints is to render a component if the useMediaQuery hook return true, the case of the *Github link*, or to applie styles in this case the `<input>` width property.
+
+update the file to match the following code:
 
 ```javascript
+// src/components/app-bar.js
+
 <AppBarStyles>
   <AppBar position="fixed" className="app-bar px-lg-5">
       <Toolbar className="toolbar">
@@ -484,10 +509,3 @@ update the file again to add responsive behaviour on the md and lg breakpoint
   </AppBar>
 </AppBarStyles>
 ```
-
-the way we're using the breakpoints is to tell react to render a component if the media-query is true, the case of the Github link, or to applie styles in this case the `<input>` width property.
-
-> Note the search-bar class in the `background-image` property we're giving a path to search.svg file that doesn't exist yet , create a file name it static download and put  the icon in the static/img/ gatsby will automaticaly make the files in this folder available as static assets
-
-next lets add the footer component.
-

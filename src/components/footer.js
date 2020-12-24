@@ -22,7 +22,7 @@ const Footer = () => {
     return (
         <Classes isDark={state.isDark}>
             <Container fluid="lg" className="container">
-                <Row className="d-flex justify-content-center my-3">
+                <Row noGutters className="d-flex justify-content-center my-3">
                     <LeftButton href="https://instagram.com/sudokud">
                         <FaGithub color="#f2f2f3" fontSize="24px" />
                     </LeftButton>
@@ -33,17 +33,17 @@ const Footer = () => {
                         <FaInstagram color="#f2f2f3" fontSize="24px" />
                     </RightButton>
                 </Row>
-                <Row className="d-flex justify-content-center">
+                <Row noGutters className="d-flex justify-content-center">
                     <p className="text-center">
                         © 2020-present chetoui hamza. All right reserved
                     </p>
                 </Row>
-                <Row className="d-flex  justify-content-center">
+                <Row noGutters className="d-flex justify-content-center">
                     <p>Made with</p>
                     <span className="mx-3">
                         <img
                             width="31px" height="26,7px"
-                            src={state.isDark ? "img/dark_heart.gif" : "img/light_heart.gif"}
+                            src={state.isDark ? "/img/dark_heart.gif" : "/img/light_heart.gif"}
                             alt="❤️" />
                     </span>
                     <p>and Passion</p>

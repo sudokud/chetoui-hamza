@@ -64,7 +64,7 @@ const NesCard = ({ thumbnail, title, slug, excerpt, published }) => {
         'audio/hoverIn.wav', { volume: 0.5 }
     )
     return (
-        <Link to={`/${slug}`}>
+        <Link to={`${slug}`}>
             <Card isDark={state.isDark}
                 onHoverEnd={() => (POP())}
             >

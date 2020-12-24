@@ -66,7 +66,7 @@ const ToggleDarkMode = ({ ...props }) => {
               initial={{ opacity: 0, rotate: 45 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={spring}
-              src="img/moon.svg"
+              src="/img/moon.svg"
               alt="dark" />
           </AnimatePresence>
         )}
@@ -76,7 +76,7 @@ const ToggleDarkMode = ({ ...props }) => {
               initial={{ opacity: 0, rotate: -23 }}
               animate={{ opacity: 1, rotate: 0 }}
               transition={spring}
-              src="img/sun.svg"
+              src="/img/sun.svg"
               alt="light" />
           </AnimatePresence>)
         }
