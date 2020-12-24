@@ -15,7 +15,7 @@ function Connect({ location }) {
             <Container
                 fluid="lg"
                 className="mt-5">
-                <Row className="p-4">
+                <Row className="p-4 pt-5">
                     <h1> Get in touch </h1>
                 </Row>
                 <Row className="p-4">

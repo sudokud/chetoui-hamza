@@ -13,6 +13,9 @@ const Posts = ({ data, location }) => {
 
       <SEO title="Blog" />
       <Container fluid="lg" className="my-4 py-4" >
+        <Row className="p-4 pt-5">
+          <h1> Blog Posts </h1>
+        </Row>
         <Row className="d-flex justify-content-center">
           {data.allMarkdownRemark.edges.map((edge, i) => {
             const { thumbnail } = edge.node.frontmatter
