@@ -41,7 +41,7 @@ const LatestPosts = () => {
                             <NesCard
                                 thumbnail={thumbnail.childImageSharp.fluid}
                                 title={edge.node.frontmatter.title}
-                                slug={edge.node.frontmatter.slug}
+                                slug={`posts/${edge.node.frontmatter.slug}`}
                                 excerpt={edge.node.frontmatter.description}
                                 published={edge.node.frontmatter.date}
                             />
