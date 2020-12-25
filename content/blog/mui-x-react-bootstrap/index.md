@@ -1,22 +1,31 @@
 ---
 slug: mui-x-react-bootstrap-x-gatsbyjs
 title: mixing React UI libraries with Gatsby
-date: 2020-12-11T17:59:31.482Z
+date: 2020-12-25T14:06:31.482Z
 description: combine Material-Ui with React-Bootstrap to create faster web Apps UIs
 thumbnail: jamstack.webp  
 tags:
-  - JavaScript JAMStack libraries ui ux
+  - JavaScript
+  - Jamstack
+  - React
+  - Gatsbyjs
+  - Bootstrap
+keywords: ui ux gatsbyjs react material-ui bootstrap web responsive design
 ---
-#### Introduction
 
+Impatient ? navigate [☛ to this link](https://reactjs-clone.netlify.app/) to see what you're going build.
 
-for a quick preview visit  [this link](https://reactjs-clone.netlify.app/)
-when you google for react ui libraries the first reasult you'll see is is a top 10, 5 or 3 React components Library for 2020, for a new newcomers to the industrie of web developing  this result will frustrate theme, just like it did when i first start learning about React, React-Frameworks and UI librarie.
+### Introduction
 
-thats what pushed me to write this particular blog post, for me there's no top because they all speak the same language wich is *React* and i think they will made a great couple if they share the same project.
+when you google for react ui libraries the first reasult you'll see is is a top 10 React components Libraries for 2020, for a newcomers to the industrie of web developing  this result will frustrate theme, just like it did when i first start learning about React, React-Frameworks and UI librarie.
 
-in this post you will play the role of **Cupidon** with material-ui and react-bootstrap, but first let's set up the envirenemnt for theme to be able to communicate.
-#### envirenement setup
+thats what pushed me to write this particular blog post.
+
+for me there's no top 10 or anything because they all speak the same language wich is *React* and i think they will made a great couple if we put them in the same project.
+
+in this post you will play the role of **Cupidon** ❤︎ with material-ui and react-bootstrap, but first let's set up the envirenemnt for them to be able to communicate.
+
+### envirenement setup
 
 > to be able to follow along with this quick tutorial you need to have a basic basic knowledge of **React** as well as **Bootstrap** and to be familare with your **command line**
 
@@ -100,7 +109,7 @@ back to your command line, add **react-bootstrap** and **Material-Ui** libraries
 
 >Note the last dependency is the **gatsby-plugin-material-ui**, we will configure this plugin to **override** the default styling by **injecting** the material-ui styles first.
 
-###### The Gatsby Config File:
+##### The Gatsby Config File:
 
 In the root of your project you have the *gatsby-config.js* file, 
 this file let us configure the gatsby [plugins](https://www.gatsbyjs.com/plugins/) to add functionality 
@@ -140,7 +149,7 @@ module.exports = {
 ```
 This is  all we need to configure **material-ui** library with **Gatsby**, next we configure react-bootstrap.
 
-###### the gatsby browser file:
+##### the gatsby browser file:
 
 depends on the starter you used in the gatsby installation it may or may not contain the **gatsby-browser.js**.
 
@@ -162,7 +171,7 @@ open the browser at *https://localhost:8000* open the devtools, inside the `<hea
 
 > notice that at the top of the `<head>` tag we have this <!--mui-inject-first--> followed by some `<style>` tags, those are comming from the material-ui styles remember when we configured the plugin to inject the styles first, at this stage you'll not get any styles tags because we didn't import any **MUI component** yet.
 
-###### The Layout component:
+##### The Layout component:
 
 to start creating components create the *layout.js* file inside `/src/componets` folder.
 
@@ -235,7 +244,7 @@ failed Building development bundle - 17.015s
 
 we are expecting this because we are importing a component that we didn't define yet.
 
-###### The App Bar Component:
+##### The App Bar Component:
 
 
 ![reactjs.org app bar](./reactjs_AppBar.png)
@@ -509,3 +518,12 @@ update the file to match the following code:
   </AppBar>
 </AppBarStyles>
 ```
+
+### Wrapping up
+
+This is my very-first tutorial on Gatsbyjs and React in general! ⚛️
+
+I just covered the AppBar component because it's too much for a single blog post,
+you can clone the [project repository](https://github.com/okuninoshi/m-ui-X-react-bootstrap.git) and play with the source code, chalenge your self and enjoy learning ✌︎
+
+My last word about the React UI librarie is Take the best feature, component, Layout systems ... from each one and **MIX IT UP**.
