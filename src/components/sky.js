@@ -8,12 +8,15 @@ import { M83, M84, M85, M86, M87, M88, M89, M90, M91 } from './tokyo/stars'
 
 const Gradient = styled.div`
    width:100%;
-   height:490px;
-   background: ${props => props.isDark ?
+    background: ${props => props.isDark ?
         "linear-gradient(180deg, #162D55 0%, #1C1124 100%)" :
         "linear-gradient(180deg, #4B75E8 3.12%, #54C0FF 57.81%, #F2F2F3 100%)"
     };
     position:absolute;
+    height:320px;
+    @media(min-width:576px){
+        height:430px;
+    }
 `
 const Star = styled(motion.div)`
     width:fit-content;
@@ -21,6 +24,7 @@ const Star = styled(motion.div)`
     top:${props => props.top || "50%"};
     left:${props => props.left || "50%"};
     position:absolute;
+
 `
 
 const Sky = () => {

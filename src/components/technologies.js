@@ -53,10 +53,8 @@ const Technologies = () => {
 
     return (
         <Styled>
-
             <h2 className="d-block">Technologies i use</h2>
             <Row >
-
                 <Col sm={4}
                     className="my-4 d-flex flex-column align-items-center">
                     <h5>DATA SOURCES</h5>
@@ -70,11 +68,9 @@ const Technologies = () => {
                         src="img/NetlifyCMS.svg"
                         alt="Netlify CMS"
                     />
-
                 </Col>
-
                 <Col sm={4}
-                    className="my-4  d-flex flex-column align-items-center">
+                    className="my-4 d-flex flex-column align-items-center">
                     <h5>BUILD</h5>
                     <Technolgy
                         href="https://getbootstrap.com/"
@@ -91,11 +87,9 @@ const Technologies = () => {
                     <Technolgy
                         href="https://material-ui.com/"
                         src="img/material-ui.svg" alt="Gatsby" />
-
                 </Col>
-
                 <Col sm={4}
-                    className="my-4  d-flex flex-column align-items-center">
+                    className="my-4 d-flex flex-column align-items-center">
                     <h5>DEPLOY 	&amp; CDN</h5>
 
                     <Technolgy
@@ -108,7 +102,6 @@ const Technologies = () => {
                     <Technolgy
                         href="https://vercel.com/"
                         src="img/vercel.svg" alt="Vercel" />
-
                 </Col>
             </Row>
         </Styled>

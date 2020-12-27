@@ -5,7 +5,10 @@ import Tokyo from './tokyo/tokyo'
 const MainWrapper = styled.div`
     margin:auto;
     max-width: 1279px;
-    padding-top:7rem;
+    padding-top:2rem;
+    @media(min-width:996px){
+        padding-top:7rem;
+    }
 `
 const Scene = () => {
     return (
