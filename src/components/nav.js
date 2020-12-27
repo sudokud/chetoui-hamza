@@ -55,7 +55,6 @@ const Styles = styled.div`
         inset -3px 3px 0px #5c6a25,
         inset -4px 4px 0px #5c6a25,
         inset -5px 5px 0px #5c6a25;
-
         background-blend-mode: difference;
     }
     

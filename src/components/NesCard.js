@@ -7,10 +7,8 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import useSound from 'use-sound'
 
-
 const Card = styled(motion.div)`
     position:relative;
-    color:${props => props.theme.palette.arctic_lime};
     width:300px;
     height:450px;
     background:linear-gradient(180deg, #684656, #684656 );
@@ -35,25 +33,28 @@ const Card = styled(motion.div)`
         height:0;
     }
     transition: all 0.3s ease;
+    .published{
+        font-size:15px;
+        padding:3px;
+        color: #fff5f6;
+	    text-shadow: 0 0 2px #000, 0 0 10px #1c1124, 0 0 5px #007bff, 0 0 25px #1c1124;
+    }
 `
 const CardBody = styled.div`
     width:100%;
     clip-path: polygon(0% 0%, 100% 0, 100% 75%, 0% 99%);
-    .published{
-        color:${props => props.theme.palette.cultured};
-        font-size:13px;
-    }
     padding:15px 0 0 0;
 `
 const CardFooter = styled.div`
     width:100%;
     .footer-content{
-        transform: rotate3D(0, 0, 1, -9.7deg);
+        transform: rotate3D(0, 0, 1, -7.7deg);
         transform-origin:left top;
     }
     .title{
         color:${props => props.theme.palette.arctic_lime};
     }
+    .excerpt{color:${props => props.theme.palette.cultured};}
 
 `
 
@@ -68,8 +69,8 @@ const NesCard = ({ thumbnail, title, slug, excerpt, published }) => {
             <Card isDark={state.isDark}
                 onHoverEnd={() => (POP())}
             >
+                <time className="published"> {published} </time>
                 <CardBody>
-                    <time className="published"> {published} </time>
                     <Img fluid={thumbnail} alt="blog post picture" />
                 </CardBody>
                 <CardFooter>

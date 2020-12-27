@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import Img from "gatsby-image"
 import Layout from '../components/layout'
+import Tag from '../components/tag'
 import SEO from '../components/seo'
 import Context from "../store/context"
 
@@ -39,7 +40,6 @@ export default function Post({ data, location }) {
   const { state } = useContext(Context)
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
-  console.log(frontmatter.tags)
   return (
     <Layout animateKey={location.key}>
       <SEO title={frontmatter.title} keywords={frontmatter.keywords} />
@@ -65,7 +65,7 @@ export default function Post({ data, location }) {
               <div className="py-4 mt-5">
                 {frontmatter.tags.map((tag, key) => {
                   return (
-                    <span className="border px-2 mt-3 mr-2" key={key}>{tag}</span>
+                    <Tag key={key} tagName={tag} />
                   )
                 })}
               </div>
