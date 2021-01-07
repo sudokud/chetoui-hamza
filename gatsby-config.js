@@ -3,7 +3,7 @@ module.exports = {
     title: `Chetoui Hamza`,
     description: `chetoui's hamza personal website`,
     author: `@okuninoshi`,
-    keywords: 'chetoui hamza, web, jamstack, tipaza, fouka, faster websites, site web static, api, sécurisé, ecommerce algerie, strapi, gatsby, cdn, netlify',
+    keywords: 'chetoui hamza, web, jamstack, faster websites, site static, api, sécurisé, ecommerce algerie, strapi, gatsby, cdn, netlify, Elevatin',
     siteUrl: 'https://chetoui-hamza.netlify.app',
     image: '/img/autoportrait.png'
   },

@@ -3,7 +3,7 @@ slug: mui-x-react-bootstrap-x-gatsbyjs
 title: mixing React UI libraries with Gatsby
 date: 2020-12-25T14:06:31.482Z
 description: combine Material-Ui with React-Bootstrap to create faster web Apps UIs
-thumbnail: jamstack.webp  
+thumbnail: materialui-gatsby-reactbootstrap.png
 tags:
   - JavaScript
   - Jamstack

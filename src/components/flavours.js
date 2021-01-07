@@ -31,7 +31,6 @@ export default function () {
                     className="Row"
                 >
                     <motion.p
-
                         animate={{ x: [-170, 230, 230, -130], y: [0, 0, 170, 170] }}
                         transition={{
                             times: [0, 0.66, 0.66, 1],
@@ -42,7 +41,6 @@ export default function () {
                         vanilla
                 </motion.p>
                     <motion.p
-
                         animate={{ x: [-180, 230, 230, -170], y: [0, 0, 170, 170] }}
                         transition={{
                             times: [0, 0.66, 0.66, 1],

@@ -10,13 +10,6 @@ import RightButton from "./buttons/right-button"
 import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa"
 const Classes = styled.div`
     background:${props => props.isDark ? "#1c1124" : "#f2f2f3"};
-    .divider{
-        width:100%;
-        height:10px;
-        box-shadow:-16px 8px 6px 0 ${props => (props.isDark ? "#0e0912" : "#a4a0a7")};
-        background:${props => (props.isDark ? "#020102" : "#87818b")};
-        margin-top:64px;
-    }
     .container{
         padding:32px;
         margin-top:32px;
@@ -28,7 +21,6 @@ const Footer = () => {
 
     return (
         <Classes isDark={state.isDark}>
-            <div className="divider"></div>
             <Container fluid="lg" className="container">
                 <Row noGutters className="d-flex justify-content-center my-3">
                     <LeftButton href="https://instagram.com/sudokud">
